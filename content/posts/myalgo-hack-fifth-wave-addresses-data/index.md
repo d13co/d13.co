@@ -5,6 +5,8 @@ slug: myalgo-hack-fifth-wave-addresses-data
 url: /myalgo-hack-fifth-wave-addresses-data
 cover:
   image: 1680318444.png
+tags:
+- "MyAlgo Hack"
 ---
 
 The MyAlgo attacks have so far been clustered around five distinct

@@ -5,6 +5,8 @@ slug: algofi-vault-reward-performance-for-governance-period-3
 url: /algofi-vault-reward-performance-for-governance-period-3
 cover:
   image: 1656927232.png
+tags:
+- Governance
 ---
 
 *TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than

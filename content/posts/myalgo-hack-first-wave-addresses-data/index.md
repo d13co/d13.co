@@ -5,6 +5,8 @@ slug: myalgo-hack-first-wave-addresses-data
 url: /myalgo-hack-first-wave-addresses-data
 cover:
   image: 1678811813.png
+tags:
+- "MyAlgo Hack"
 ---
 
 The MyAlgo attacks have so far been clustered around three distinct

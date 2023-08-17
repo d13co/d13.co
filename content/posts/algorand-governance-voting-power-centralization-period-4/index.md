@@ -5,6 +5,8 @@ slug: algorand-governance-voting-power-centralization-period-4
 url: /algorand-governance-voting-power-centralization-period-4
 cover:
   image: 1661197777.png
+tags:
+- Governance
 ---
 
 Overview

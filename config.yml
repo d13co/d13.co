@@ -22,7 +22,7 @@ params:
     - D13_co
   author: Bit @ D13.co
   images:
-    - '<link or path of image for opengraph, twitter-cards>'
+    - /images/logo-7-green-384-padded-doofy.png
   DateFormat: 'January 2, 2006'
   defaultTheme: auto
   disableThemeToggle: false

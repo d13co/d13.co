@@ -5,6 +5,8 @@ slug: algorand-governance-whales-known-wallets-consensus-participation-stats
 url: /algorand-governance-whales-known-wallets-consensus-participation-stats
 cover:
   image: gov.png
+tags:
+- Governance
 ---
 
 
