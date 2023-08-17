@@ -79,12 +79,12 @@ params:
       - permalink
       - summary
       - content
-menu:
-  main:
-    - identifier: d13
-      name: Chirp
-      url: 'https://twitter.com/d13_co'
-      weight: 30
+# menu:
+#   main:
+#     - identifier: d13
+#       name: Chirp
+#       url: 'https://twitter.com/d13_co'
+#       weight: 30
 markup:
   highlight:
     noClasses: false
