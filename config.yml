@@ -52,8 +52,8 @@ params:
     icon: /images/logo-7-green-128.png
     iconHeight: 48
   homeInfoParams:
-    Title: D13.co
-    Content: "Develops on Algorand. [View Products](/products)"
+    Title: "D13 .co | .algo | .coop"
+    Content: "Develops on Algorand."
   socialIcons:
     - name: Twitter
       url: 'https://twitter.com/D13_co/'
