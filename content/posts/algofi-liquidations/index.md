@@ -2,9 +2,10 @@
 title: "Every AlgoFi Liquidation: Stats & Data"
 date: 2022-04-20%00:00:00+00:00
 slug: algofi-liquidations-stats-data
+url: /algofi-liquidations-stats-data
+cover:
+  image: liq1.png
 ---
-
-![](liq1.png)
 
 Following a positive response to [a reddit post](https://www.reddit.com/r/algofi/comments/tyid2i/anyone_interested_in_a_liquidation_monitoring/)
 I made about the need for an AlgoFi borrow utilization & liquidation

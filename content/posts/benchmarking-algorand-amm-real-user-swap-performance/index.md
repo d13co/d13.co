@@ -2,12 +2,12 @@
 title: "Benchmarking Algorand AMM 1:1 real world swap performance"
 date: 2023-01-11T02:18:38+00:00
 slug: benchmarking-algorand-amm-real-user-swap-performance
+url: /benchmarking-algorand-amm-real-user-swap-performance
+cover:
+  image: 1673476543.png
 ---
 
-![](1673476543.png)
-
 TL; DR: We tested Algorand with end-user-identical AMM swaps: 8,070 in a 3 second block.
-
 
 ------------------------------------------------------------------------
 

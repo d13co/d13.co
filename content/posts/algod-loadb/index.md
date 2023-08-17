@@ -2,9 +2,10 @@
 title: "Algod-Loadb: An aware Algod HTTP Load Balancer"
 date: 2022-04-25T02:18:38+00:00
 slug: algod-loadb-an-aware-algod-http-load-balancer
+url: /algod-loadb-an-aware-algod-http-load-balancer
+cover:
+  image: algod-loadb.png
 ---
-
-![](algod-loadb.png)
 
 So you want to do High Availability Algorand stuff. But algod, your
 trusty portal to and from the Algorand blockchain, can betray you in a

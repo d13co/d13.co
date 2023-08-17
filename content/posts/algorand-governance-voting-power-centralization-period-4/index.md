@@ -2,9 +2,10 @@
 title: "Algorand Governance Voting Power Centralization - Period 4"
 date: 2022-08-21T02:18:38+00:00
 slug: algorand-governance-voting-power-centralization-period-4
+url: /algorand-governance-voting-power-centralization-period-4
+cover:
+  image: 1661197777.png
 ---
-
-![](1661197777.png)
 
 Overview
 --------

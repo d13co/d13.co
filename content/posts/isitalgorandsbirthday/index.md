@@ -2,6 +2,9 @@
 title: "Is It Algorand's Birthday? ...dot com"
 date: 2022-06-01T02:18:38+00:00
 slug: isitalgorandsbirthday
+url: /isitalgorandsbirthday
+cover:
+  image: 1692233635.png
 ---
 
 To celebrate Algorand MainNet\'s third birthday on the 11th of June

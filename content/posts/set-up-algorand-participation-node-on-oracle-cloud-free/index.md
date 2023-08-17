@@ -2,9 +2,10 @@
 title: "Setting up an Algorand consensus participation server on Oracle Cloud for free"
 date: 2022-10-11T02:18:38+00:00
 slug: set-up-algorand-participation-node-on-oracle-cloud-free
+url: /set-up-algorand-participation-node-on-oracle-cloud-free
+cover:
+  image: 1665498407.png
 ---
-
-![](1665498407.png)
 
 Running an Algorand consensus participation node requires a bit of
 patience and a bit of hardware.

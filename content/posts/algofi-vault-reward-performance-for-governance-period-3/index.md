@@ -2,6 +2,9 @@
 title: "AlgoFi vault reward performance for Governance period 3"
 date: 2022-07-04T02:18:38+00:00
 slug: algofi-vault-reward-performance-for-governance-period-3
+url: /algofi-vault-reward-performance-for-governance-period-3
+cover:
+  image: 1656927232.png
 ---
 
 *TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than

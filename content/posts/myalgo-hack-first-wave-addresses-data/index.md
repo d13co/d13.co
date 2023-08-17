@@ -2,6 +2,9 @@
 title: "MyAlgo hack: First Wave - Addresses & Data"
 date: 2023-03-14T21:26:38+00:00
 slug: myalgo-hack-first-wave-addresses-data
+url: /myalgo-hack-first-wave-addresses-data
+cover:
+  image: 1678811813.png
 ---
 
 The MyAlgo attacks have so far been clustered around three distinct

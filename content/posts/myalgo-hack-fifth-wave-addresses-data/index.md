@@ -2,6 +2,9 @@
 title: "MyAlgo hack: Fifth Wave - Addresses & Data"
 date: 2023-03-31T21:26:38+00:00
 slug: myalgo-hack-fifth-wave-addresses-data
+url: /myalgo-hack-fifth-wave-addresses-data
+cover:
+  image: 1680318444.png
 ---
 
 The MyAlgo attacks have so far been clustered around five distinct

@@ -2,8 +2,8 @@
 title: "Preliminary Advisory Report - Algorand 20-02-2023 Thefts"
 date: 2023-02-27T21:26:38+00:00
 slug: algorand-20-02-2023-thefts-preliminary-advisory-report
+url: /algorand-20-02-2023-thefts-preliminary-advisory-report
 ---
-
 
 **Summary: There is a non-zero chance of a MyAlgo wallet software
 compromise leading to the theft of at least \$7.2m worth of assets on
