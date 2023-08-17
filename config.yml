@@ -1,0 +1,90 @@
+baseURL: 'https://d13.co/'
+languageCode: en-us
+title: D13.co
+theme: PaperMod
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pygmentsUseClasses: true
+minify:
+  disableXML: true
+  minifyOutput: true
+params:
+  env: production
+  title: D13.co
+  description: Real-time Algorand blockchain event streaming
+  keywords:
+    - D13 collective
+    - D13.algo
+    - Algorand
+    - D13co
+    - D13_co
+  author: D13.co//ective
+  images:
+    - '<link or path of image for opengraph, twitter-cards>'
+  DateFormat: 'January 2, 2006'
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  assets:
+    favicon: <link / abs url>
+    favicon16x16: <link / abs url>
+    favicon32x32: <link / abs url>
+    apple_touch_icon: <link / abs url>
+    safari_pinned_tab: <link / abs url>
+  label:
+    text: ' '
+    icon: /images/logo-7-green-128.png
+    iconHeight: 48
+  homeInfoParams:
+    Title: D13.co
+    Content: "Develops on Algorand. [View Products](/products)"
+  socialIcons:
+    - name: Twitter
+      url: 'https://twitter.com/D13_co/'
+    - name: Reddit
+      url: 'https://reddit.com/r/D13'
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+  editPost:
+    URL: 'https://github.com/d13co/d13.co/tree/main/content'
+    Text: Suggest Changes
+    appendFilePath: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+menu:
+  main:
+    - identifier: d13
+      name: Chirp
+      url: 'https://twitter.com/d13_co'
+      weight: 30
+markup:
+  highlight:
+    noClasses: false

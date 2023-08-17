@@ -1,0 +1,36 @@
+<style>
+  .details-collapsible {
+    background: rgba(127,127,127,.2);
+    padding: 1.5em 1.25em;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    padding-bottom: 0.5rem;
+  }
+  .details-collapsible p:first-of-type {
+    border-top: 1px rgba(127,127,127,0.2) solid;
+    padding-top: 0.75em;
+  }
+  .details-collapsible p {
+    margin-left: 1em;
+  }
+  .details-collapsible summary {
+    margin-bottom: 1em;
+  }
+  .details-collapsible summary::marker {
+    border: 1px red solid;
+  }
+  @media (max-width: 767px) {
+    #details-collapsible {
+    padding: 1.5em 0.75em 1.5em 0.6em;
+    }
+    #details-collapsible-inner {
+      margin-left: 0.5em;
+    }
+  }
+</style>
+<details class="details-collapsible">
+  <summary>{{ (.Get 0) | markdownify }}</summary>
+  {{ .Inner | markdownify }}
+</details>

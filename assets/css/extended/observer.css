@@ -1,0 +1,7 @@
+.logo a img,
+.profile img {
+  border-radius: 0px !important;
+  mix-blend-mode: difference;
+}
+
+
