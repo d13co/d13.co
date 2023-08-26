@@ -130,5 +130,4 @@ That was it for the installation part.
 
 {{< callout emoji="ℹ️" text="If you are running a participation node, monitoring it with a free [Metrika.co account](https://app.metrika.co/algorand/alerts/subscriptions) is a must. They will email you if your account is not participating as expected." >}}
 
-
-
+[🐦 @D13_co](https://twitter.com/d13_co)
