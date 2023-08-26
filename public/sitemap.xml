@@ -2,46 +2,59 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://d13.co/</loc>
+    <loc>/</loc>
+    <lastmod>2023-08-26T10:44:59+03:00</lastmod>
+  </url><url>
+    <loc>/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</loc>
+    <lastmod>2023-08-26T10:44:59+03:00</lastmod>
+  </url><url>
+    <loc>/posts/</loc>
+    <lastmod>2023-08-26T10:44:59+03:00</lastmod>
+  </url><url>
+    <loc>/tags/myalgo-hack/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/myalgo-hack-fifth-wave-addresses-data/</loc>
+    <loc>/myalgo-hack-fifth-wave-addresses-data/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/</loc>
+    <loc>/tags/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/myalgo-hack-first-wave-addresses-data/</loc>
+    <loc>/myalgo-hack-first-wave-addresses-data/</loc>
     <lastmod>2023-03-14T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/algorand-20-02-2023-thefts-preliminary-advisory-report/</loc>
+    <loc>/algorand-20-02-2023-thefts-preliminary-advisory-report/</loc>
     <lastmod>2023-02-27T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/benchmarking-algorand-amm-real-user-swap-performance/</loc>
+    <loc>/benchmarking-algorand-amm-real-user-swap-performance/</loc>
     <lastmod>2023-01-11T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/set-up-algorand-participation-node-on-oracle-cloud-free/</loc>
+    <loc>/set-up-algorand-participation-node-on-oracle-cloud-free/</loc>
     <lastmod>2022-10-11T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/algorand-governance-voting-power-centralization-period-4/</loc>
+    <loc>/algorand-governance-whales-known-wallets-consensus-participation-stats/</loc>
+    <lastmod>2022-08-22T21:26:38+00:00</lastmod>
+  </url><url>
+    <loc>/tags/governance/</loc>
+    <lastmod>2022-08-22T21:26:38+00:00</lastmod>
+  </url><url>
+    <loc>/algorand-governance-voting-power-centralization-period-4/</loc>
     <lastmod>2022-08-21T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/algofi-vault-reward-performance-for-governance-period-3/</loc>
+    <loc>/algofi-vault-reward-performance-for-governance-period-3/</loc>
     <lastmod>2022-07-04T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/isitalgorandsbirthday/</loc>
+    <loc>/isitalgorandsbirthday/</loc>
     <lastmod>2022-06-01T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/algod-loadb-an-aware-algod-http-load-balancer/</loc>
+    <loc>/algod-loadb-an-aware-algod-http-load-balancer/</loc>
     <lastmod>2022-04-25T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/posts/our-very-own-community-space-r-d13/</loc>
+    <loc>/our-very-own-community-space-r-d13/</loc>
     <lastmod>2022-04-19T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>https://d13.co/categories/</loc>
+    <loc>/categories/</loc>
   </url><url>
-    <loc>https://d13.co/posts/algofi-liquidations-stats-data/</loc>
-  </url><url>
-    <loc>https://d13.co/tags/</loc>
+    <loc>/algofi-liquidations-stats-data/</loc>
   </url>
 </urlset>

@@ -1,4 +1,3 @@
-baseURL: 'https://d13.co/'
 languageCode: en-us
 title: D13.co
 theme: PaperMod
@@ -15,7 +14,6 @@ params:
   title: D13.co
   description: Real-time Algorand blockchain event streaming
   keywords:
-    - D13 collective
     - D13.algo
     - Algorand
     - D13co

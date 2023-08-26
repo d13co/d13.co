@@ -2,21 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>D13.co</title>
-    <link>https://d13.co/</link>
+    <link>/</link>
     <description>Recent content on D13.co</description>
     <image>
-      <url>https://d13.co/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://d13.co/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>/images/logo-7-green-384-padded-doofy.png</url>
+      <link>/images/logo-7-green-384-padded-doofy.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 21:26:38 +0000</lastBuildDate><atom:link href="https://d13.co/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 26 Aug 2023 10:44:59 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Implementing on-chain VRF shuffle for EXA Lootbox Reveals</title>
+      <link>/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</link>
+      <pubDate>Sat, 26 Aug 2023 10:44:59 +0300</pubDate>
+      
+      <guid>/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</guid>
+      <description>Following a brief partnership during CupStakes - where EXA.market was our official secondary marketplace - I was commissioned by them to implement the smart contracts that would power their rewards programme.
+As a new marketplace in the Algorand ecosystem, EXA wanted to incentivize users to trade on their platform. Users were rewarded with &amp;ldquo;Lootbox&amp;rdquo; NFTs for using the platform.
+After the lootboxes were distributed, we revealed that there were two more kinds of lootbox users could get.</description>
+    </item>
+    
     <item>
       <title>MyAlgo hack: Fifth Wave - Addresses &amp; Data</title>
-      <link>https://d13.co/posts/myalgo-hack-fifth-wave-addresses-data/</link>
+      <link>/myalgo-hack-fifth-wave-addresses-data/</link>
       <pubDate>Fri, 31 Mar 2023 21:26:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/myalgo-hack-fifth-wave-addresses-data/</guid>
+      <guid>/myalgo-hack-fifth-wave-addresses-data/</guid>
       <description>The MyAlgo attacks have so far been clustered around five distinct waves, roughly corresponding to these dates:
 First Wave: February 20, 2023
 Second Wave: March 5, 2023
@@ -29,10 +40,10 @@ Summary The attack was automated and ran for 14 hours - from 2023-03-31 10:15 (G
     
     <item>
       <title>MyAlgo hack: First Wave - Addresses &amp; Data</title>
-      <link>https://d13.co/posts/myalgo-hack-first-wave-addresses-data/</link>
+      <link>/myalgo-hack-first-wave-addresses-data/</link>
       <pubDate>Tue, 14 Mar 2023 21:26:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/myalgo-hack-first-wave-addresses-data/</guid>
+      <guid>/myalgo-hack-first-wave-addresses-data/</guid>
       <description>The MyAlgo attacks have so far been clustered around three distinct waves, roughly corresponding to these dates:
 First Wave: February 20, 2023
 Second Wave: March 5, 2023
@@ -43,20 +54,20 @@ Aggregates and Addresses In the first wave, 24 addresses were impacted for the f
     
     <item>
       <title>Preliminary Advisory Report - Algorand 20-02-2023 Thefts</title>
-      <link>https://d13.co/posts/algorand-20-02-2023-thefts-preliminary-advisory-report/</link>
+      <link>/algorand-20-02-2023-thefts-preliminary-advisory-report/</link>
       <pubDate>Mon, 27 Feb 2023 21:26:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/algorand-20-02-2023-thefts-preliminary-advisory-report/</guid>
+      <guid>/algorand-20-02-2023-thefts-preliminary-advisory-report/</guid>
       <description>Summary: There is a non-zero chance of a MyAlgo wallet software compromise leading to the theft of at least $7.2m worth of assets on the Algorand blockchain. We recommend rekeying MyAlgo accounts to fresh private keys, or simply moving funds where possible. This precautionary remediation of further risk should not have usability impact and, if done carefully, may have a significant security benefit.\
 We have been day 1 responders to these attacks: reporting the potential compromises, organizing affected users, systematically collecting as much information as possible in order to find a possible common vector, suggesting actions to be taken, preparing transaction trail documents for authorities.</description>
     </item>
     
     <item>
       <title>Benchmarking Algorand AMM 1:1 real world swap performance</title>
-      <link>https://d13.co/posts/benchmarking-algorand-amm-real-user-swap-performance/</link>
+      <link>/benchmarking-algorand-amm-real-user-swap-performance/</link>
       <pubDate>Wed, 11 Jan 2023 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/benchmarking-algorand-amm-real-user-swap-performance/</guid>
+      <guid>/benchmarking-algorand-amm-real-user-swap-performance/</guid>
       <description>TL; DR: We tested Algorand with end-user-identical AMM swaps: 8,070 in a 3 second block.
 Our friends at Vestige.fi recently performed a benchmark of AMM swap performance on Algorand MainNet. While the results were great (2881 peak swaps per second), some naysayers missed the forest for the trees with complaints about the methodology being synthetic.
 The methodology by the Vestige team was:
@@ -65,31 +76,41 @@ The methodology by the Vestige team was:
     
     <item>
       <title>Setting up an Algorand consensus participation server on Oracle Cloud for free</title>
-      <link>https://d13.co/posts/set-up-algorand-participation-node-on-oracle-cloud-free/</link>
+      <link>/set-up-algorand-participation-node-on-oracle-cloud-free/</link>
       <pubDate>Tue, 11 Oct 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/set-up-algorand-participation-node-on-oracle-cloud-free/</guid>
+      <guid>/set-up-algorand-participation-node-on-oracle-cloud-free/</guid>
       <description>Running an Algorand consensus participation node requires a bit of patience and a bit of hardware.
 Unfortunately, consensus participation currently isn&#39;t rewarded by the network - only by our conscience! Most cloud providers do not accept conscience bucks, so we will do what we can with free offerings.
 The Oracle Cloud has an &amp;quot;always free&amp;quot; tier which includes good-enough virtual servers for our purposes. Traditionally this is where I state my affiliations and paid promotions, but there are none in this case.</description>
     </item>
     
     <item>
+      <title>Algorand Governance Period 4 Whales: Known wallets &amp; Consensus participation statistics</title>
+      <link>/algorand-governance-whales-known-wallets-consensus-participation-stats/</link>
+      <pubDate>Mon, 22 Aug 2022 21:26:38 +0000</pubDate>
+      
+      <guid>/algorand-governance-whales-known-wallets-consensus-participation-stats/</guid>
+      <description>As a follow-up on our report on Voting Power Centralization in Governance Period 4 we decided to look into known addresses from the governor whale list, as well as their consensus participation status.
+In case you missed it and can&#39;t be bothered to check, we defined &amp;quot;whale wallets&amp;quot; as single-entity governors that have committed at least 1 million ALGO and are still eligible. We excluded the top governor - Folks Finance - as their vote is decided by Folks protocol users.</description>
+    </item>
+    
+    <item>
       <title>Algorand Governance Voting Power Centralization - Period 4</title>
-      <link>https://d13.co/posts/algorand-governance-voting-power-centralization-period-4/</link>
+      <link>/algorand-governance-voting-power-centralization-period-4/</link>
       <pubDate>Sun, 21 Aug 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/algorand-governance-voting-power-centralization-period-4/</guid>
+      <guid>/algorand-governance-voting-power-centralization-period-4/</guid>
       <description>Overview We analyzed the top eligible wallets enrolled for Algorand Governance Period 4 as of August 21, 2022. The data shows a very &amp;quot;whale&amp;quot; heavy distribution of voting power and rewards, where the top 37 individual &amp;quot;whale&amp;quot; wallets control the vote and reap 50% of rewards, and wallets with over 1 million ALGO commitment control 86% of the vote and rewards.
 Data Sources To get our raw data, we used two different data sources and correlated them to confirm correctness:</description>
     </item>
     
     <item>
       <title>AlgoFi vault reward performance for Governance period 3</title>
-      <link>https://d13.co/posts/algofi-vault-reward-performance-for-governance-period-3/</link>
+      <link>/algofi-vault-reward-performance-for-governance-period-3/</link>
       <pubDate>Mon, 04 Jul 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/algofi-vault-reward-performance-for-governance-period-3/</guid>
+      <guid>/algofi-vault-reward-performance-for-governance-period-3/</guid>
       <description>TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than 2x in governance rewards profit.
 For the third Governance season we tried the AlgoFi vault for Governance: AlgoFi counts vaulted Algo as collateral that you can borrow against. Borrowing Algo against your vaulted algo has two advantages:
 You can add the borrowed algo to the vault, thus increasing your collateral and ability to borrow more Algo. You are not exposed to liquidation danger due to price fluctuations between your collateral and borrow value, as they are the same picture price.</description>
@@ -97,10 +118,10 @@ You can add the borrowed algo to the vault, thus increasing your collateral and 
     
     <item>
       <title>Is It Algorand&#39;s Birthday? ...dot com</title>
-      <link>https://d13.co/posts/isitalgorandsbirthday/</link>
+      <link>/isitalgorandsbirthday/</link>
       <pubDate>Wed, 01 Jun 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/isitalgorandsbirthday/</guid>
+      <guid>/isitalgorandsbirthday/</guid>
       <description>To celebrate Algorand MainNet&#39;s third birthday on the 11th of June 2022, we set up a mini-project consisting of a countdown timer to the big day: is it algorands birthday dot com and a midi project that will be revealed there on Algorand&#39;s big day.
 We picked June 11 from Block Zero&#39;s timestamp on MainNet:
 &amp;quot;2019-06-11T00:00:00Z&amp;quot;
@@ -109,20 +130,20 @@ At midnight the countdown will transition to a web2.0 celebration extravaganza. 
     
     <item>
       <title>Algod-Loadb: An aware Algod HTTP Load Balancer</title>
-      <link>https://d13.co/posts/algod-loadb-an-aware-algod-http-load-balancer/</link>
+      <link>/algod-loadb-an-aware-algod-http-load-balancer/</link>
       <pubDate>Mon, 25 Apr 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/algod-loadb-an-aware-algod-http-load-balancer/</guid>
+      <guid>/algod-loadb-an-aware-algod-http-load-balancer/</guid>
       <description>So you want to do High Availability Algorand stuff. But algod, your trusty portal to and from the Algorand blockchain, can betray you in a number of ways:
 It can go down for upgrades. algod must be up to date to keep syncing. It is recommended to set up a cron job to attempt to update algod every day. This will usually include some downtime ~we\ think~ It can go down for not upgrading.</description>
     </item>
     
     <item>
       <title>Our very own community space: /r/D13</title>
-      <link>https://d13.co/posts/our-very-own-community-space-r-d13/</link>
+      <link>/our-very-own-community-space-r-d13/</link>
       <pubDate>Tue, 19 Apr 2022 02:18:38 +0000</pubDate>
       
-      <guid>https://d13.co/posts/our-very-own-community-space-r-d13/</guid>
+      <guid>/our-very-own-community-space-r-d13/</guid>
       <description>As we&#39;re launching our first Algorand product soon, we wanted to have a space where people can reach out and talk to us.
 We were a bit surprised to find that /r/D13 was available as a subreddit! We promptly claimed it and are in the process of filling it out with some content.
 If you want to ask us anything, feel free to drop by and post.
@@ -131,10 +152,10 @@ Visit our subreddit: /r/D13</description>
     
     <item>
       <title>Every AlgoFi Liquidation: Stats &amp; Data</title>
-      <link>https://d13.co/posts/algofi-liquidations-stats-data/</link>
+      <link>/algofi-liquidations-stats-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://d13.co/posts/algofi-liquidations-stats-data/</guid>
+      <guid>/algofi-liquidations-stats-data/</guid>
       <description>Following a positive response to a reddit post I made about the need for an AlgoFi borrow utilization &amp;amp; liquidation notification service, Hellen and I started looking into AlgoFi blockchain data relating to lending &amp;amp; liquidations. We prepared a nice spreadsheet with every single liquidation, as well as some nice stats.
 What&#39;s a liquidation? When you take a loan out on AlgoFi, if your collateral&#39;s value drops to be worth less than your maximum allowed borrow value*, your account can be liquidated.</description>
     </item>
