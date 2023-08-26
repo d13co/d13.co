@@ -1,6 +1,6 @@
 ---
 title: "Implementing on-chain VRF shuffle for EXA Lootbox Reveals"
-date: 2023-08-26T10:43:59+03:00
+date: 2023-08-26T10:41:59+03:00
 slug: implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals
 cover:
   image: dice.jpg
