@@ -10,18 +10,7 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 26 Aug 2023 10:44:59 +0300</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Implementing on-chain VRF shuffle for EXA Lootbox Reveals</title>
-      <link>/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</link>
-      <pubDate>Sat, 26 Aug 2023 10:44:59 +0300</pubDate>
-      
-      <guid>/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</guid>
-      <description>Following a brief partnership during CupStakes - where EXA.market was our official secondary marketplace - I was commissioned by them to implement the smart contracts that would power their rewards programme.
-As a new marketplace in the Algorand ecosystem, EXA wanted to incentivize users to trade on their platform. Users were rewarded with &amp;ldquo;Lootbox&amp;rdquo; NFTs for using the platform.
-After the lootboxes were distributed, we revealed that there were two more kinds of lootbox users could get.</description>
-    </item>
-    
+    <lastBuildDate>Fri, 31 Mar 2023 21:26:38 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MyAlgo hack: Fifth Wave - Addresses &amp; Data</title>
       <link>/myalgo-hack-fifth-wave-addresses-data/</link>
