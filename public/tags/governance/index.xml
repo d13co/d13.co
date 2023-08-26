@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Governance on D13.co</title>
+    <link>/tags/governance/</link>
+    <description>Recent content in Governance on D13.co</description>
+    <image>
+      <url>/images/logo-7-green-384-padded-doofy.png</url>
+      <link>/images/logo-7-green-384-padded-doofy.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 22 Aug 2022 21:26:38 +0000</lastBuildDate><atom:link href="/tags/governance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Algorand Governance Period 4 Whales: Known wallets &amp; Consensus participation statistics</title>
+      <link>/algorand-governance-whales-known-wallets-consensus-participation-stats/</link>
+      <pubDate>Mon, 22 Aug 2022 21:26:38 +0000</pubDate>
+      
+      <guid>/algorand-governance-whales-known-wallets-consensus-participation-stats/</guid>
+      <description>As a follow-up on our report on Voting Power Centralization in Governance Period 4 we decided to look into known addresses from the governor whale list, as well as their consensus participation status.
+In case you missed it and can&#39;t be bothered to check, we defined &amp;quot;whale wallets&amp;quot; as single-entity governors that have committed at least 1 million ALGO and are still eligible. We excluded the top governor - Folks Finance - as their vote is decided by Folks protocol users.</description>
+    </item>
+    
+    <item>
+      <title>Algorand Governance Voting Power Centralization - Period 4</title>
+      <link>/algorand-governance-voting-power-centralization-period-4/</link>
+      <pubDate>Sun, 21 Aug 2022 02:18:38 +0000</pubDate>
+      
+      <guid>/algorand-governance-voting-power-centralization-period-4/</guid>
+      <description>Overview We analyzed the top eligible wallets enrolled for Algorand Governance Period 4 as of August 21, 2022. The data shows a very &amp;quot;whale&amp;quot; heavy distribution of voting power and rewards, where the top 37 individual &amp;quot;whale&amp;quot; wallets control the vote and reap 50% of rewards, and wallets with over 1 million ALGO commitment control 86% of the vote and rewards.
+Data Sources To get our raw data, we used two different data sources and correlated them to confirm correctness:</description>
+    </item>
+    
+    <item>
+      <title>AlgoFi vault reward performance for Governance period 3</title>
+      <link>/algofi-vault-reward-performance-for-governance-period-3/</link>
+      <pubDate>Mon, 04 Jul 2022 02:18:38 +0000</pubDate>
+      
+      <guid>/algofi-vault-reward-performance-for-governance-period-3/</guid>
+      <description>TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than 2x in governance rewards profit.
+For the third Governance season we tried the AlgoFi vault for Governance: AlgoFi counts vaulted Algo as collateral that you can borrow against. Borrowing Algo against your vaulted algo has two advantages:
+You can add the borrowed algo to the vault, thus increasing your collateral and ability to borrow more Algo. You are not exposed to liquidation danger due to price fluctuations between your collateral and borrow value, as they are the same picture price.</description>
+    </item>
+    
+  </channel>
+</rss>
