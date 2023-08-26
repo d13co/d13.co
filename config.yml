@@ -4,7 +4,7 @@ title: D13.co
 theme: PaperMod
 enableRobotsTXT: true
 buildDrafts: false
-buildFuture: false
+buildFuture: true
 buildExpired: false
 pygmentsUseClasses: true
 minify:
