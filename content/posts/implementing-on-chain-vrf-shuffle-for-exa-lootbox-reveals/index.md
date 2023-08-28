@@ -12,7 +12,7 @@ As a new marketplace in the Algorand ecosystem, EXA wanted to incentivize users 
 
 After the lootboxes were distributed, we revealed that there were two more kinds of lootbox users could get. By merging 3 of their original (level 1) lootboxes they could get a [level 2 lootbox](https://explorer.perawallet.app/assets/1108385957/), and by merging 3 of their level 2 lootboxes they would get a [level 3 lootbox](https://explorer.perawallet.app/assets/1108387538/). This "merge" was performed by the first smart contract I developed for EXA.
 
-## Levels and levels
+## Lootbox levels
 
 The mechanics of the higher level lootbox were not explicitly outlined at the time, but the implication was:
 
