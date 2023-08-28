@@ -6,7 +6,7 @@ cover:
   image: dice.jpg
 ---
 
-Following a brief partnership during [CupStakes](https://cupstakes.world) - where [EXA.market](https://exa.market/) was our official secondary marketplace - they commissioned me to implement the smart contracts that would power their [rewards programme](https://exa.market/rewards).
+Following a brief partnership during [CupStakes](https://cupstakes.world) - where [EXA.market](https://exa.market/) was our official secondary marketplace - they commissioned me to implement the smart contracts that would power their [rewards program](https://exa.market/rewards).
 
 As a new marketplace in the Algorand ecosystem, EXA wanted to incentivize users to trade on their platform. Users were rewarded with ["Lootbox" NFTs](https://explorer.perawallet.app/assets/1003527093/) for using the platform.
 
