@@ -1,5 +1,6 @@
 ---
 title: "Implementing an on-chain VRF shuffle for EXA Lootbox Reveals"
+description: "Discussing challenges and considerations in implementing a fair VRF-backed shuffle for the EXA Lootbox rewards program on Algorand"
 date: 2023-08-28T18:58:00+03:00
 slug: implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals
 cover:

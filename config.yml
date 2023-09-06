@@ -1,3 +1,4 @@
+baseURL: https://d13.co/
 languageCode: en-us
 title: D13.co
 theme: PaperMod
@@ -52,6 +53,8 @@ params:
   homeInfoParams:
     Title: "D13 .co | .algo | .coop"
     Content: "Develops on Algorand."
+social:
+  twitter: d13_co
   socialIcons:
     - name: Twitter
       url: 'https://twitter.com/D13_co/'
