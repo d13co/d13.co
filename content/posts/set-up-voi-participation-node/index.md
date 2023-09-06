@@ -31,6 +31,8 @@ Codename:	jammy
 
 ## Update your software to the latest versions
 
+Run:
+
 ```bash
 sudo apt update && sudo apt-get upgrade -y && echo OK
 ```
@@ -45,7 +47,7 @@ OK
 
 ## Enable automatic software upgrades
 
-This will keep your node software up to date:
+Run this, which will keep your node software up to date:
 
 ```bash
 sudo systemctl start unattended-upgrades && sudo systemctl enable unattended-upgrades
@@ -62,10 +64,10 @@ Executing: /lib/systemd/systemd-sysv-install enable unattended-upgrades
 
 ### Set up repository
 
-Run the following commands to download some requirements and add the algorand repository, from which you will be getting your node software and its updates:
+1. Run the following commands to download some requirements and add the algorand repository, from which you will be getting your node software and its updates:
 
 ```bash
-sudo apt install -y gnupg2 curl software-properties-common
+sudo apt install -y jq gnupg2 curl software-properties-common
 curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc
 sudo add-apt-repository "deb [arch=amd64] https://releases.algorand.com/deb/ stable main"
 ```
@@ -82,11 +84,11 @@ Adding repository.
 Press [ENTER] to continue or Ctrl-c to cancel.
 ```
 
-As the prompt indicates, press `ENTER` to continue.
+2. As the prompt indicates, press `ENTER` to continue.
 
 ### Install the node
 
-Run this command to install the node:
+1. Run this command to install the node:
 
 ```bash
 sudo apt update && sudo apt install -y algorand && echo OK
@@ -216,7 +218,6 @@ and
 Run the following command:
 
 ```bash
-sudo apt install -y jq &&\
 goal node catchup $(curl -s https://testnet-api.voi.nodly.io/v2/status|jq -r '.["last-catchpoint"]') &&\
 echo OK
 ```
@@ -261,9 +262,9 @@ Run this command and wait until the "Catchpoint" lines disappear:
 goal node status -w 1000
 ```
 
-When the catchpoint lines disappear and you can see the "Last committed block" value increasing roughly every 3-4 seconds, you can stop this with `Ctrl+C`
+When the checkpoint lines disappear, wait for "Sync Time" to be `0.0s`
 
-You are now all synced up!
+After this you can exit the status command with `Ctrl+C`. You are now all synced up!
 
 # Participation
 
