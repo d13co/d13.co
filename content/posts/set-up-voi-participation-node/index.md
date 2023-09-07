@@ -165,8 +165,8 @@ Expected output: `OK`
 3. Rename the algorand service to voi:
 
 ```bash
-sudo cp /lib/systemd/system/algorand.service /lib/systemd/system/voi.service &&\
-sudo sed -i 's/Algorand daemon/Voi daemon/g' /lib/systemd/system/voi.service &&\
+sudo cp /lib/systemd/system/algorand.service /etc/systemd/system/voi.service &&\
+sudo sed -i 's/Algorand daemon/Voi daemon/g' /etc/systemd/system/voi.service &&\
 echo OK
 ```
 
