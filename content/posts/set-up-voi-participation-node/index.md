@@ -278,7 +278,7 @@ Run this command to create a wallet that will store your mnemonic in encrypted f
 goal wallet new voi
 ```
 
-You will be prompted to enter a password. Choose something secure & save it on paper or in a secure assword manager.
+You will be prompted to enter a password. Choose something secure & save it on paper or in a secure password manager.
 
 Expected output:
 
