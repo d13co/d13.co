@@ -331,6 +331,18 @@ dilution=$(echo "sqrt($end - $start)" | bc) &&\
 goal account addpartkey -a $addr --roundFirstValid $start --roundLastValid $end --keyDilution $dilution
 ```
 
+{{< details "ℹ️  Entered the wrong address?" >}}
+This set of scripts will remember your address for future commands (until you log out).
+
+If you entered the wrong address, you can reset it by running this command:
+
+```
+addr=""
+```
+
+Or by simply logging out and back in.
+{{< /details >}}
+
 After entering your information, it will print `Please stand by while generating keys. This might take a few minutes...`
 
 After a few minutes, you should see:
@@ -347,17 +359,35 @@ Generated with goal v3.17.0
 1. Check that you are not registered online:
 
 ```bash
-if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
+checkonline() {
+  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
+  goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
+}
+checkonline
+```
+Expected output: `You are offline.`
+
+{{< details "ℹ️  Entered the wrong address?" >}}
+This set of scripts will remember your address for future commands (until you log out).
+
+If you entered the wrong address, you can reset it by running this command:
+
+```
+addr=""
 ```
 
-Expected output: `You are offline.`
+Or by simply logging out and back in.
+{{< /details >}}
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
 ```bash
-if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-goal account changeonlinestatus -o=1 -a $addr
+getaddress() {
+  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
+}
+getaddress &&\
+goal account changeonlinestatus -a $addr -o=1 &&\
+sleep 1 &&\
 goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
 ```
 
@@ -381,18 +411,36 @@ This can be done with the following:
 1. First check that you are registered online:
 
 ```bash
-if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
+checkonline() {
+  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
+  goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
+}
+checkonline
 ```
 
 Expected output: `You are online!`
 
+{{< details "ℹ️  Entered the wrong address?" >}}
+This set of scripts will remember your address for future commands (until you log out).
+
+If you entered the wrong address, you can reset it by running this command:
+
+```
+addr=""
+```
+
+Or by simply logging out and back in.
+{{< /details >}}
+
 2. Send a transaction to mark your account as offline:
 
 ```bash
-if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-goal account changeonlinestatus -a $addr -o=0
-sleep 1
+getaddress() {
+  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
+}
+getaddress &&\
+goal account changeonlinestatus -a $addr -o=0 &&\
+sleep 1 &&\
 goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
 ```
 
