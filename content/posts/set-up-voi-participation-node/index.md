@@ -7,6 +7,21 @@ This article will guide you through setting up a Voi participation node on the l
 
 If you already have an Algorand node running, check back later for an upcoming article on co-hosting nodes.
 
+{{< details "🪙 &nbsp;You will need to have some $VOI balance to complete this guide." >}}
+
+You will need $VOI because:
+
+- Transacting on the VOI network requires a small fee (0.001 $VOI)
+- Participating in consensus is proportional to your balance
+
+The last step of this guide includes "going online", i.e. registering to participate in consensus. This is an on-chain transaction that costs 0.001 $VOI.
+
+If you do not have $VOI yet, you can still complete all steps until that point while you wait to get some $VOI.
+
+You should church out the [Voi Discord](https://discord.gg/ZjAc4rSkgq) to find out how to get some.
+
+{{</ details >}}
+
 {{< callout emoji="ℹ️" text="Code blocks can be copied for your convenience." >}}
 
 ## Check your version
@@ -378,6 +393,8 @@ addr=""
 
 Or by simply logging out and back in.
 {{< /details >}}
+
+{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, reach out on the [Voi Discord](https://discord.gg/ZjAc4rSkgq). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
