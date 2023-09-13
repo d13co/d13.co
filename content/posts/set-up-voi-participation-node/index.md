@@ -20,7 +20,7 @@ The last step of this guide includes "going online", i.e. registering to partici
 
 If you do not have $VOI yet, you can still complete all steps until that point while you wait to get some $VOI.
 
-You should church out the [Voi Discord](https://discord.gg/ZjAc4rSkgq) to find out how to get some.
+You should church out the [Voi Discord](#join-the-node-runners-channel) to find out how to get some.
 
 {{</ details >}}
 
@@ -278,7 +278,7 @@ Genesis ID: voitest-v1
 Genesis hash: IXnoWtviVVJW5LGivNFc0Dq14V3kqaXuK2u5OQrdVZo=
 ```
 
-If this does not happen, start over from the start of this section ("Fast catchup with the network") or seek help on the [Voi Discord](https://discord.gg/ZjAc4rSkgq).
+If this does not happen, start over from the start of this section ("Fast catchup with the network") or seek help on the [Voi Discord](#join-the-node-runners-channel).
 
 If it does, it means that your node is processing a fast catchup to the latest state, which can save a lot of time.
 
@@ -298,12 +298,26 @@ After this you can exit the status command with `Ctrl+C`. You are now all synced
 
 You can optionally enable node telemetry which will report stats and errors in order to detect issues and improve the blockchain.
 
-The following command will enable telemetry and restart the voi service.
+The following command will attach a friendly name to your telemetry. Replace "XXX" with your desired name, something like your NFD or nickname.
+
+```bash
+sudo ALGORAND_DATA=/var/lib/algorand diagcfg telemetry name -n XXX
+```
+
+Then you can enable telemetry and restart the voi service with this command:
 
 ```bash
 sudo ALGORAND_DATA=/var/lib/algorand diagcfg telemetry enable &&\
 sudo systemctl restart voi
 ```
+
+# Join the node runners channel
+
+To access the `#node-runners` channel on the Voi Discord, you need to:
+
+1) [Join the server and visit the #roles](https://discord.gg/hSDwR7Avsm) channel.
+2) Emote with a running emoji 🏃 to the message there.
+3) You should be able to access the [#node-runners](https://discord.gg/ZjAc4rSkgq) channel.
 
 # Participation
 
@@ -418,7 +432,7 @@ addr=""
 Or by simply logging out and back in.
 {{< /details >}}
 
-{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, reach out on the [Voi Discord](https://discord.gg/ZjAc4rSkgq). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
+{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
@@ -496,6 +510,21 @@ Transaction 5KYUOGQYKTVPN5RBFFKDNMYUIQZY5RK5VQIMEDZDE2FPIB32M3OA committed in ro
 You are offline.
 ```
 
+# Monitoring
+
+There is a [simple monitoring interface](https://cswenor.github.io/voi-proposer-data/24.html) where you can see how your node has performed over the past 24 hours.
+
+**It may take a while to have your participating address listed there** depending on your Voi balance.
+
+The important fields to look out for are:
+
+- q05Latency
+  - Lower is better
+- avgPctOnTime (Average percent on time)
+  - Higher is better
+
+The target for avgPctOnTime is over 90%, ideally close to 99%.
+
 # Fin
 
-That is it for now. Stay tuned for updates to this guide via the [Voi Discord](https://discord.gg/ZjAc4rSkgq).
+That is it for now. Stay tuned for updates to this guide via the [Voi Discord](#join-the-node-runners-channel).
