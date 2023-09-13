@@ -294,6 +294,17 @@ When the checkpoint lines disappear, wait for "Sync Time" to be `0.0s`
 
 After this you can exit the status command with `Ctrl+C`. You are now all synced up!
 
+## [Optional] Enable Telemetry
+
+You can optionally enable node telemetry which will report stats and errors in order to detect issues and improve the blockchain.
+
+The following command will enable telemetry and restart the voi service.
+
+```bash
+sudo ALGORAND_DATA=/var/lib/algorand diagcfg telemetry enable &&\
+sudo systemctl restart voi
+```
+
 # Participation
 
 This part of the guide will walk you through adding an address via mnemonic to your node, generating participation keys and going online.
