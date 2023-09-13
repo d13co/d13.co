@@ -53,8 +53,12 @@ params:
   homeInfoParams:
     Title: "D13 .co | .algo | .coop"
     Content: "Develops on Algorand."
-social:
-  twitter: d13_co
+  editPost:
+    URL: 'https://github.com/d13co/d13.co/tree/main/content'
+    Text: Suggest Changes
+    appendFilePath: true
+  social:
+    twitter: d13_co
   socialIcons:
     - name: Twitter
       url: 'https://twitter.com/D13_co/'
@@ -64,10 +68,6 @@ social:
     hidden: false
     hiddenInList: false
     hiddenInSingle: false
-  editPost:
-    URL: 'https://github.com/d13co/d13.co/tree/main/content'
-    Text: Suggest Changes
-    appendFilePath: true
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true

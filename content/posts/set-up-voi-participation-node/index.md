@@ -1,6 +1,8 @@
 ---
 title: "Set Up Voi Participation Node on Ubuntu 22.04"
 date: 2023-09-06T08:19:15+05:00
+cover:
+  image: voi.png
 ---
 
 This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively.
@@ -23,6 +25,17 @@ You should church out the [Voi Discord](https://discord.gg/ZjAc4rSkgq) to find o
 {{</ details >}}
 
 {{< callout emoji="ℹ️" text="Code blocks can be copied for your convenience." >}}
+
+## Hardware Requirements
+
+You will need the following specs for your participation node:
+
+- CPU with 8 **threads** (4 core / 8 thread is fine)
+- 16 GB RAM
+- 100 GB NVMe SSD or equivalent
+- 100 Mbps connection minimum 
+  - Ideally: 1 Gbps connection with low latency
+  - Must be always online
 
 ## Check your version
 
