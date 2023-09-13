@@ -20,7 +20,7 @@ The last step of this guide includes "going online", i.e. registering to partici
 
 If you do not have $VOI yet, you can still complete all steps until that point while you wait to get some $VOI.
 
-You should church out the [Voi Discord](#join-the-node-runners-channel) to find out how to get some.
+You can complete [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) to request some $VOI.
 
 {{</ details >}}
 
@@ -432,7 +432,7 @@ addr=""
 Or by simply logging out and back in.
 {{< /details >}}
 
-{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
+{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) and reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
