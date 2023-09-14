@@ -441,7 +441,7 @@ addr=""
 Or by simply logging out and back in.
 {{< /details >}}
 
-{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) and reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://app.dappflow.org/setup-config?name=Voi%20testnet&algod_url=https://testnet-api.voi.nodly.io&indexer_url=https://testnet-idx.voi.nodly.io&redirect=/explorer)." >}}
+{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) and reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://voi.observer/)." >}}
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
