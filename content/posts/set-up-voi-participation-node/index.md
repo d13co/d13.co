@@ -311,6 +311,15 @@ sudo ALGORAND_DATA=/var/lib/algorand diagcfg telemetry enable &&\
 sudo systemctl restart voi
 ```
 
+{{< details "🧠 Pro tip: Reduced logging interferes with telemetry" >}}
+If you have manually disabled or reduced logging on your node, telemetry will not work.
+
+Your `config.json` must have `BaseLoggerDebugLevel` set to `4` (or not set at all.)
+
+If you are following this guide without modifications, you can ignore this tip.
+{{< /details >}}
+
+
 # Join the node runners channel
 
 To access the `#node-runners` channel on the Voi Discord, you need to:
