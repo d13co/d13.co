@@ -3,6 +3,7 @@ title: "Set Up Voi Participation Node on Ubuntu 22.04"
 date: 2023-09-06T08:19:15+05:00
 cover:
   image: voi.png
+ShowToc: true
 ---
 
 This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively.
@@ -380,7 +381,7 @@ Would you like to see it now? (Y/n):
 
 You will then be prompted to view your backup seed phrase. Press `Y` and `ENTER` to view it. Save it somewhere securely.
 
-## Add your participating address mnemonic
+## Create or import your participating address
 
 In this step you can import your Voi account mnemonic on your node. You can either create a new account, or import an existing one.
 
