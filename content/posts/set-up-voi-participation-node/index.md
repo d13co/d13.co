@@ -332,15 +332,35 @@ To access the `#node-runners` channel on the Voi Discord, you need to:
 
 This part of the guide will walk you through adding an address via mnemonic to your node, generating participation keys and going online.
 
-## Create a node wallet
+## Create a node wallet container
 
-Run this command to create a wallet that will store your mnemonic in encrypted form:
+The current recommendation is to use your node to sign transactions that will take your account online (participating) or offline (not participating.)
+
+For this you will need to create an encrypted container ("wallet") that is secured by a password. **Your seed phrase(s) will be encrypted with this password, so pick something long and unpredictable.** In the event that your node is compromised, this password will be all that stands between the attacker and your seed phrases.
+
+You will need to enter this password whenever you need to sign transactions on your node.
+
+{{< details "🧠 Pro tip: How to generate a random 12 character password on your node" >}}
+
+You can generate a random 12 character password on your node with this command:
+
+```
+tr -dc A-Z0-9 </dev/urandom | head -c 12 ; echo ''
+```
+
+You can then use this password in the next step.
+
+Make sure to save this either on paper or in a password manager.
+
+{{< /details >}}
+
+When you have decided on a very strong password, run this command to create the encrypted wallet container:
 
 ```bash
 goal wallet new voi
 ```
 
-You will be prompted to enter a password. Choose something secure & save it on paper or in a secure password manager.
+You will be prompted to enter a password. Note the warnings above and enter one.
 
 Expected output:
 
@@ -358,7 +378,58 @@ You will then be prompted to view your backup seed phrase. Press `Y` and `ENTER`
 
 ## Add your participating address mnemonic
 
-Run:
+In this step you can import your Voi account mnemonic on your node. You can either create a new account, or import an existing one.
+
+{{< callout emoji="⚠️" text="**We strongly recommend creating a new account for Voi.** If you use an account that exists on Algorand, a potential compromise would affect you on both networks." >}}
+
+Choose your preferred method and expand it to view the instructions. You only need to do one of these.
+
+{{< details "**To create a new account, expand this section.**" >}}
+
+### Step 1
+
+You can create a new account in the container you just created with the following command:
+
+```
+goal account new
+```
+
+You will be prompted for your wallet container password that you created earlier.
+
+Expected output: 
+
+```
+Please enter the password for wallet 'voi':
+Created new account with address AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+```
+
+Copy the newly created address, as we will use it in the next step.
+
+### Step 2
+
+To display your new account's mnemonic, use this command:
+
+```
+echo -ne "\nEnter your voi address: " && read addr &&\
+goal account export -a $addr
+```
+
+It will prompt you for 1) the address generated in step 1, and 2) the password you created earlier. Expected output: 
+
+`Enter your voi address:`
+
+`Please enter the password for wallet 'voi':`
+
+`Exported key for account AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: "crystal sing shy patient toddler lady crouch frown salmon toilet token educate leader comic ignore harvest strike holiday twist pulse better result beyond absorb come"`
+
+Save this mnemonic securely. A paper backup or a password manager are good options.
+
+Great! You can now proceed to [generating your participation keys](#generate-your-participation-keys)
+
+{{< /details >}}
+
+{{<details "**To import an existing account using its mnemonic, expand this section.**" >}}
+Run this command:
 
 ```bash
 goal account import
@@ -373,6 +444,7 @@ apple apple apple apple ...
 ```
 
 It should output `Imported [YOUR ADDRESS]`
+{{< /details >}}
 
 ## Generate your participation keys
 
@@ -380,11 +452,14 @@ Run this set of commands to generate the participation keys for your account.
 
 It will prompt for:
 
-1) your Voi address (that you entered above) and 
+1) your Voi address (in some cases) and
 2) the participation duration, defaulting to 2M rounds (77 days at 3.3 second rounds.) Press ENTER to accept that. 
 
 ```bash
-echo -ne "\nEnter your voi address: " && read addr &&\
+getaddress() {
+  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
+}
+getaddress &&\
 echo -ne "\nEnter duration in rounds [press ENTER to accept default (2M)]: " && read duration &&\
 start=$(goal node status | grep "Last committed block:" | cut -d\  -f4) &&\
 duration=${duration:-2000000} &&\
