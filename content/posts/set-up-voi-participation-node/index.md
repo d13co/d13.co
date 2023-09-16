@@ -298,6 +298,8 @@ After this you can exit the status command with `Ctrl+C`. You are now all synced
 
 You can optionally enable node telemetry which will report stats and errors in order to detect issues and improve the blockchain.
 
+{{< callout emoji="ℹ️" text="**The initial node runners seed/airdrop will depend on telemetry data**. If you want to receive it, you need to enable telemetry. Beyond that, block rewards will _not_ depend on telemetry being enabled." >}}
+
 The following command will attach a friendly name to your telemetry. Replace "XXX" with your desired name, something like your NFD or nickname.
 
 ```bash
@@ -310,6 +312,8 @@ Then you can enable telemetry and restart the voi service with this command:
 sudo ALGORAND_DATA=/var/lib/algorand diagcfg telemetry enable &&\
 sudo systemctl restart voi
 ```
+
+You can check if the telemetry is working correctly by checking the `Node Health` section of the [Monitoring](#monitoring) web interface.
 
 {{< details "🧠 Pro tip: Reduced logging interferes with telemetry" >}}
 If you have manually disabled or reduced logging on your node, telemetry will not work.
@@ -608,6 +612,18 @@ The important fields to look out for are:
   - Higher is better
 
 The target for avgPctOnTime is over 90%, ideally close to 99%.
+
+---
+
+If you have enabled telemetry, statistics for the health of your node will be shown on the [health page](https://cswenor.github.io/voi-proposer-data/health.html) of the monitoring interface.
+
+The important fields to look out for are:
+
+- livenessScore
+- votingScore
+- networkScore
+
+They all range from 0 (worst) to 1 (best).
 
 # Fin
 
