@@ -4,4 +4,6 @@
   mix-blend-mode: difference;
 }
 
-
+body.dark code {
+  border: 1px rgba(255,255,255,0.5) dotted;
+}
