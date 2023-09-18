@@ -379,7 +379,8 @@ Keeping this backup phrase safe is extremely important.
 Would you like to see it now? (Y/n):
 ```
 
-You will then be prompted to view your backup seed phrase. Press `Y` and `ENTER` to view it. Save it somewhere securely.
+You will then be prompted to view your backup seed phrase. Press `Y` and `ENTER` to view it. 
+**Save it somewhere securely.**
 
 ## Create or import your participating address
 
