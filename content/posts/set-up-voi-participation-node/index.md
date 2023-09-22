@@ -4,6 +4,7 @@ date: 2023-09-06T08:19:15+05:00
 cover:
   image: voi.png
 ShowToc: true
+ShowReadingTime: true
 ---
 
 This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively.
@@ -473,7 +474,7 @@ dilution=$(echo "sqrt($end - $start)" | bc) &&\
 goal account addpartkey -a $addr --roundFirstValid $start --roundLastValid $end --keyDilution $dilution
 ```
 
-{{< details "ℹ️  Entered the wrong address?" >}}
+{{< details "ℹ️  Error? Entered the wrong address?" >}}
 This set of scripts will remember your address for future commands (until you log out).
 
 If you entered the wrong address, you can reset it by running this command:
@@ -483,6 +484,8 @@ addr=""
 ```
 
 Or by simply logging out and back in.
+
+Then you can try again.
 {{< /details >}}
 
 After entering your information, it will print `Please stand by while generating keys. This might take a few minutes...`
