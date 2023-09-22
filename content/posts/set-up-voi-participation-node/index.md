@@ -512,7 +512,7 @@ checkonline
 ```
 Expected output: `You are offline.`
 
-{{< details "ℹ️  Entered the wrong address?" >}}
+{{< details "ℹ️  Error? Entered the wrong address?" >}}
 This set of scripts will remember your address for future commands (until you log out).
 
 If you entered the wrong address, you can reset it by running this command:
@@ -522,7 +522,10 @@ addr=""
 ```
 
 Or by simply logging out and back in.
+
+Then you can try again.
 {{< /details >}}
+
 
 {{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) and reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://voi.observer/)." >}}
 
@@ -567,7 +570,7 @@ checkonline
 
 Expected output: `You are online!`
 
-{{< details "ℹ️  Entered the wrong address?" >}}
+{{< details "ℹ️  Error? Entered the wrong address?" >}}
 This set of scripts will remember your address for future commands (until you log out).
 
 If you entered the wrong address, you can reset it by running this command:
@@ -577,7 +580,10 @@ addr=""
 ```
 
 Or by simply logging out and back in.
+
+Then you can try again.
 {{< /details >}}
+
 
 2. Send a transaction to mark your account as offline:
 
