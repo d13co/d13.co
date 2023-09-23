@@ -97,7 +97,7 @@ Executing: /lib/systemd/systemd-sysv-install enable unattended-upgrades
 1. Run the following commands to download some requirements and add the algorand repository, from which you will be getting your node software and its updates:
 
 ```bash
-sudo apt install -y jq gnupg2 curl software-properties-common
+sudo apt install -y jq bc gnupg2 curl software-properties-common
 curl -o - https://releases.algorand.com/key.pub | sudo tee /etc/apt/trusted.gpg.d/algorand.asc
 sudo add-apt-repository "deb [arch=amd64] https://releases.algorand.com/deb/ stable main"
 ```
