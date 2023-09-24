@@ -22,11 +22,13 @@ The last step of this guide includes "going online", i.e. registering to partici
 
 If you do not have $VOI yet, you can still complete all steps until that point while you wait to get some $VOI.
 
-You can complete [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) to request some $VOI.
+You can get 1 VOI to participate by running the command `/voi-testnet-faucet` on `#node-runners` on the [Voi Discord](#join-the-node-runners-channel).
 
 {{</ details >}}
 
 {{< callout emoji="ℹ️" text="Code blocks can be copied for your convenience." >}}
+
+
 
 ## Hardware Requirements
 
@@ -38,6 +40,8 @@ You will need the following specs for your participation node:
 - 100 Mbps connection minimum 
   - Ideally: 1 Gbps connection with low latency
   - Must be always online
+
+
 
 ## Check your version
 
@@ -59,6 +63,8 @@ Codename:	jammy
 
 20.04 should also work.
 
+
+
 ## Update your software to the latest versions
 
 Run:
@@ -75,6 +81,8 @@ Expected output:
 OK
 ```
 
+
+
 ## Enable automatic software upgrades
 
 Run this, which will keep your node software up to date:
@@ -89,6 +97,8 @@ Expected output:
 Synchronizing state of unattended-upgrades.service with SysV service script with /lib/systemd/systemd-sysv-install.
 Executing: /lib/systemd/systemd-sysv-install enable unattended-upgrades
 ```
+
+
 
 ## Install Algorand node software
 
@@ -151,7 +161,9 @@ sudo systemctl stop algorand && sudo systemctl disable algorand && echo OK
 
 Expected output: `OK`
 
-## Set up your shell to run goal
+
+
+### Set up your shell to run goal
 
 Run this command to help `goal` run properly on your shell:
 
@@ -159,13 +171,17 @@ Run this command to help `goal` run properly on your shell:
 echo -e "\nexport ALGORAND_DATA=/var/lib/algorand/" >> ~/.bashrc && source ~/.bashrc && echo OK
 ```
 
-## Set up your user
+
+
+### Set up your user
 
 ```bash
 sudo adduser $(whoami) algorand && echo OK
 ```
 
 Expected last line of output: `OK`
+
+
 
 ## Configure your node for voi
 
@@ -211,7 +227,9 @@ sudo systemctl start voi && sudo systemctl enable voi && echo OK
 
 Expected last line of output: `OK`
 
-## Check your status
+
+
+### Check your status
 
 Check the status of your node with the following command:
 
@@ -242,7 +260,9 @@ and
 
 `Genesis hash: IXnoWtviVVJW5LGivNFc0Dq14V3kqaXuK2u5OQrdVZo=`
 
-## Fast catch up with the network
+
+
+### Fast catch up with the network
 
 Run the following command:
 
@@ -283,7 +303,7 @@ If this does not happen, start over from the start of this section ("Fast catchu
 
 If it does, it means that your node is processing a fast catchup to the latest state, which can save a lot of time.
 
-### Wait for fast catchup to complete
+#### Wait for fast catchup to complete
 
 Run this command and wait until the "Catchpoint" lines disappear:
 
@@ -295,7 +315,9 @@ When the checkpoint lines disappear, wait for "Sync Time" to be `0.0s`
 
 After this you can exit the status command with `Ctrl+C`. You are now all synced up!
 
-## [Optional] Enable Telemetry
+
+
+### [Optional] Enable Telemetry
 
 You can optionally enable node telemetry which will report stats and errors in order to detect issues and improve the blockchain.
 
@@ -325,7 +347,7 @@ If you are following this guide without modifications, you can ignore this tip.
 {{< /details >}}
 
 
-# Join the node runners channel
+## Join the node runners channel
 
 To access the `#node-runners` channel on the Voi Discord, you need to:
 
@@ -333,11 +355,15 @@ To access the `#node-runners` channel on the Voi Discord, you need to:
 2) Emote with a running emoji 🏃 to the message there.
 3) You should be able to access the [#node-runners](https://discord.gg/ZjAc4rSkgq) channel.
 
-# Participation
+You can get 1 VOI to participate by running the command `/voi-testnet-faucet` in the `#node-runners` channel.
+
+## Participation
 
 This part of the guide will walk you through adding an address via mnemonic to your node, generating participation keys and going online.
 
-## Create a node wallet container
+
+
+### Create a node wallet container
 
 The current recommendation is to use your node to sign transactions that will take your account online (participating) or offline (not participating.)
 
@@ -381,7 +407,9 @@ Would you like to see it now? (Y/n):
 
 You will then be prompted to view your backup seed phrase. Press `Y` and `ENTER` to view it. Save it somewhere securely.
 
-## Create or import your participating address
+
+
+### Create or import your participating address
 
 In this step you can import your Voi account mnemonic on your node. You can either create a new account, or import an existing one.
 
@@ -391,7 +419,7 @@ Choose your preferred method and expand it to view the instructions. You only ne
 
 {{< details "**To create a new account, expand this section.**" >}}
 
-### Step 1
+#### Step 1
 
 You can create a new account in the container you just created with the following command:
 
@@ -410,7 +438,9 @@ Created new account with address AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 
 Copy the newly created address, as we will use it in the next step.
 
-### Step 2
+---
+
+#### Step 2
 
 To display your new account's mnemonic, use this command:
 
@@ -451,21 +481,20 @@ apple apple apple apple ...
 It should output `Imported [YOUR ADDRESS]`
 {{< /details >}}
 
-## Generate your participation keys
+
+
+### Generate your participation keys
 
 Run this set of commands to generate the participation keys for your account.
 
 It will prompt for:
 
 1) your Voi address (in some cases) and
-2) the participation duration, defaulting to 2M rounds (77 days at 3.3 second rounds.) Press ENTER to accept that. 
+2) the participation duration, defaulting to 2000000 rounds (77 days at 3.3 second rounds.) Press ENTER to accept that. 
 
 ```bash
-getaddress() {
-  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-}
-getaddress &&\
-echo -ne "\nEnter duration in rounds [press ENTER to accept default (2M)]: " && read duration &&\
+{{< getaddress >}}getaddress &&\
+echo -ne "\nEnter duration in rounds [press ENTER to accept default)]: " && read duration &&\
 start=$(goal node status | grep "Last committed block:" | cut -d\  -f4) &&\
 duration=${duration:-2000000} &&\
 end=$((start + duration)) &&\
@@ -474,17 +503,13 @@ goal account addpartkey -a $addr --roundFirstValid $start --roundLastValid $end 
 ```
 
 {{< details "ℹ️  Error? Entered the wrong address?" >}}
-This set of scripts will remember your address for future commands (until you log out).
+If you see an error containing the words `value too great for base`, then you entered extra characters in the duration value.
 
-If you entered the wrong address, you can reset it by running this command:
+Enter the number exactly without separators or suffixes like `M`, `K`, etc. Example: `2000000`
 
-```
-addr=""
-```
+---
 
-Or by simply logging out and back in.
-
-Then you can try again.
+{{< wrongaddress >}}
 {{< /details >}}
 
 After entering your information, it will print `Please stand by while generating keys. This might take a few minutes...`
@@ -496,51 +521,48 @@ Participation key generation successful. Participation ID: CJOZKSLXZUNEPPOFLRU7J
 Generated with goal v3.17.0
 ```
 
-## Register to go online
+Your node is almost ready to register online and start participating in consensus. One more step to go!
 
-{{< callout emoji="⚠️" text="**Whenever you intend to take your node offline, make sure to register offline first** (next section). Being registered to participate without a node running actively harms the network." >}}
 
-1. Check that you are not registered online:
 
-```bash
-checkonline() {
-  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-  goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
-}
-checkonline
+### Check your participation status
+
+Before and after performing key registration (online/offline) transactions, you may find it useful to check your account's participation status with this command:
+
 ```
-Expected output: `You are offline.`
+{{< getaddress >}}getaddress &&\
+goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
+```
 
 {{< details "ℹ️  Error? Entered the wrong address?" >}}
-This set of scripts will remember your address for future commands (until you log out).
-
-If you entered the wrong address, you can reset it by running this command:
-
-```
-addr=""
-```
-
-Or by simply logging out and back in.
-
-Then you can try again.
+{{< wrongaddress >}}
 {{< /details >}}
 
 
-{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, fill out [this form](https://docs.google.com/forms/d/e/1FAIpQLSehNL0nNP0mtIXK5j615vxQtzz6QQpYUKHTVN4irN6YpHjXfg/viewform) and reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://voi.observer/)." >}}
+If you are online (participating in consensus) this should output `You are online!`. Otherwise, it will output `You are offline.`.
+
+
+
+### Register to go online
+
+{{< callout emoji="⚠️" text="**Whenever you intend to take your node offline, make sure to register offline first** (next section). Being registered to participate without a node running actively harms the network." >}}
+
+{{< callout emoji="🪙" text="You will need some $VOI to complete this step. If you do not have any, reach out on the [Voi Discord](#join-the-node-runners-channel). You can check your balance on the [Explorer](https://voi.observer/)." >}}
+
+1. Check that you are not registered online using the command in the [previous section](#check-your-participation-status). The output should be `You are offline.`.
+
 
 2. You can register your account as participating in the Voi consensus with the following command: 
 
+
 ```bash
-getaddress() {
-  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-}
-getaddress &&\
+{{< getaddress >}}getaddress &&\
 goal account changeonlinestatus -a $addr -o=1 &&\
 sleep 1 &&\
 goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
 ```
 
-You will see a prompt for your wallet password. After you enter it, you should see the following:
+You will see a prompt for your address (unless you entered it earlier) and your wallet password. After you enter it, you should see the following:
 
 ```text
 Please enter the password for wallet 'voi': 
@@ -551,46 +573,20 @@ Transaction 5KYUOGQYKTVPN5RBFFKDNMYUIQZY5RK5VQIMEDZDE2FPIB32M3OA committed in ro
 You are online!
 ```
 
-## Register to go offline
+
+
+### Register to go offline
 
 If you need to stop your participation node, you must register your account as offline.
 
 This can be done with the following:
 
-1. First check that you are registered online:
-
-```bash
-checkonline() {
-  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-  goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
-}
-checkonline
-```
-
-Expected output: `You are online!`
-
-{{< details "ℹ️  Error? Entered the wrong address?" >}}
-This set of scripts will remember your address for future commands (until you log out).
-
-If you entered the wrong address, you can reset it by running this command:
-
-```
-addr=""
-```
-
-Or by simply logging out and back in.
-
-Then you can try again.
-{{< /details >}}
-
+1. Check that you are not registered online using the command in the [relevant section](#check-your-participation-status). The output should be `You are online!`.
 
 2. Send a transaction to mark your account as offline:
 
 ```bash
-getaddress() {
-  if [ "$addr" == "" ]; then echo -ne "\nEnter your voi address: " && read addr; else echo ""; fi
-}
-getaddress &&\
+{{< getaddress >}}getaddress &&\
 goal account changeonlinestatus -a $addr -o=0 &&\
 sleep 1 &&\
 goal account dump -a $addr | jq -r 'if (.onl == 1) then "You are online!" else "You are offline." end'
@@ -607,33 +603,78 @@ Transaction 5KYUOGQYKTVPN5RBFFKDNMYUIQZY5RK5VQIMEDZDE2FPIB32M3OA committed in ro
 You are offline.
 ```
 
-# Monitoring
 
-There is a [simple monitoring interface](https://cswenor.github.io/voi-proposer-data/24.html) where you can see how your node has performed over the past 24 hours.
 
-**It may take a while to have your participating address listed there** depending on your Voi balance.
+### Renew your participation keys
 
-The important fields to look out for are:
+Your participation keys will expire at some point. The default values above (2 million round validity) currently correspond to 77 days. This section explains how to renew your participation keys.
 
-- q05Latency
-  - Lower is better
-- avgPctOnTime (Average percent on time)
-  - Higher is better
+You can renew your expired participation key with this command:
 
-The target for avgPctOnTime is over 90%, ideally close to 99%.
+```bash
+{{< getaddress >}}getaddress &&\
+echo -ne "\nEnter duration in rounds [press ENTER to accept default)]: " && read duration &&\
+start=$(goal node status | grep "Last committed block:" | cut -d\  -f4) &&\
+duration=${duration:-2000000} &&\
+end=$((start + duration)) &&\
+dilution=$(echo "sqrt($end - $start)" | bc) &&\
+goal account renewpartkey -a $addr --roundLastValid $end --keyDilution $dilution
+```
+
+It will:
+
+- Prompt you for your address (unless you have entered it earlier)
+- Prompt you for your desired participation key duration (just press enter to accept default - 2M / 77 days)
+- It will generate the keys (which may take a few minutes)
+- It will ask you for your wallet password, and 
+- Submit the online transaction.
+
+{{< details "❗ Possible Errors" >}}
+
+`Account already has a participation key valid at least until roundLastValid`
+
+This will happen if you try to renew your current participation key with one that expires sooner, e.g. i your current participation key expires in 1 million rounds, and your renewal is attempting to last until 500K rounds.
+
+Select a larger duration value and this error should go away.
 
 ---
 
-If you have enabled telemetry, statistics for the health of your node will be shown on the [health page](https://cswenor.github.io/voi-proposer-data/health.html) of the monitoring interface.
+`roundLastValid needs to be well after the current round`
 
-The important fields to look out for are:
+This happens if your duration is too short.
 
-- livenessScore
-- votingScore
-- networkScore
+Select a larger duration value and this error should go away.
 
-They all range from 0 (worst) to 1 (best).
+{{< /details >}}
 
-# Fin
+Expected output: _(your values will differ)_
+
+```text
+Using address: WEAKNODEZXOBMGNQ56UIBFSGYHJLFPBTGQ7LJJYQFFYCZTDZ4AMRUYYFLU
+
+Enter duration in rounds [press ENTER to accept default)]: 10000
+Please stand by while generating keys. This might take a few minutes...
+Participation key generation successful
+Please enter the password for wallet 'voi':
+Transaction id for status change transaction: TXDDH4VLD2N57Y4TAN4BSD5XUCYRUNIEBC6EL2ZZQHGTJSYGE25Q
+Transaction TXDDH4VLD2N57Y4TAN4BSD5XUCYRUNIEBC6EL2ZZQHGTJSYGE25Q still pending as of round 482881
+Transaction TXDDH4VLD2N57Y4TAN4BSD5XUCYRUNIEBC6EL2ZZQHGTJSYGE25Q still pending as of round 482882
+Transaction TXDDH4VLD2N57Y4TAN4BSD5XUCYRUNIEBC6EL2ZZQHGTJSYGE25Q committed in round 482883
+Participation key installed successfully, Participation ID: JX5GJ3ZYTJMXINMIOUNYKI6S37RPQ3JCQQR5XZ47QBPGWZPWWC5A
+
+Generated with goal v3.18.0
+```
+
+You should now be online and participating in consensus! You can check this with the status command in the ["Check your participation status"](#check-your-participation-status) section.
+
+## Monitoring
+
+A community member has set up a [monitoring interface](https://voi-node-info.boeieruurd.com/) here where you can see how your node is performing.
+
+**It may take a while to have your participating address listed there** depending on your Voi balance.
+
+Scores over 9 are very good. Scores under 5 are considered "failing".
+
+## Fin
 
 That is it for now. Stay tuned for updates to this guide via the [Voi Discord](#join-the-node-runners-channel).
