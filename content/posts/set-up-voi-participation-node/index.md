@@ -4,6 +4,7 @@ date: 2023-09-06T08:19:15+05:00
 cover:
   image: voi.png
 ShowToc: true
+TocOpen: true
 ShowReadingTime: true
 ---
 
@@ -669,7 +670,7 @@ You should now be online and participating in consensus! You can check this with
 
 ## Monitoring
 
-A community member has set up a [monitoring interface](https://voi-node-info.boeieruurd.com/) here where you can see how your node is performing.
+Community member Boeieruurd has set up a [monitoring interface](https://voi-node-info.boeieruurd.com/) here where you can see how your node is performing.
 
 **It may take a while to have your participating address listed there** depending on your Voi balance.
 
