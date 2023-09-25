@@ -87,6 +87,7 @@ You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set-up-a
 - skip the `sudo chown algorand:algorand` commands
 - skip the `sudo chmod g+w /var/lib/algorand/config.json` command
 - the `systemctl` commands need to be modified, instead of `systemctl start voi` you will need `systemctl start algorand@-home-ubuntu-node-data`
+- remove `sudo` **except for `systemctl` commands**
 
 {{< /details >}}
 
