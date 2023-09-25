@@ -314,7 +314,7 @@ sudo systemctl restart voi && echo OK
 
 Expected output: `OK`.
 
-Then you should retry the catchup service. If you try the restart-catchup a few times and if it still doesn't work, reach out on the [Discord](#join-the-node-runners-channel).
+Then you should retry the catchup command. If you try the restart-catchup a few times and if it still doesn't work, reach out on the [Discord](#join-the-node-runners-channel).
 
 {{< /details >}}
 
