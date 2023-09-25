@@ -176,7 +176,7 @@ Created symlink /etc/systemd/system/multi-user.target.wants/algorand.service →
 OK
 ```
 
-### Stop the node
+## Stop the node
 
 By default, the algorand node will auto-start, which we do not want. Stop it with:
 
