@@ -298,6 +298,26 @@ echo OK
 
 Expected last line of output: `OK`
 
+{{< details "❗ Error? " >}}
+
+If you encounter an error in this step, check the error carefully. If it includes `already catching up` towards the end, then everything is OK and you can proceed to the next step. 
+
+---
+
+If you get an error that includes `unable to start catchpoint service for requested catchpoint` then try restarting the voi service and attempt to catch up again.
+
+To restart the service use:
+
+```bash
+sudo systemctl restart voi && echo OK
+```
+
+Expected output: `OK`.
+
+Try this a couple of times and if it still doesn't work, reach out on the [Discord](#join-the-node-runners-channel).
+
+{{< /details >}}
+
 ### Check the node's status
 
 Check status with this command:
