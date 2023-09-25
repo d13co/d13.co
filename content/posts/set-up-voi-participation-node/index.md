@@ -8,7 +8,7 @@ TocOpen: true
 ShowReadingTime: true
 ---
 
-This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively.
+This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively. This guide is only suitable for `x86` architecture machines as it relies on the Algorand repository, which does not publish packages for other architectures such as ARM64.
 
 If you already have an Algorand node running, check back later for an upcoming article on co-hosting nodes.
 
@@ -44,7 +44,7 @@ You will need the following specs for your participation node:
 
 
 
-## Check your version
+## Check your Ubuntu version
 
 Check that you are running Ubuntu. Run this command:
 
@@ -65,6 +65,30 @@ Codename:	jammy
 20.04 should also work.
 
 
+## Check your architecture
+
+Check that you are on an `x86` machine. Run this command:
+
+```
+uname -p
+```
+
+Expected output: `x86_64`.
+
+If you get a different response (such as `aarch64` for ARM64) then this guide will not work as-is due to ARM packages of Algorand not being available through the repository that this guide uses.
+
+
+{{< details "⚡ If you are technically savvy and on a non-x86 machine..." >}}
+
+You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set-up-algorand-participation-node-on-oracle-cloud-free/#step-5-install-algod) to install algod and then resume from the [stop the node](#set-up-voi-participation-node/#stop-the-node) parts **but you will need to modify the commands**:
+
+- replacing `/var/lib/algorand` with `/home/ubuntu/node/data` everywhere
+- skip the "Rename the algorand service to voi" part
+- skip the `sudo chown algorand:algorand` commands
+- skip the `sudo chmod g+w /var/lib/algorand/config.json` command
+- the `systemctl` commands need to be modified, instead of `systemctl start voi` you will need `systemctl start algorand@-home-ubuntu-node-data`
+
+{{< /details >}}
 
 ## Update your software to the latest versions
 
