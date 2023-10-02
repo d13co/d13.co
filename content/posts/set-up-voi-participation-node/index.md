@@ -83,6 +83,8 @@ If you get a different response (such as `aarch64` for ARM64) then this guide wi
 You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set up algorand participation node on oracle cloud free/#step 5 install algod) to install algod and then resume from the [set up your shell to run goal](#set up your shell to run goal) part **but you will need to modify the commands**:
 
 - replacing `/var/lib/algorand` with `/home/ubuntu/node/data` everywhere
+  - assuming your user is `ubuntu`. Check this with the command `whoami`.
+- run: `echo 'export PATH=$PATH:/home/ubuntu/node' >> ~/.bashrc && source ~/.bashrc`
 - skip the "Set up your user" command: `sudo adduser $(whoami) algorand && echo OK`
 - skip the "Rename the algorand service to voi" part
 - skip the `sudo chown algorand:algorand` commands
