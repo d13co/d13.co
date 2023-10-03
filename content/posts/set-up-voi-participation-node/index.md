@@ -84,6 +84,7 @@ You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set up a
 
 - replacing `/var/lib/algorand` with `/home/ubuntu/node/data` everywhere
   - assuming your user is `ubuntu`. Check this with the command `whoami`.
+- run: `sudo apt install -y jq`
 - run: `echo 'export PATH=$PATH:/home/ubuntu/node' >> ~/.bashrc && source ~/.bashrc`
 - skip the "Set up your user" command: `sudo adduser $(whoami) algorand && echo OK`
 - skip the "Rename the algorand service to voi" part
