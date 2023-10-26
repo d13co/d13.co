@@ -100,7 +100,7 @@ You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set up a
 Run:
 
 ```bash
-sudo apt update && sudo apt-get upgrade -y && echo OK
+sudo apt update && export DEBIAN_FRONTEND=noninteractive && sudo apt-get upgrade -y && echo OK
 ```
 
 Expected output:
