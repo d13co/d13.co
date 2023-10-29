@@ -401,7 +401,7 @@ If you are following this guide without modifications, you can ignore this tip.
 
 To access the `#node-runners` channel on the Voi Discord, you need to:
 
-1) [Join the server and visit the #roles](https://discord.gg/hSDwR7Avsm) channel.
+1) [Join the server and visit the #roles](https://discord.gg/UPBnGr3qm8) channel.
 2) Emote with a running emoji 🏃 to the message there.
 3) You should be able to access the [#node-runners](https://discord.gg/ZjAc4rSkgq) channel.
 
