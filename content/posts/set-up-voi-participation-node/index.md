@@ -10,7 +10,7 @@ ShowReadingTime: true
 
 This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively. This guide is only suitable for `x86` architecture machines as it relies on the Algorand repository, which does not publish packages for other architectures such as ARM64.
 
-If you already have an Algorand node running, check back later for an upcoming article on co-hosting nodes.
+{{< callout emoji="⚠️" text="Do not follow this guide if you are running an existing Algorand node on the same server, at it will likely overwrite your Algorand installation." >}}
 
 {{< details "🪙 &nbsp;You will need to have some $VOI balance to complete this guide." >}}
 
@@ -131,6 +131,8 @@ Executing: /lib/systemd/systemd-sysv-install enable unattended-upgrades
 
 
 ## Install Algorand node software
+
+{{< callout emoji="⚠️" text="Do not follow this guide if you are running an existing Algorand node on the same server, at it will likely overwrite your Algorand installation." >}}
 
 ### Set up repository
 
