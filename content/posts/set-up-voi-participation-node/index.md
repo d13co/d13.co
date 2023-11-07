@@ -80,7 +80,7 @@ If you get a different response (such as `aarch64` for ARM64) then this guide wi
 
 {{< details "⚡ If you are technically savvy and on a non-x86 machine..." >}}
 
-You can start with [Step 5 of the Algorand/Oracle guide](https://d13.co/set up algorand participation node on oracle cloud free/#step 5 install algod) to install algod and then resume from the [set up your shell to run goal](#set up your shell to run goal) part **but you will need to modify the commands**:
+You can start with [Step 5 of the Algorand-Oracle guide](https://d13.co/set-up-algorand-participation-node-on-oracle-cloud-free/#step-5-install-algod) to install algod and then resume from the [set up your shell to run goal](#set up your shell to run goal) part **but you will need to modify the commands**:
 
 - replacing `/var/lib/algorand` with `/home/ubuntu/node/data` everywhere
   - assuming your user is `ubuntu`. Check this with the command `whoami`.
