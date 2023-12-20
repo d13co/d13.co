@@ -2,30 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on D13.co</title>
-    <link>/tags/</link>
+    <link>https://d13.co/tags/</link>
     <description>Recent content in Tags on D13.co</description>
     <image>
-      <url>/images/logo-7-green-384-padded-doofy.png</url>
-      <link>/images/logo-7-green-384-padded-doofy.png</link>
+      <url>https://d13.co/images/logo-7-green-384-padded-doofy.png</url>
+      <link>https://d13.co/images/logo-7-green-384-padded-doofy.png</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Mar 2023 21:26:38 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 19 Dec 2023 21:26:38 +0000</lastBuildDate><atom:link href="https://d13.co/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEAL Audit</title>
+      <link>https://d13.co/tags/teal-audit/</link>
+      <pubDate>Tue, 19 Dec 2023 21:26:38 +0000</pubDate>
+      
+      <guid>https://d13.co/tags/teal-audit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vulnerability Disclosure</title>
+      <link>https://d13.co/tags/vulnerability-disclosure/</link>
+      <pubDate>Tue, 19 Dec 2023 21:26:38 +0000</pubDate>
+      
+      <guid>https://d13.co/tags/vulnerability-disclosure/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>MyAlgo Hack</title>
-      <link>/tags/myalgo-hack/</link>
+      <link>https://d13.co/tags/myalgo-hack/</link>
       <pubDate>Fri, 31 Mar 2023 21:26:38 +0000</pubDate>
       
-      <guid>/tags/myalgo-hack/</guid>
+      <guid>https://d13.co/tags/myalgo-hack/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Governance</title>
-      <link>/tags/governance/</link>
+      <link>https://d13.co/tags/governance/</link>
       <pubDate>Mon, 22 Aug 2022 21:26:38 +0000</pubDate>
       
-      <guid>/tags/governance/</guid>
+      <guid>https://d13.co/tags/governance/</guid>
       <description></description>
     </item>
     
