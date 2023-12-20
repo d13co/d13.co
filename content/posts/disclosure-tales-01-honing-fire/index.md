@@ -3,7 +3,7 @@ title: "Disclosure Tales 01: Honing Fire"
 date: 2023-12-19T21:26:38+00:00
 url: disclosure-tales-01-honing-fire
 cover:
-  image: 956.webp
+  image: 956.png
 tags:
 - "Vulnerability Disclosure"
 - "TEAL Audit"
