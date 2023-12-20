@@ -101,7 +101,7 @@ The extra transaction at the end is half an X-NFT shuffled back and forth while 
 
 ## Takeaways
 
-Hone responded professionally - they acknowledged the vulnerability, fixed it and paid out a bounty despite not having a formal program. We clicked quite well with Dom and paved the way to potentially auditing their contracts in the future. Aside from the thrill of finding the vulnerability, the disclosure process went so smoothly, it was almost boring (the good kind!)
+Hone responded professionally - they acknowledged the vulnerability, fixed it and paid out a bounty despite not having a formal program. We clicked quite well with Dom and paved the way to potentially auditing their contracts in the future. Aside from the thrill of finding the vulnerability, the disclosure process went so smoothly, it was almost boring - the good kind.
 
 Tips for contract developers/owners:
 - Validate your transactions very strictly
