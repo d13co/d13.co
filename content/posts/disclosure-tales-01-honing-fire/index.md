@@ -9,7 +9,7 @@ tags:
 - "TEAL Audit"
 ---
 
-I discovered and disclosed a vulnerability in the Hone NFT shuffle contracts. They responded well. This story is almost boring.
+I discovered and disclosed a vulnerability in the [Hone NFT shuffle](https://nft.hone.fi/) contracts. They responded well. This story is almost boring.
 
 ## The backstory
 
