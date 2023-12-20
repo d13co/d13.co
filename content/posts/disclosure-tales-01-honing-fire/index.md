@@ -1,6 +1,6 @@
 ---
 title: "Disclosure Tales 01: Honing Fire"
-date: 2023-12-20T21:26:38+00:00
+date: 2023-12-20T16:06:38+00:00
 slug: disclosure-tales-01-honing-fire
 cover:
   image: 956.png
@@ -51,7 +51,7 @@ The burn method executes 3 inner transactions:
 
 ### A bad burn
 
-The vulnerability was a straightforward once: insufficient transaction validation.
+The vulnerability was a straightforward one: insufficient transaction validation.
 
 The outer asset transaction that returns the NFT was not validated for destination or amount.
 
@@ -65,7 +65,7 @@ When you find a vulnerability, it is a good idea to test that it works as you ex
 
 But how?
 
-**It is bad practie to demonstrate exploits on public networks.** If the exploit is noticed, anyone could copy the method. Assuming you are reporting it, not exploiting it, you need a good method to reproduce it without leaving traces on mainnet.
+**It is bad practice to demonstrate exploits on public networks.** If the exploit is noticed, anyone could copy the method. Assuming you are reporting it, not exploiting it, you need a good method to reproduce it without leaving traces on mainnet.
 
 Enter: [simulate](https://developer.algorand.org/docs/get-details/dapps/smart-contracts/debugging/?from_query=simulate#simulate). This feature of `algod` enables dry-running a transaction (or transaction group) and reporting what the result _would have been_, if it had been executed at that round.
 
@@ -107,7 +107,8 @@ Tips for contract developers/owners:
 - Validate your transactions very strictly
 - Paying a bug bounty for a legitimate bug is a really good idea. Aside from being "the right thing to do", it is an incentive for an undecided grayhat to lean white-hat and report the vuln rather than exploit it or sell it.
   - Creating a reputation for not paying legitimate bug bounties is penny-wise and pound-foolish.
-- Have a well documented path to disclose vulnerabilities - i.e. a security contact.
+- Have a well documented path to disclose vulnerabilities.
+  - Ideal: security email contact. Discoverable easily in documentation. Bonus points: PGP key.
 
 Tips for white/grayhats:
 - Report it, don't exploit it.

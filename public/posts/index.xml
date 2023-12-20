@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Sep 2023 08:19:15 +0500</lastBuildDate><atom:link href="https://d13.co/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Dec 2023 16:06:38 +0000</lastBuildDate><atom:link href="https://d13.co/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disclosure Tales 01: Honing Fire</title>
+      <link>https://d13.co/posts/disclosure-tales-01-honing-fire/</link>
+      <pubDate>Wed, 20 Dec 2023 16:06:38 +0000</pubDate>
+      
+      <guid>https://d13.co/posts/disclosure-tales-01-honing-fire/</guid>
+      <description>I discovered and disclosed a vulnerability in the Hone NFT shuffle contracts. They responded well. This story is almost boring.
+The backstory I was curious about the mechanics of the Hone NFT shuffle, as it utilizes VRF, in which I have a keen interest. Reading TEAL is a bit like reading assembly, but with enough determination and a bit of practice you can figure out what a contract is doing.</description>
+    </item>
+    
     <item>
       <title>Set Up Voi Participation Node on Ubuntu 22.04</title>
       <link>https://d13.co/posts/set-up-voi-participation-node/</link>
