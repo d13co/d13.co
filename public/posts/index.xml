@@ -10,26 +10,15 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Dec 2023 21:26:38 +0000</lastBuildDate><atom:link href="https://d13.co/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Disclosure Tales 01: Honing Fire</title>
-      <link>https://d13.co/disclosure-tales-01-honing-fire/</link>
-      <pubDate>Tue, 19 Dec 2023 21:26:38 +0000</pubDate>
-      
-      <guid>https://d13.co/disclosure-tales-01-honing-fire/</guid>
-      <description>I discovered and disclosed a vulnerability in the Hone NFT shuffle contracts. They responded well. This story is almost boring.
-The backstory I was curious about the mechanics of the Hone NFT shuffle, as it utilizes VRF, in which I have a keen interest. Reading TEAL is a bit like reading assembly, but with enough determination and a bit of practice you can figure out what a contract is doing.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 06 Sep 2023 08:19:15 +0500</lastBuildDate><atom:link href="https://d13.co/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Set Up Voi Participation Node on Ubuntu 22.04</title>
       <link>https://d13.co/posts/set-up-voi-participation-node/</link>
       <pubDate>Wed, 06 Sep 2023 08:19:15 +0500</pubDate>
       
       <guid>https://d13.co/posts/set-up-voi-participation-node/</guid>
-      <description>This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively.
-If you already have an Algorand node running, check back later for an upcoming article on co-hosting nodes.
-ℹ️Code blocks can be copied for your convenience.Check your version Check that you are running Ubuntu.</description>
+      <description>This article will guide you through setting up a Voi participation node on the latest Ubuntu LTS (22.04). It assumes you start with a local or remote (server/cloud) installation. Version 20.04 should also work, but is not tested extensively. This guide is only suitable for x86 architecture machines as it relies on the Algorand repository, which does not publish packages for other architectures such as ARM64.
+⚠️Do not follow this guide if you are running an existing Algorand node on the same server, at it will likely overwrite your Algorand installation.</description>
     </item>
     
     <item>
