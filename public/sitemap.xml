@@ -2,56 +2,65 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/</loc>
+    <loc>https://d13.co/</loc>
+    <lastmod>2023-09-06T08:19:15+05:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/posts/</loc>
+    <lastmod>2023-09-06T08:19:15+05:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/posts/set-up-voi-participation-node/</loc>
+    <lastmod>2023-09-06T08:19:15+05:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/posts/implementing-on-chain-vrf-shuffle-for-exa-lootbox-reveals/</loc>
+    <lastmod>2023-08-28T18:58:00+03:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/posts/redundant-participation-nodes-on-algorand/</loc>
+    <lastmod>2023-08-26T08:59:59+03:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/tags/myalgo-hack/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/tags/myalgo-hack/</loc>
+    <loc>https://d13.co/myalgo-hack-fifth-wave-addresses-data/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/myalgo-hack-fifth-wave-addresses-data/</loc>
+    <loc>https://d13.co/tags/</loc>
     <lastmod>2023-03-31T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/posts/</loc>
-    <lastmod>2023-03-31T21:26:38+00:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-03-31T21:26:38+00:00</lastmod>
-  </url><url>
-    <loc>/myalgo-hack-first-wave-addresses-data/</loc>
+    <loc>https://d13.co/myalgo-hack-first-wave-addresses-data/</loc>
     <lastmod>2023-03-14T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/algorand-20-02-2023-thefts-preliminary-advisory-report/</loc>
+    <loc>https://d13.co/algorand-20-02-2023-thefts-preliminary-advisory-report/</loc>
     <lastmod>2023-02-27T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/benchmarking-algorand-amm-real-user-swap-performance/</loc>
+    <loc>https://d13.co/benchmarking-algorand-amm-real-user-swap-performance/</loc>
     <lastmod>2023-01-11T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/set-up-algorand-participation-node-on-oracle-cloud-free/</loc>
+    <loc>https://d13.co/set-up-algorand-participation-node-on-oracle-cloud-free/</loc>
     <lastmod>2022-10-11T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/algorand-governance-whales-known-wallets-consensus-participation-stats/</loc>
+    <loc>https://d13.co/algorand-governance-whales-known-wallets-consensus-participation-stats/</loc>
     <lastmod>2022-08-22T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/tags/governance/</loc>
+    <loc>https://d13.co/tags/governance/</loc>
     <lastmod>2022-08-22T21:26:38+00:00</lastmod>
   </url><url>
-    <loc>/algorand-governance-voting-power-centralization-period-4/</loc>
+    <loc>https://d13.co/algorand-governance-voting-power-centralization-period-4/</loc>
     <lastmod>2022-08-21T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/algofi-vault-reward-performance-for-governance-period-3/</loc>
+    <loc>https://d13.co/algofi-vault-reward-performance-for-governance-period-3/</loc>
     <lastmod>2022-07-04T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/isitalgorandsbirthday/</loc>
+    <loc>https://d13.co/isitalgorandsbirthday/</loc>
     <lastmod>2022-06-01T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/algod-loadb-an-aware-algod-http-load-balancer/</loc>
+    <loc>https://d13.co/algod-loadb-an-aware-algod-http-load-balancer/</loc>
     <lastmod>2022-04-25T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/our-very-own-community-space-r-d13/</loc>
+    <loc>https://d13.co/our-very-own-community-space-r-d13/</loc>
     <lastmod>2022-04-19T02:18:38+00:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>https://d13.co/categories/</loc>
   </url><url>
-    <loc>/algofi-liquidations-stats-data/</loc>
+    <loc>https://d13.co/algofi-liquidations-stats-data/</loc>
   </url>
 </urlset>
