@@ -1,9 +1,12 @@
 ---
 title: "Disclosure Tales 02: Downward Facing DAOs"
-date: 2023-12-20T16:06:38+00:00
+date: 2023-12-29T00:06:38+00:00
 slug: disclosure-tales-02-downward-facing-daos
 cover:
-  image: TODO.png
+  image: dt02.jpg
+ShowToc: true
+TocOpen: true
+ShowReadingTime: true
 tags:
 - "Vulnerability Disclosure"
 - "TEAL Audit"
@@ -22,13 +25,13 @@ I discovered and disclosed a vulnerability in the [Updog](https://www.updog.vote
 
 3) Voting power is proportional to the staked amount of governance tokens in the DAO.
 
-The most notable Updog DAO was the "Coffeebean DAO", which housed a large number of NFTs with an minimum floor value of over 56,000 $ALGO.
+The most notable Updog DAO was the "Coffeebean DAO", which housed a large number of NFTs with an floor value of at least 56,000 $ALGO.
 
 The FAME DAO launched recently. It licensed the Updog contracts but had its [own frontend](https://www.algofame.org/dao).
 
 ## The vulnerability
 
-Due to insufficient validation in the staking method, a malicious user can drain all governance tokens from the DAO, as well as gain super-majority voting power in the DAO.
+Due to insufficient validation in the staking method, a malicious user can drain all governance tokens from the DAO, as well as gain super-majority voting power.
 
 ### A normal staking call
 
@@ -47,13 +50,13 @@ The stake call would then increase the total locked amount (`tl` in global state
 
 The contract code does not validate the staking transaction group's size. This means that a single asset transfer could be padded with 15 staking application calls, and the user would be credited with 15x more stake than they sent.
 
-The credited stake could then be withdrawn (at a cost of 1 ALGO, usually), so to drain the contract of all governance tokens, a user could start with a trivial amount of tokens, and then loop stake-withdraw calls until they withdraw all the tokens. In just 3 deposit-withdraw cycles, the initial governance token would be withdrawn 3375x at a cost of 3 ALGO.
+The credited stake could then be withdrawn (at a cost of 1 ALGO, usually), so to drain the contract of all governance tokens, a user could start with a trivial amount of tokens, and then loop stake-withdraw calls until they withdraw all the tokens. In just 3 deposit-withdraw cycles, the initial amount would be withdrawn 3375x at a cost of 3 ALGO.
 
 Due to how this story unfolded, you can see an example of this on-chain [here](https://app.dappflow.org/explorer/group/4OMym%2FVi3WKs8PLkEJESsclkQtNUJBI7KGshLgJcTrA%3D/34464554/transactions):
 
 ![](bad-stake.png)
 
-_(It is generally not cool to do this. [Simulate can be used to confirm and disclose a vulnerability](/posts/disclosure-tales-01-honing-fire/#simulating-validation) without leaving the exploit on-chain in plain sight. I plead extenuating circumstances later on.)_
+_(It is generally not cool to do this. [Simulate can be used to confirm and disclose a vulnerability](/posts/disclosure-tales-01-honing-fire/#simulating-validation) without leaving the exploit on-chain in plain sight. I plead extenuating circumstances in this case.)_
 
 ## Disclosure
 
@@ -71,11 +74,11 @@ My read on the situation is that the developer moved on after a lack of traction
 
 The Updog developer has not made any profit from his efforts, and the fruit of his labor went largely unused, especially lately (2023.) Users demanding that he put in more work can come across as entitled.
 
-On the other hand, some token holders wanted to vote out certain NFTs and did not have a viable option to do so.
+On the other hand, I understand token holders wanting to vote out their NFTs but not having a viable option to do so.
 
 A possible middle ground here would have been crowdfunding some amount for the developer to fix the frontend, but this did not materialize.
 
-This situation can spark an interesting discussion about "community" development: how long, or how much, is a developer "obliged" to keep working for free? And many such questions. This discussion can be held elsewhere. This will be long enough as it is.
+This situation can spark an interesting discussion about "community" development: how long, or how much, is a developer "obliged" to keep working for free? Many such questions. This discussion can be held elsewhere - this will be long enough as it is.
 
 ### FAME DAO
 
@@ -93,13 +96,15 @@ However, this couldn't be done without users noticing. Word of "an issue" with t
 
 ### Decision time
 
-If you are D13 in this situation, would do you do? Choose your own adventure:
+If you are me in this situation, what do you do? Choose your own adventure:
 
 The vulnerability you found and reported would likely get out. It isn't exactly rocket science either, and with 50K+ ALGO worth of Lizards and Berds in just one of the DAOs, this would likely motivate people to steal everything out of the vulnerable DAOs. (JPEGs are addictive, don't start)
 
 **Do you...**
 
-🙈 Claim "not my circus, not my monkeys" and let the pieces fall wherever they may?
+🚔 Steal shit and keep it?
+
+🙈 Say "not my circus, not my monkeys" and let the pieces fall wherever they may?
 
 😬 Agonize over the ethics of attacking the DAOs to rescue the assets in order to return them?
 
@@ -172,13 +177,13 @@ With the Updog frontend non-operational, the only web-facing hint that something
 
 ## The plan, more concretely
 
-As mentioned in the hashed message, the coffeebean DAO held hundreds of assets (564) so a manual operation is entirely out of the question.
+As mentioned in the hashed message, the coffeebean DAO held hundreds of assets (564) so a manual operation was entirely out of the question.
 
 I cloned the coffeebean contract in a local Algorand sandbox and started coding a bot.
 
 One of the Updog features that enabled this operation to take place at all was the "change duration" type of vote. The default configuration for coffeebean was: 3 day voting period, plus one day cooldown between votes. If this could not be changed, it would take over 6 years to recover all the assets.
 
-The minimum accepted voting duration was thankfully very short (60 seconds) and the cooldown is also configurable (30 minutes minimum.) After getting stake supermajority, the first order of business was to change the duration to the minimums.
+The minimum accepted voting duration was thankfully very short (60 seconds) and the cooldown is also configurable (30 minutes minimum.) After getting stake supermajority, the first order of business was to change these values to the minimums.
 
 The DAOs also have a configurable required threshold for a vote to pass. This was also set to the maximum possible amount, in order to deter votes passing against my stake (slashing was also possible) in case my bot malfunctioned while I was not monitoring the progress.
 
@@ -215,9 +220,91 @@ The FAME tokens were recovered first using this account: [ZZLPDZA5774SFE7HQUSSHN
 
 All Updog DAO related transactions were performed from this account: [325OX7FO743TRL7N7W534L6P7U5ZXJCCUAP57N46KDN7AXPAV6OXT5L74Q](https://app.dappflow.org/explorer/account/325OX7FO743TRL7N7W534L6P7U5ZXJCCUAP57N46KDN7AXPAV6OXT5L74Q/transactions).
 
-Updog DAOs attacked were:
+The Updog DAOs in question:
 
 - [Coffeebean DAO](https://app.dappflow.org/explorer/application/1108232468/transactions)
-- [DEGEN DAO](https://app.dappflow.org/explorer/application/1018462173/transactions)
-- 
--
+- [DEGEN 2.1 DAO](https://app.dappflow.org/explorer/application/1018462173/transactions)
+- [DEGEN 2?](https://app.dappflow.org/explorer/application/1012349743/transactions)
+- [DEGEN 1?](https://app.dappflow.org/explorer/application/1012804934/transactions)
+- [Treats DAO](https://app.dappflow.org/explorer/application/1146417048/transactions)
+- [Updog COOP DAO](https://app.dappflow.org/explorer/application/1139539266/transactions)
+- [Fry Foundation Vote DAO](https://app.dappflow.org/explorer/application/1142839041/transactions)
+
+Some DAOs had stricted minimum duration parameters. One is still slowly drained of ALGO.
+
+Most of the DAOs' recovery went as planned...
+
+## A mistake
+
+...but not all. During the recovery I realised that some of the earlier DAOs had significant differences in implementation. I had to fork my bot code and re-implement it to accommodate for their differences:
+
+- the proposal type `pt` had completely different values, e.g. `pay_algo` vs `pa`
+- different restrictions in proposals e.g. ALGO proposals restrict the amount to 10% of the total.
+- there is a manager address
+- etc
+
+During this time I was also travelling for the holidays, so I had to check in on how the bots were doing. 4 DAOs were being manipulated in parallel - Coffeebean and the 3 DAOs marked "DEGEN" above.
+
+Unfortunately, I inadvertently froze [one of the DAOs](https://app.dappflow.org/explorer/application/1012349743/transactions). A passed proposal was not executed in time, which rendered the DAO inoperable.
+
+The logic to execute passed proposals in that DAO has a restriction: "Proposals can only be executed within 24 hours of the vote end time"
+
+Creating a new proposal also has a restriction: "Cannot create a new proposal before the previous proposal is executed"
+
+The bug that bit me was in this point [above](#the-plan-more-concretely): "Executing the vote outcome, if it is desirable". The change-manager vote was not registered as desirable, so it was not executed (voting it up was done manually.)
+
+While there is normally a workaround for clearing proposals, it could not be used in this case. First, the previous manager address I Was trying to replace was lost in the MyAlgo hack. But even if it were available, the "manager" address can clear a vote - _unless_ it is a "change manager" vote... which is the vote type I had just passed to make myself manager of the DAO.
+
+## Returning the assets
+
+The entire point of this operation was to rescue the assets before someone can steal them, and return them to their "rightful owners" - however we may define that.
+
+### FAME, FRY, COOP, TREATS
+
+The FAME tokens have been returned already. By virtue of being active very recently, we can assume that the ownership of the addresses that staked FAME in their DAO in the past few months have not been compromised.
+
+The FRY, TREATS and COOP tokens that were recovered will be returned to the addresses that staked them after a soft verification that the ownership has not changed.
+
+### Coffeebean NFTs
+
+For NFTs, which were not tied to voting power/stake, the current plan is to return them to the _owners_ that deposited them. Beside the logistic issue of tracking everything down (the previous iteration of the Coffeebean treasury was a multisig, but that should not add too much complexity) the other big issue is that some of the deposit addresses are reported to have been lost in the MyAlgo hack, which means we will have to resort to social recovery.
+
+### BEANGOV Tokens
+
+BEANGOV, the Coffeebean DAO governance token, had some liquidity in tinyman - approx $840 in TVL.
+
+The BEANGOV extracted from the contract was sold for $ALGO. The intent here was to remove the first mover advantage of BEAN holders who got wind of this situation first.
+
+### ALGO & Fungibles
+
+The current plan for the ALGO and fungible tokens recovered is to distribute them to BEANGOV holders. This includes the ALGO from the "liquidated" BEANGOV as mentioned above. The people with "stake" in the Coffeebean DAO are currently thought to be:
+
+- BEANGOV holders
+- BEANGOV LP providers
+- Addresses with staked BEAN in the DAO
+
+For the other DAOs, a similar plan will be executed based on stake.
+
+## Timeline
+
+Returning the assets will not be a quick or easy task. Tracking down long dormant or rekeyed addresses may prove difficult, and the sheer number of DAOs / assets / addresses will prove to be a challenge. I hope we can overcome it together.
+
+My current priority is to return the easiest assets, which are the governance tokens. FAME is already done and FRY / TREATS / COOP should also be relatively straightforward.
+
+For the Coffeebean & DEGEN assets, the next steps will be to document the provenance of NFTs and figure out a redistribution plan. I plead for your patience and cooperation in this matter.
+
+## Closing Thoughts
+
+I am not sure how you will react to this. I probably should have left it alone, but I didn't like the most likely outcome: someone stealing these assets and keeping them.
+
+We have had enough Ls in 2023 as a community, and I thought to try and prevent another one. This is not a victory lap; value was lost over this, and no matter how we slice and dice it, some people will be dissatisfied.
+
+Doing all this was significant work, and even more lies ahead in figuring out how, where and how much to return to each "stake holder".
+
+## Discussion
+
+You can join the [#downward-facing-daos]() channel in the Coffeebean Discord to discuss.
+
+You can shout at me [on the app formerly known as Twitter](https://twitter.com/intent/tweet?text=I%20knew%20you%20were%20a%20scoundrel%20%40d13_co%20%23downwardFacingDAOs).
+
+
