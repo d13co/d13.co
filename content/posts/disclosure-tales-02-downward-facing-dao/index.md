@@ -17,7 +17,7 @@ I discovered and disclosed a vulnerability in the [Updog](https://www.updog.vote
 
 ## Background: The DAOs
 
-[Updog](https://www.updog.vote) was offered a fully featured DAO platform. In a nutshell:
+[Updog](https://www.updog.vote) offered a fully featured DAO platform. In a nutshell:
 
 1) Each DAO instance has a governance token that can be staked and withdrawn.
 
@@ -173,7 +173,7 @@ Txn ID: (note) https://app.dappflow.org/explorer/transaction/RJMAEFB663XP54CYQTE
 
 {{</ details >}}
 
-With the Updog frontend non-operational, the only web-facing hint that something is amiss would be the FAME DAO frontend. Bilal agreed to put up a maintenance notice and wait until this operation is complete before announcing anything.
+With the Updog frontend non-operational, the only web-facing hint that something is amiss would be the FAME DAO frontend. Bilal agreed to put up a maintenance notice and wait until this operation is complete before announcing anything. I am grateful for this cooperation.
 
 ## The plan, more concretely
 
@@ -208,9 +208,9 @@ More granularly, each of these steps includes:
 
 These checks were performed every single round.
 
-Finally, each DAO is different - application ID, governance token asset ID, etc. - so the bot would have configurations so that it could be executed in tandem for multiple DAOs at once.
+Finally, each DAO is different - application ID, governance token asset ID, etc. - so the bot would have configurations so that it could be executed in tandem for multiple DAOs at the same time.
 
-While I hadn't realized at the time, some of the DAOs also differed significantly in implementation.
+_[OMINOUSLY]_  While I hadn't realized at the time, some of the DAOs also differed significantly in implementation.
 
 ## Go time
 
@@ -251,29 +251,33 @@ The logic to execute passed proposals in that DAO has a restriction: "Proposals 
 
 Creating a new proposal also has a restriction: "Cannot create a new proposal before the previous proposal is executed"
 
-The bug that bit me was in this point [above](#the-plan-more-concretely): "Executing the vote outcome, if it is desirable". The change-manager vote was not registered as desirable, so it was not executed (voting it up was done manually.)
+The bug that bit me was in this point [above](#the-plan-more-concretely): `Executing the vote outcome, if it is desirable`. The change-manager vote was not registered as desirable, so it was not executed automatically (voting it up was done manually.)
 
-While there is normally a workaround for clearing proposals, it could not be used in this case. First, the previous manager address I Was trying to replace was lost in the MyAlgo hack. But even if it were available, the "manager" address can clear a vote - _unless_ it is a "change manager" vote... which is the vote type I had just passed to make myself manager of the DAO.
+While there is normally a workaround for clearing proposals, it could not be used in this case. The "manager" address can clear a vote - _unless_ it is a "change manager" vote... which is the vote type I had just passed to make myself manager of the DAO. The previous manager address was also lost in the MyAlgo hack, but it wouldn't have been able to clear the vote even if it was still available.
+
+So that sucked.
 
 ## Returning the assets
 
-The entire point of this operation was to rescue the assets before someone can steal them, and return them to their "rightful owners" - however we may define that.
+The entire point of this operation was to rescue the assets before someone can steal them, and return them to their "rightful owners".
 
-### FAME, FRY, COOP, TREATS
+### Governance Tokens: FAME, FRY, TREATS, COOP
 
-The FAME tokens have been returned already. By virtue of being active very recently, we can assume that the ownership of the addresses that staked FAME in their DAO in the past few months have not been compromised.
+The FAME tokens have been returned already. By virtue of being active very recently, we can assume that the addresses that staked FAME in their DAO in the past few months have not been compromised.
 
 The FRY, TREATS and COOP tokens that were recovered will be returned to the addresses that staked them after a soft verification that the ownership has not changed.
 
 ### Coffeebean NFTs
 
-For NFTs, which were not tied to voting power/stake, the current plan is to return them to the _owners_ that deposited them. Beside the logistic issue of tracking everything down (the previous iteration of the Coffeebean treasury was a multisig, but that should not add too much complexity) the other big issue is that some of the deposit addresses are reported to have been lost in the MyAlgo hack, which means we will have to resort to social recovery.
+For NFTs, which were not tied to voting power/stake, the current plan is to return them to the _owners_ that deposited them.
+
+Besides the logistic issue of tracking everything down (the previous iteration of the Coffeebean treasury was a multisig, but that should not add too much complexity) the other big issue is that some of the deposit addresses are reported to have been lost in the MyAlgo hack, which means we will likely have to resort to social recovery in some cases.
 
 ### BEANGOV Tokens
 
 BEANGOV, the Coffeebean DAO governance token, had some liquidity in tinyman - approx $840 in TVL.
 
-The BEANGOV extracted from the contract was sold for $ALGO. The intent here was to remove the first mover advantage of BEAN holders who got wind of this situation first.
+The BEANGOV extracted from the contract was sold for $ALGO shortly before this article went live. The intent was to remove the first mover advantage of BEAN holders who got wind of this situation first.
 
 ### ALGO & Fungibles
 
@@ -281,17 +285,23 @@ The current plan for the ALGO and fungible tokens recovered is to distribute the
 
 - BEANGOV holders
 - BEANGOV LP providers
-- Addresses with staked BEAN in the DAO
+- Addresses with staked BEANGOV in the Coffeebean DAO
 
-For the other DAOs, a similar plan will be executed based on stake.
+For the other DAOs that had these kind of assets, a similar plan will be executed based on stake.
 
 ## Timeline
 
 Returning the assets will not be a quick or easy task. Tracking down long dormant or rekeyed addresses may prove difficult, and the sheer number of DAOs / assets / addresses will prove to be a challenge. I hope we can overcome it together.
 
-My current priority is to return the easiest assets, which are the governance tokens. FAME is already done and FRY / TREATS / COOP should also be relatively straightforward.
+My current priority is to return the easiest assets first, which are the governance tokens. FAME is already done and FRY / TREATS / COOP should also be relatively straightforward.
 
-For the Coffeebean & DEGEN assets, the next steps will be to document the provenance of NFTs and figure out a redistribution plan. I plead for your patience and cooperation in this matter.
+For the Coffeebean & DEGEN assets, the next steps will be a bunch of accounting: document the provenance of NFTs & other assets, track down owners when addresses can be verified to be impacted by MyAlgo, and finally figure out a redistribution plan. I plead for your patience and help in this matter.
+
+## Discussion
+
+You can join the [#downward-facing-daos]() channel in the Coffeebean Discord to discuss.
+
+You can shout at me [on the app formerly known as Twitter](https://twitter.com/intent/tweet?text=I%20knew%20you%20were%20a%20scoundrel%20%40d13_co%20%23downwardFacingDAOs).
 
 ## Closing Thoughts
 
@@ -300,11 +310,5 @@ I am not sure how you will react to this. I probably should have left it alone, 
 We have had enough Ls in 2023 as a community, and I thought to try and prevent another one. This is not a victory lap; value was lost over this, and no matter how we slice and dice it, some people will be dissatisfied.
 
 Doing all this was significant work, and even more lies ahead in figuring out how, where and how much to return to each "stake holder".
-
-## Discussion
-
-You can join the [#downward-facing-daos]() channel in the Coffeebean Discord to discuss.
-
-You can shout at me [on the app formerly known as Twitter](https://twitter.com/intent/tweet?text=I%20knew%20you%20were%20a%20scoundrel%20%40d13_co%20%23downwardFacingDAOs).
 
 
