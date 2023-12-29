@@ -267,6 +267,8 @@ The FAME tokens have been returned already. By virtue of being active very recen
 
 The FRY, TREATS and COOP tokens that were recovered will be returned to the addresses that staked them after a soft verification that the ownership has not changed.
 
+**Update: All the above have been returned** - except for one TRTS holder who is no longer opted in.
+
 ### Coffeebean NFTs
 
 For NFTs, which were not tied to voting power/stake, the current plan is to return them to the _owners_ that deposited them.
@@ -310,5 +312,3 @@ I am not sure how you will react to this. I probably should have left it alone, 
 We have had enough Ls in 2023 as a community, and I thought to try and prevent another one. This is not a victory lap; value was lost over this, and no matter how we slice and dice it, some people will be dissatisfied.
 
 Doing all this was significant work, and even more lies ahead in figuring out how, where and how much to return to each "stake holder".
-
-
