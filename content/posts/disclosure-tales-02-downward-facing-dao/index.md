@@ -299,7 +299,7 @@ For the Coffeebean & DEGEN assets, the next steps will be a bunch of accounting:
 
 ## Discussion
 
-You can join the [#downward-facing-daos]() channel in the Coffeebean Discord to discuss.
+You can join the [#downward-facing-daos](https://discord.gg/MuJqqUtABW) channel in the Coffeebean Discord to discuss.
 
 You can shout at me [on the app formerly known as Twitter](https://twitter.com/intent/tweet?text=I%20knew%20you%20were%20a%20scoundrel%20%40d13_co%20%23downwardFacingDAOs).
 
