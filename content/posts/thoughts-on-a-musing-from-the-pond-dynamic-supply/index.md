@@ -10,7 +10,7 @@ tags:
 - "Inflation"
 ---
 
-**The ["Musings on the pond"](https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72) article lays out a thought-provoking proposal for a deep intervention in Algorand's economics.** If you have not read it, it is well worth putting it at the top of your reading list and getting to it - even now, in fact: if you have the time, go read that first.
+**The ["Musings on the pond"](https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72) article lays out a thought-provoking proposal for a deep intervention in Algorand's economics.** If you have not read it, it is well worth putting it at the top of your reading list and getting to it soon - even now, in fact: if you have the time, go [read that first](https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72).
 
 Among the proposed interventions is **a set of changes to the minimum transaction fee, block rewards and fee burns that would alter the fixed nature of the total supply of Algorand.** The present article discusses these changes.
 
