@@ -54,7 +54,7 @@ The protocol would issue .25 new ALGO and burn 1 ALGO making total supply net de
 
 The Algorand protocol, like most other blockchain protocols, can be changed - through consensus. This section briefly* describes the process.
 
-_* And possibly inaccurately - this is all from memory._
+_* Possible inaccuracies ahead - this is from memory._
 
 There are multiple reasons to want protocol upgrades: Shorter or dynamic round times, upgrading the Algorand Virtual Machine (AVM) to new versions (e.g. supporting more smart contract opcodes), new protocol-level features (e.g. State Proofs) etc. Algorand is constantly improving, and the ability to upgrade the protocol is core to this evolution.
 
@@ -93,7 +93,7 @@ This was based on an honest response by Fabrice in the Algorand forums early on 
 
 Reducing that statement to "they can just do it" is a masterful distillation of truth into single-malt bullshit:
 
-1) They can't "just" do it, they would have to at least get buyin from the super majority of online stake, and -
+1) They can't "just" do it, they would have to at least get buy-in from the super majority of online stake, and -
 2) The actual community that isn't participating in consensus. The code is open after all, and a change like this would be widely discussed, and -
 3) This was presented as some unique Algorand Achilles heel - but basically all blockchains can do this! Ethereum switched their entire consensus model from PoW to PoS. Even Bitcoin introduces new protocol level features - e.g. taproot was introduced in 2021.
 
@@ -167,7 +167,7 @@ So if "today" played out under the new protocol, it would result in **deflation*
 
 Is that a lot? What if we did an entire year under this exact proposed model, with these exact values for TPS, block time, etc?
 
-We had 30,103 blocks produced today, so the total supplywould be reduced by 7613.05 ALGO and the yearly supply reduction (in this ground-hog day/year at the pond) would be 2,778,763.25 ALGO.
+We had 30,103 blocks produced today, so the total supply would be reduced by 7613.05 ALGO and the yearly supply reduction (in this ground-hog day/year at the pond) would be 2,778,763.25 ALGO.
 
 I wouldn't say no to getting a tip like that in my wallet, but what does it look like in context? 
 
