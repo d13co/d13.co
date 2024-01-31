@@ -225,12 +225,13 @@ Make a copy of it (or download it) to be able to tweak the inputs and answer any
 
 ![](dall-e-pondering.png)
 
-While the "fixed supply" model gave the community a sense of security and comfort that "beyond 2030 there would be no inflation", changing this assumption and model is absolutely worth considering. The upside to a change like this is moving the protocol towards self-sustainability, and - through incentivising block proposers - decentralization.
+While the "fixed supply" model gave the community a sense of security and comfort that "beyond 2030 there would be no inflation", changing this assumption and model is absolutely worth considering. The musings article has a lot more context on how these parameters would be governed, so it is essential supplemental reading.
+
+The upside to a change like this is moving the protocol towards self-sustainability, and - through incentivising block proposers - decentralization.
 
 The downside to this particular instance of the model (with the specific parameters) is almost too small to measure. The 5 TPS scenario above would come with much larger problems than 0.2% inflation over a decade: it would mean that the blockchain has failed to get traction. At that point, does it even matter?
 
-The break-even of 17~18 TPS average seems like the _least_ we should hope for in a successful, high throughput blockchain like Algorand - and on the arbitrary day that the "Musings" article as released, the protocol would have been (infinitesimally, again) deflationary already! 35 TPS is more than double the required break-even TPS for 2.87 second round times.
-
+The break-even of 17~18 TPS average seems like the _least_ we should hope for in a successful, high throughput blockchain like Algorand - and on the arbitrary day that the "Musings" article as released, the protocol would have been (infinitesimally, again) deflationary already! 35 TPS is about double the required break-even TPS at the current 2.87 second round times.
 
 If you have not yet read ["Musings on the pond"](https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72), go do that.
 
