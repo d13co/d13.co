@@ -180,7 +180,7 @@ Do note that:
 - "today" (2024-01-30) was not cherry-picked, it is the day of the pondening, when the musings article was released.
 - 0.0278% is a very small number
 - 17.42 TPS is a very attainable number
-- on this arbitrary day we were at slightly over 2x the break-even 17.42 TPS
+- on this arbitrary day we were at slightly over 2x of the break-even 17.42 TPS
 
 ### But what if we have a very bad TPS year
 
@@ -190,7 +190,7 @@ Let's go very, very, bear-in-the-dumps-low: 5 TPS.
 
 All other figures being the same, we get:
 
-```
+```text
 Per block:
 Txns: 14.35
 Fees: 0.1435 (@ 0.01 minimum fee)
@@ -208,7 +208,7 @@ Net supply change (year): 1,958,538.80875
 
 It is still peanuts, no? Consider this playing out over _10 years_: 
 
-```
+```text
 Total supply: +19,586,038.70
 Decade % Inflation: 0.196%
 ```
