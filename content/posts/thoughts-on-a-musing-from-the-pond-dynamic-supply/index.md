@@ -77,9 +77,9 @@ When a new protocol version is ready to release on one of the public networks, t
 
 ![](dall-e-voting.png)
 
-This vote requires a supermajority (of 90%? I believe) to pass. The voters are the nodes participating in consensus, and their voting power is the ALGO they have as online stake. 1 ALGO = 1 vote. If 90% of the ALGO participating in consensus decides to go for the next version of the protocol, then it is adopted network-wide.
+This vote requires a supermajority (of 90%? I believe) to pass. The voters are the nodes participating in consensus, and their voting power is the ALGO they have as online stake. 1 ALGO = 1 vote. If 90% of the  LGO participating in consensus decides to go for the next version of the protocol, then it is adopted network-wide.
 
-The vote format is simple: upgrade to the latest version of algod to support the proposal, or abstain from upgrading to reject it. If the required supermajority is not met by the end of the voting period, the protocol upgrade is rejected.
+The vote format is simple: upgrade your node to the latest available version to support the proposal, or abstain from upgrading to reject it. If the required supermajority is not met by the end of the voting period, the protocol upgrade is rejected.
 
 _One more disclaimer: the above is from memory, do not base your dissertation on the exact details._
 
@@ -93,7 +93,7 @@ This was based on an honest response by Fabrice in the Algorand forums early on 
 
 Reducing that statement to "they can just do it" is a masterful distillation of truth into single-malt bullshit:
 
-1) They can't "just" do it, they would have to at least get buy-in from the super majority of online stake, and -
+1) The Foundation can't "just" do it. It would have to at least get buy-in from the super majority of online stake, and -
 2) The actual community that isn't participating in consensus. The code is open after all, and a change like this would be widely discussed, and -
 3) This was presented as some unique Algorand Achilles heel - but basically all blockchains can do this! Ethereum switched their entire consensus model from PoW to PoS. Even Bitcoin introduces new protocol level features - e.g. taproot was introduced in 2021.
 
@@ -101,7 +101,7 @@ Reducing that statement to "they can just do it" is a masterful distillation of 
 
 ![](dall-e-confudius.png)
 
-> The fixed supply is **canon**
+> The fixed supply is canon
 >
 > Dare you speak of changing it?
 >
@@ -115,8 +115,8 @@ Recall the two factors pushing and pulling the total supply under this proposed 
 
 - Programmatic issuance of ALGO per block for validators:
   - + 0.25 ALGO per block
-- Burn mechanic per transaction
-  - 50% of the txn fee (.005 without congestion)
+- Burn mechanic per transaction:
+  - 50% of the txn fees (.005 without congestion)
 
 The inflationary/deflationary threshold would be 50 transactions **per block.**
 
@@ -163,7 +163,7 @@ Net supply change: -0.2529120266203705
 
 📢 **With 2.87 second round time, the break-even TPS is 17.42** 👈
 
-So if "today" played out under the new protocol, it would result in **deflation** of 0.2529 ALGO per block.
+So if "today" played out under the new protocol, it would result in 0.2529 ALGO fewer total supply per block.
 
 Is that a lot? What if we did an entire year under this exact proposed model, with these exact values for TPS, block time, etc?
 
