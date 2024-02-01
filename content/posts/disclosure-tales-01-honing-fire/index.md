@@ -33,7 +33,7 @@ The vulnerability I found was in the burn method.
 
 ### A normal burn
 
-A normal burn looked [like this](https://algoexplorer.io/tx/group/NLNENsS6L9Y20WcjqCXxZ8ieGBWDEKyGaIiSR4ZOSlw%3D):
+A normal burn looked [like this](https://allo.info/tx/group/NLNENsS6L9Y20WcjqCXxZ8ieGBWDEKyGaIiSR4ZOSlw%3D):
 
 ![](1703029963.png)
 
@@ -95,7 +95,7 @@ The cool part? They used the burn vulnerability to empty out the contract NFTs b
 
 ![](1703031023.png)
 
-[Here](https://algoexplorer.io/tx/group/IY1vw1QrbvM6qyMZsHLS197kcFkIoMmYi9JBo2hySLc%3D) we see the creator account (GAC..) burning zero of an NFT.
+[Here](https://allo.info/tx/group/IY1vw1QrbvM6qyMZsHLS197kcFkIoMmYi9JBo2hySLc%3D) we see the creator account (GAC..) burning zero of an NFT.
 
 The extra transaction at the end is half an X-NFT shuffled back and forth while they burned all the NFTs back to into ownership.
 

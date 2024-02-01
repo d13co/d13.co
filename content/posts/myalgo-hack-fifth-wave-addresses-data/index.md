@@ -54,11 +54,11 @@ amounts were swapped for a total of 353,860.76 \$ALGO.
 --------------------
 
 Notably, the attackers stole 30% of the circulating supply of the [\$BUY
-ASA](https://algoexplorer.io/asset/137020565)
+ASA](https://allo.info/asset/137020565)
 ([](https://twitter.com/buying_com)[buying.com](https://buying.com/)).
 This asset has freeze and clawback enabled. The company was notified and
 was able to [claw back the
-funds](https://algoexplorer.io/tx/B5Y62QMH6XCVQKJNVGA4CVAIS3PNTBOU45HHARAWNIEAVIIFB7PA)
+funds](https://allo.info/tx/B5Y62QMH6XCVQKJNVGA4CVAIS3PNTBOU45HHARAWNIEAVIIFB7PA)
 while the attack was still in progress.
 
 Data

@@ -83,9 +83,9 @@ Observations
 Several DeFi platforms were used for swapping, lending & borrowing.
 
 It is interesting to note that the attackers
-[swapped](https://algoexplorer.io/tx/group/JKBurgcWvPGmz4K06MIP5rjOgHxDpcAgN8PqxqKWwWg%3D)
-[300,000](https://algoexplorer.io/tx/group/hrr4Ff1YTnO64FZG0aXS8qJG2XHPJkh4lQxhsc74%2FxM%3D)
-[USDC](https://algoexplorer.io/tx/group/kL4%2B6vdCOaS6kII0ox0x7LbHSVS1l7PR9lflEGKQs3s%3D)
+[swapped](https://allo.info/tx/group/JKBurgcWvPGmz4K06MIP5rjOgHxDpcAgN8PqxqKWwWg%3D)
+[300,000](https://allo.info/tx/group/hrr4Ff1YTnO64FZG0aXS8qJG2XHPJkh4lQxhsc74%2FxM%3D)
+[USDC](https://allo.info/tx/group/kL4%2B6vdCOaS6kII0ox0x7LbHSVS1l7PR9lflEGKQs3s%3D)
 on-chain and in quick succession on February 20th, causing a sharp dip
 in USDC price. The remaining USDC was deposited into an exchange.
 
@@ -95,7 +95,7 @@ Some of the attacker accounts controlling these funds became active on
 March 5th.
 
 We highlight [an
-account](https://algoexplorer.io/address/J6NFGQYSBAEBLVTJCOCCQAJ52KJIHZMWNGHVGZTSMMW4MXHN5J65G2PQYA)
+account](https://allo.info/address/J6NFGQYSBAEBLVTJCOCCQAJ52KJIHZMWNGHVGZTSMMW4MXHN5J65G2PQYA)
 controlled by the attackers that held a significant amount of goBTC and
 goETH. They caused two similar dips to the goBTC/ALGO pair after
 swapping goBTC.
@@ -103,11 +103,11 @@ swapping goBTC.
 ![](gobtc-algo.jpg)
 
 The remaining goBTC and goETH were
-[deposited](https://algoexplorer.io/tx/group/BrFrqgkRSSPAnnW7y8BvabSDLWojhMTfn0k%2FhBL5W4Y%3D)
+[deposited](https://allo.info/tx/group/BrFrqgkRSSPAnnW7y8BvabSDLWojhMTfn0k%2FhBL5W4Y%3D)
 [as
-collateral](https://algoexplorer.io/tx/group/eUW9%2F47eKl%2Fp4IRz35nd5cUCfMxQfULY7wYGkl08hRY%3D)
+collateral](https://allo.info/tx/group/eUW9%2F47eKl%2Fp4IRz35nd5cUCfMxQfULY7wYGkl08hRY%3D)
 on AlgoFi and ALGO was
-[borrowed](https://algoexplorer.io/tx/group/qclCbfuUic%2BEg8%2BOFR5sWQG1jLZYSKySLHqZvPJQvEw%3D)
+[borrowed](https://allo.info/tx/group/qclCbfuUic%2BEg8%2BOFR5sWQG1jLZYSKySLHqZvPJQvEw%3D)
 against it.
 
 March 5th also saw new attacks on users with large asset holdings. Data

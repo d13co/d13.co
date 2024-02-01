@@ -70,14 +70,14 @@ Sexy stats time range: From AlgoFi genesis until 20 April 2022
 -   Sum of all liquidations by seized collateral value: \~\$1.6M
 -   Sum of liquidation incentives (7% liquidator profit): \~\$113K
 -   Most successful liquidator by number of liquidations:
-     [2HB66TH3RORMXG4G2F5CIIUA2CDM2DFMNX2P3ZAOBQ3TFXDGUG2KFCDL4Y](https://algoexplorer.io/address/2HB66TH3RORMXG4G2F5CIIUA2CDM2DFMNX2P3ZAOBQ3TFXDGUG2KFCDL4Y)
+     [2HB66TH3RORMXG4G2F5CIIUA2CDM2DFMNX2P3ZAOBQ3TFXDGUG2KFCDL4Y](https://allo.info/address/2HB66TH3RORMXG4G2F5CIIUA2CDM2DFMNX2P3ZAOBQ3TFXDGUG2KFCDL4Y)
     with 1833 liquidations. By a mile - \#2 is at 117 liquidations.
 -   Most successful liquidator by seized collateral value is,
     unsurprisingly, the aforementioned 2HB66T..FCDL4Y, with a total of
     \$815K worth of liquidated collateral. The liquidation
     incentive/profit of which works out to a neat \$57K.
 -   The [most expensive single liquidation
-    transaction](https://algoexplorer.io/tx/group/KqJSqthnEAB3SL8Fqob3c6vermnntPxsJQ1G6nQDjro%3D)
+    transaction](https://allo.info/tx/group/KqJSqthnEAB3SL8Fqob3c6vermnntPxsJQ1G6nQDjro%3D)
     so far involved paying off 161,915 USDC to seize 176,200 ALGO.
     Liquidation incentive for that was \~12K ALGO.
 -   Most liquidated account by number of individual liquidations:
@@ -171,8 +171,8 @@ The spreadsheet above includes a group transaction for each liquidation
 (column grp\_txn). You can search that on AlgoExplorer.io and see the
 liquidation yourself! E.g. the first liquidation at round 18043632 had
 group ID YGST8hii9P9OL0SOPqJeaJy2dnhDN21GJQcHr3slsGY= which you can see
-on algoexplorer.io
-[here](https://algoexplorer.io/tx/group/YGST8hii9P9OL0SOPqJeaJy2dnhDN21GJQcHr3slsGY%3D).
+on allo.info
+[here](https://allo.info/tx/group/YGST8hii9P9OL0SOPqJeaJy2dnhDN21GJQcHr3slsGY%3D).
 It is quite fascinating.
 
 ### The Service: LiquiFi, NotiFi, NotMeFi or something

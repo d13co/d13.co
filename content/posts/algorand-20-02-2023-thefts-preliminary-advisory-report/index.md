@@ -15,7 +15,7 @@ remediation of further risk should not have usability impact and, if
 done carefully, may have a significant security benefit.**\
 
 We have been [day 1
-responders](https://algoexplorer.io/tx/54QEQKNH66ZW3FT2LQU7QQ6LFX7QVABXJYK7LM6WAHJNQ3M5W2PQ)
+responders](https://allo.info/tx/54QEQKNH66ZW3FT2LQU7QQ6LFX7QVABXJYK7LM6WAHJNQ3M5W2PQ)
 to these attacks:
 [reporting](https://twitter.com/Algo_Surf/status/1627827487668424707)
 the potential compromises, organizing affected users, systematically

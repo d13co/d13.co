@@ -29,7 +29,7 @@ by the Vestige team was:
     smarter than me has data on block times we could do better
     calculations, in case blocks were delayed or so. \"
 -   \"all transactions were made from
-    https://algoexplorer.io/address/SWAPVMWRFIIY2L5V2JEWXIE7TLSOCUJP4BJYMAM65VBMRXHHE24GBMMPYM
+    https://allo.info/address/SWAPVMWRFIIY2L5V2JEWXIE7TLSOCUJP4BJYMAM65VBMRXHHE24GBMMPYM
     which called the app 1000469889 which does 85 swaps in inner
     transactions (255/3)\"
 
@@ -167,22 +167,22 @@ Aggregate data available on [Google
 Sheets](https://docs.google.com/spreadsheets/d/1DPDzZNIre3hGuBhC28VIE-JT3vVZn_vpFb0y8vdV-SI/).
 
 See the transactions: [BENCHMAKER.. on
-AlgoExplorer](https://algoexplorer.io/address/BENCHMAKERWFHU3YPNJIXT6F7JIDWJJQF46KW4P4WGXUX7ELTPM6JTUZ2A).
+AlgoExplorer](https://allo.info/address/BENCHMAKERWFHU3YPNJIXT6F7JIDWJJQF46KW4P4WGXUX7ELTPM6JTUZ2A).
 
 Appendix B - Vestige test blocks & transaction count: {#appendix-bvestige-test-blocks-transaction-count}
 -----------------------------------------------------
 
 26418:
-[https://algoexplorer.io/block/26101803](https://algoexplorer.io/block/26101803)
+[https://allo.info/block/26101803](https://allo.info/block/26101803)
 
 31250:
-[https://algoexplorer.io/block/26101804](https://algoexplorer.io/block/26101804)
+[https://allo.info/block/26101804](https://allo.info/block/26101804)
 
 31241:
-[https://algoexplorer.io/block/26101805](https://algoexplorer.io/block/26101805)
+[https://allo.info/block/26101805](https://allo.info/block/26101805)
 
 1567:
-[https://algoexplorer.io/block/26101806](https://algoexplorer.io/block/26101806)
+[https://allo.info/block/26101806](https://allo.info/block/26101806)
 
 [Source](https://discord.com/channels/491256308461207573/491256308461207575/1061347210060644413)
 

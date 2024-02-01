@@ -159,6 +159,6 @@ And who knows - we may be seeing more of this VRF shuffle method beyond the loot
 
 ----
 
-The reveal contract ID is [1177117711](https://algoexplorer.io/application/1177117711) on Mainnet.
+The reveal contract ID is [1177117711](https://allo.info/application/1177117711) on Mainnet.
 
 For any questions you can hit me up on [Twitter](https://twitter.com/d13_co) or by [Email](mailto:bit@d13.co).
