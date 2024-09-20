@@ -17,8 +17,16 @@
       <pubDate>Mon, 22 Aug 2022 21:26:38 +0000</pubDate>
       
       <guid>https://d13.co/algorand-governance-whales-known-wallets-consensus-participation-stats/</guid>
-      <description>As a follow-up on our report on Voting Power Centralization in Governance Period 4 we decided to look into known addresses from the governor whale list, as well as their consensus participation status.
-In case you missed it and can&#39;t be bothered to check, we defined &amp;quot;whale wallets&amp;quot; as single-entity governors that have committed at least 1 million ALGO and are still eligible. We excluded the top governor - Folks Finance - as their vote is decided by Folks protocol users.</description>
+      <description>&lt;p&gt;As a follow-up on our report on &lt;a href=&#34;https://d13.co/algorand-governance-voting-power-centralization-period-4/&#34;&gt;Voting Power Centralization in
+Governance Period
+4&lt;/a&gt;
+we decided to look into known addresses from the governor whale list, as
+well as their consensus participation status.&lt;/p&gt;
+&lt;p&gt;In case you missed it and can&#39;t be bothered to check, we defined
+&amp;quot;whale wallets&amp;quot; as single-entity governors that have committed at
+least 1 million ALGO and are still eligible. We excluded the top
+governor - Folks Finance - as their vote is decided by Folks protocol
+users.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -27,8 +35,15 @@ In case you missed it and can&#39;t be bothered to check, we defined &amp;quot;w
       <pubDate>Sun, 21 Aug 2022 02:18:38 +0000</pubDate>
       
       <guid>https://d13.co/algorand-governance-voting-power-centralization-period-4/</guid>
-      <description>Overview We analyzed the top eligible wallets enrolled for Algorand Governance Period 4 as of August 21, 2022. The data shows a very &amp;quot;whale&amp;quot; heavy distribution of voting power and rewards, where the top 37 individual &amp;quot;whale&amp;quot; wallets control the vote and reap 50% of rewards, and wallets with over 1 million ALGO commitment control 86% of the vote and rewards.
-Data Sources To get our raw data, we used two different data sources and correlated them to confirm correctness:</description>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;We analyzed the top eligible wallets enrolled for Algorand Governance
+Period 4 as of August 21, 2022. The data shows a very &amp;quot;whale&amp;quot; heavy
+distribution of voting power and rewards, where the top 37 individual
+&amp;quot;whale&amp;quot; wallets control the vote and reap 50% of rewards, and wallets
+with over 1 million ALGO commitment control 86% of the vote and rewards.&lt;/p&gt;
+&lt;h2 id=&#34;data-sources&#34;&gt;Data Sources&lt;/h2&gt;
+&lt;p&gt;To get our raw data, we used two different data sources and correlated
+them to confirm correctness:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -37,9 +52,23 @@ Data Sources To get our raw data, we used two different data sources and correla
       <pubDate>Mon, 04 Jul 2022 02:18:38 +0000</pubDate>
       
       <guid>https://d13.co/algofi-vault-reward-performance-for-governance-period-3/</guid>
-      <description>TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than 2x in governance rewards profit.
-For the third Governance season we tried the AlgoFi vault for Governance: AlgoFi counts vaulted Algo as collateral that you can borrow against. Borrowing Algo against your vaulted algo has two advantages:
-You can add the borrowed algo to the vault, thus increasing your collateral and ability to borrow more Algo. You are not exposed to liquidation danger due to price fluctuations between your collateral and borrow value, as they are the same picture price.</description>
+      <description>&lt;p&gt;&lt;em&gt;TL;DR: Maximizing our vaulted ALGO with borrowed ALGO yielded more than
+2x in governance rewards profit.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;For the third Governance season we tried the AlgoFi vault for
+Governance: AlgoFi counts vaulted Algo as collateral that you can borrow
+against. Borrowing Algo against your vaulted algo has two advantages:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;You can add the borrowed algo to the vault, thus increasing your
+collateral and ability to borrow more Algo.&lt;/li&gt;
+&lt;li&gt;You are not exposed to liquidation danger due to price fluctuations
+between your collateral and borrow value, as they are the same
+&lt;del&gt;picture&lt;/del&gt; price.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Your risk in this scheme is essentially confined to smart contract risk:
+AlgoFi vault contracts failing either catastrophically (entire vaulted
+amount lost) or partially (inability to vote and/or claim rewards). This
+was palatable to our risk tolerance considering AlgoFi&#39;s reputation and
+audits, so we tested it out on a few accounts.&lt;/p&gt;</description>
     </item>
     
   </channel>

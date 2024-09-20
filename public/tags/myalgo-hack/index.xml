@@ -17,14 +17,19 @@
       <pubDate>Fri, 31 Mar 2023 21:26:38 +0000</pubDate>
       
       <guid>https://d13.co/myalgo-hack-fifth-wave-addresses-data/</guid>
-      <description>The MyAlgo attacks have so far been clustered around five distinct waves, roughly corresponding to these dates:
-First Wave: February 20, 2023
-Second Wave: March 5, 2023
-Third Wave: March 6, 2023
-Fourth Wave: March 17, 2023
-Fifth Wave: March 31, 2023
-This article presents data from the fifth wave - March 31 - as well as subsequent movements of stolen funds.
-Summary The attack was automated and ran for 14 hours - from 2023-03-31 10:15 (GMT) until 2023-04-01 00:25 (GMT).</description>
+      <description>&lt;p&gt;The MyAlgo attacks have so far been clustered around five distinct
+waves, roughly corresponding to these dates:&lt;/p&gt;
+&lt;p&gt;First Wave: February 20, 2023&lt;br&gt;
+Second Wave: March 5, 2023&lt;br&gt;
+Third Wave: March 6, 2023&lt;br&gt;
+Fourth Wave: March 17, 2023&lt;br&gt;
+Fifth Wave: March 31, 2023&lt;/p&gt;
+&lt;p&gt;This article presents data from the fifth wave - March 31 - as well as
+subsequent movements of stolen funds.&lt;/p&gt;
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+&lt;p&gt;The attack was automated and ran for 14 hours - from 2023-03-31 10:15
+(GMT) until 2023-04-01 00:25 (GMT). ASAs were drained from 4,166
+accounts into the following malicious account:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -33,12 +38,31 @@ Summary The attack was automated and ran for 14 hours - from 2023-03-31 10:15 (G
       <pubDate>Tue, 14 Mar 2023 21:26:38 +0000</pubDate>
       
       <guid>https://d13.co/myalgo-hack-first-wave-addresses-data/</guid>
-      <description>The MyAlgo attacks have so far been clustered around three distinct waves, roughly corresponding to these dates:
-First Wave: February 20, 2023
-Second Wave: March 5, 2023
-Third Wave: March 6, 2023
-This article presents data from the initial wave - February 20 - as well as subsequent movements of stolen funds during March 5th. Wallets attacked on March 5th are not included.
-Aggregates and Addresses In the first wave, 24 addresses were impacted for the following aggregate losses:</description>
+      <description>&lt;p&gt;The MyAlgo attacks have so far been clustered around three distinct
+waves, roughly corresponding to these dates:&lt;/p&gt;
+&lt;p&gt;First Wave: February 20, 2023&lt;br&gt;
+Second Wave: March 5, 2023&lt;br&gt;
+Third Wave: March 6, 2023&lt;/p&gt;
+&lt;p&gt;This article presents data from the initial wave - February 20 - as well
+as subsequent movements of stolen funds during March 5th. Wallets
+attacked on March 5th are not included.&lt;/p&gt;
+&lt;h2 id=&#34;aggregates-and-addresses&#34;&gt;Aggregates and Addresses&lt;/h2&gt;
+&lt;p&gt;In the first wave, 24 addresses were impacted for the following
+aggregate losses:&lt;br&gt;
+&lt;br&gt;
+16,964,466.38 ALGO&lt;br&gt;
+3,440,465.51 USDC&lt;br&gt;
+1,515,710.00 OPUL&lt;br&gt;
+800,000.00 gALGO&lt;br&gt;
+1,237,828.90 COSG&lt;br&gt;
+40,252,507.58 goMINT&lt;br&gt;
+230.37 goETH&lt;br&gt;
+15.85 goBTC&lt;br&gt;
+2,713,794.69 BANK&lt;br&gt;
+&lt;br&gt;
+The approximate value at the time was $9.4MM.&lt;br&gt;
+&lt;br&gt;
+The impacted addresses are:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,8 +71,21 @@ Aggregates and Addresses In the first wave, 24 addresses were impacted for the f
       <pubDate>Mon, 27 Feb 2023 21:26:38 +0000</pubDate>
       
       <guid>https://d13.co/algorand-20-02-2023-thefts-preliminary-advisory-report/</guid>
-      <description>Summary: There is a non-zero chance of a MyAlgo wallet software compromise leading to the theft of at least $7.2m worth of assets on the Algorand blockchain. We recommend rekeying MyAlgo accounts to fresh private keys, or simply moving funds where possible. This precautionary remediation of further risk should not have usability impact and, if done carefully, may have a significant security benefit.\
-We have been day 1 responders to these attacks: reporting the potential compromises, organizing affected users, systematically collecting as much information as possible in order to find a possible common vector, suggesting actions to be taken, preparing transaction trail documents for authorities.</description>
+      <description>&lt;p&gt;&lt;strong&gt;Summary: There is a non-zero chance of a MyAlgo wallet software
+compromise leading to the theft of at least $7.2m worth of assets on
+the Algorand blockchain. We recommend rekeying MyAlgo accounts to fresh
+private keys, or simply moving funds where possible. This precautionary
+remediation of further risk should not have usability impact and, if
+done carefully, may have a significant security benefit.&lt;/strong&gt;\&lt;/p&gt;
+&lt;p&gt;We have been &lt;a href=&#34;https://allo.info/tx/54QEQKNH66ZW3FT2LQU7QQ6LFX7QVABXJYK7LM6WAHJNQ3M5W2PQ&#34;&gt;day 1
+responders&lt;/a&gt;
+to these attacks:
+&lt;a href=&#34;https://twitter.com/Algo_Surf/status/1627827487668424707&#34;&gt;reporting&lt;/a&gt;
+the potential compromises, organizing affected users, systematically
+collecting as much information as possible in order to find a possible
+common vector, suggesting actions to be taken, preparing transaction
+trail documents for authorities. This case quickly grew with multiple
+confirmations and more discoveries daily.&lt;/p&gt;</description>
     </item>
     
   </channel>

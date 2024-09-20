@@ -1,0 +1,29 @@
+  6635 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:25
+  6636 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:25
+
+  6637 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:04
+  6638 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:04
+  6639 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:04
+  6640 | https://github.com/algorandfoundation/specs/tree/5615adc36bad610c7f165fa2967f4ecfa75125f0 | 00:00:04
+
+Average round time after 6637 was ~4.25
+
+idx=# select avg(realtime_diff) from (SELECT lead(h.realtime, 1) OVER w - h.realtime AS realtime_diff
+   FROM block_header h where h.round > 6636 and h.round <= 7636
+  WINDOW w AS (ORDER BY h.round)) x;
+       avg
+-----------------
+ 00:00:04.249249
+
+Protocol is unchanged, so: 25 sec round time means the genesis timestamp was off and Algorand was catching up to real time.
+
+6637 = 2019-06-12T22:05:25Z
+
+assuming 0 - 6636 took 4.25 seconds average but was counted as 25, the actual first block was voted on at around (genesis time) + (25 - 4.25) * 6636 (not counting genesis which was not a voted block)
+
+1-6636 took 28198 seconds @ 4.25 sec round times
+6337 was 2019-06-12 22:05:25
+
+actual zero was 1560377125 - 28198 = 2019-06-12T14:15:27.000Z
+
+assuming that things did not stall or delay in the first ~7 hours that it was catching up

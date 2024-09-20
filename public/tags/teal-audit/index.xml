@@ -10,15 +10,37 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 20 Dec 2023 16:06:38 +0000</lastBuildDate><atom:link href="https://d13.co/tags/teal-audit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:06:38 +0000</lastBuildDate><atom:link href="https://d13.co/tags/teal-audit/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Disclosure Tales 02: Downward Facing DAOs</title>
+      <link>https://d13.co/posts/disclosure-tales-02-downward-facing-daos/</link>
+      <pubDate>Fri, 29 Dec 2023 00:06:38 +0000</pubDate>
+      
+      <guid>https://d13.co/posts/disclosure-tales-02-downward-facing-daos/</guid>
+      <description>&lt;p&gt;I discovered and disclosed a vulnerability in the &lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; and &lt;a href=&#34;https://www.algofame.org/dao&#34;&gt;FAME&lt;/a&gt; DAO contracts. Then I hacked them. This story is not boring.&lt;/p&gt;
+&lt;h2 id=&#34;background-the-daos&#34;&gt;Background: The DAOs&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; offered a fully featured DAO platform. In a nutshell:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Each DAO instance has a governance token that can be staked and withdrawn.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;The DAO contracts could control assets and ALGO. Payments of both types could be executed trustlessly after a proposal passed with enough votes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Voting power is proportional to the staked amount of governance tokens in the DAO.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Disclosure Tales 01: Honing Fire</title>
       <link>https://d13.co/posts/disclosure-tales-01-honing-fire/</link>
       <pubDate>Wed, 20 Dec 2023 16:06:38 +0000</pubDate>
       
       <guid>https://d13.co/posts/disclosure-tales-01-honing-fire/</guid>
-      <description>I discovered and disclosed a vulnerability in the Hone NFT shuffle contracts. They responded well. This story is almost boring.
-The backstory I was curious about the mechanics of the Hone NFT shuffle, as it utilizes VRF, in which I have a keen interest. Reading TEAL is a bit like reading assembly, but with enough determination and a bit of practice you can figure out what a contract is doing.</description>
+      <description>&lt;p&gt;I discovered and disclosed a vulnerability in the &lt;a href=&#34;https://nft.hone.fi/&#34;&gt;Hone NFT shuffle&lt;/a&gt; contracts. They responded well. This story is almost boring.&lt;/p&gt;
+&lt;h2 id=&#34;the-backstory&#34;&gt;The backstory&lt;/h2&gt;
+&lt;p&gt;I was curious about the mechanics of the Hone NFT shuffle, as it utilizes VRF, in which I have a keen interest. Reading TEAL is a bit like reading assembly, but with enough determination and a bit of practice you can figure out what a contract is doing.&lt;/p&gt;
+&lt;p&gt;Occasionally you can also spot a combination of transactions or parameters that breaks the assumptions of the contract developer. The dopamine rush from finding and verifying a vulnerability in a smart contract is probably equivalent to snorting 1,000 ground-up sudoku puzzles.&lt;/p&gt;</description>
     </item>
     
   </channel>
