@@ -1,0 +1,49 @@
+#subsigners-custom {
+}
+#subsigners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 15px;
+  border-left: 5px green solid;
+}
+#subsign-sign button,
+#subsigners-list button {
+  border: 1px gray solid;
+  align-self: center;
+  padding: 5px 10px 5px 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#subsigners-list .cx-space-between {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#subsigners-list .cx-invisi {
+  visibility: hidden;
+}
+#subsign-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#subsign-sign.open {
+  border-left: 5px green solid;
+  padding-left: 15px;
+}
+#subsign-sign .ssqr {
+  max-width: 50%;
+}
+#subsign-sign details summary {
+  margin-top: 20px;
+  opacity: 0.35;
+  filter: grayscale(60%);
+}
+#subsign-sign details[open] summary {
+  opacity: 1;
+  filter: grayscale(0);
+}

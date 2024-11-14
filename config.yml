@@ -87,5 +87,14 @@ params:
 #       url: 'https://twitter.com/d13_co'
 #       weight: 30
 markup:
-  highlight:
-    noClasses: false
+  goldmark:
+    highlight:
+      noClasses: false
+    renderer:
+      unsafe: true
+server:
+  headers:
+  - for: /**
+    values:
+      Access-Control-Allow-Origin: "*"
+      Access-Control-Allow-Methods: GET, OPTIONS
