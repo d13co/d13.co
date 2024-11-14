@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Inflation on D13.co</title>
     <link>https://d13.co/tags/inflation/</link>
     <description>Recent content in Inflation on D13.co</description>
-    <image>
-      <url>https://d13.co/images/logo-7-green-384-padded-doofy.png</url>
-      <link>https://d13.co/images/logo-7-green-384-padded-doofy.png</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 31 Jan 2024 00:13:37 +0000</lastBuildDate><atom:link href="https://d13.co/tags/inflation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 31 Jan 2024 00:13:37 +0000</lastBuildDate>
+    <atom:link href="https://d13.co/tags/inflation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Thoughts on &#34;a&#34; musing on the pond: Dynamic supply for Algorand</title>
       <link>https://d13.co/posts/musing-on-the-pond-dynamic-supply/</link>
       <pubDate>Wed, 31 Jan 2024 00:13:37 +0000</pubDate>
-      
       <guid>https://d13.co/posts/musing-on-the-pond-dynamic-supply/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;The &lt;a href=&#34;https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72&#34;&gt;&amp;ldquo;Musings on the pond&amp;rdquo;&lt;/a&gt; article lays out a thought-provoking proposal for a deep intervention in Algorand&amp;rsquo;s economics.&lt;/strong&gt; If you have not read it, it is well worth putting it at the top of your reading list and getting to it soon - even now, in fact: if you have the time, go &lt;a href=&#34;https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72&#34;&gt;read that first&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Among the proposed interventions is &lt;strong&gt;a set of changes to the minimum transaction fee, block rewards and fee burns that would alter the fixed nature of the total supply of Algorand.&lt;/strong&gt; The present article discusses these changes.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;The &lt;a href=&#34;https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72&#34;&gt;&amp;ldquo;Musings on the pond&amp;rdquo;&lt;/a&gt; article lays out a thought-provoking proposal for a deep intervention in Algorand&amp;rsquo;s economics.&lt;/strong&gt; If you have not read it, it is well worth putting it at the top of your reading list and getting to it soon - even now, in fact: if you have the time, go &lt;a href=&#34;https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72&#34;&gt;read that first&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Among the proposed interventions is &lt;strong&gt;a set of changes to the minimum transaction fee, block rewards and fee burns that would alter the fixed nature of the total supply of Algorand.&lt;/strong&gt; The present article discusses these changes.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

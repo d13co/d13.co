@@ -1,35 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Whitehat Operation on D13.co</title>
     <link>https://d13.co/tags/whitehat-operation/</link>
     <description>Recent content in Whitehat Operation on D13.co</description>
-    <image>
-      <url>https://d13.co/images/logo-7-green-384-padded-doofy.png</url>
-      <link>https://d13.co/images/logo-7-green-384-padded-doofy.png</link>
-    </image>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 29 Dec 2023 00:06:38 +0000</lastBuildDate><atom:link href="https://d13.co/tags/whitehat-operation/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Dec 2023 00:06:38 +0000</lastBuildDate>
+    <atom:link href="https://d13.co/tags/whitehat-operation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Disclosure Tales 02: Downward Facing DAOs</title>
       <link>https://d13.co/posts/disclosure-tales-02-downward-facing-daos/</link>
       <pubDate>Fri, 29 Dec 2023 00:06:38 +0000</pubDate>
-      
       <guid>https://d13.co/posts/disclosure-tales-02-downward-facing-daos/</guid>
-      <description>&lt;p&gt;I discovered and disclosed a vulnerability in the &lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; and &lt;a href=&#34;https://www.algofame.org/dao&#34;&gt;FAME&lt;/a&gt; DAO contracts. Then I hacked them. This story is not boring.&lt;/p&gt;
-&lt;h2 id=&#34;background-the-daos&#34;&gt;Background: The DAOs&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; offered a fully featured DAO platform. In a nutshell:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Each DAO instance has a governance token that can be staked and withdrawn.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;The DAO contracts could control assets and ALGO. Payments of both types could be executed trustlessly after a proposal passed with enough votes.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Voting power is proportional to the staked amount of governance tokens in the DAO.&lt;/p&gt;</description>
+      <description>&lt;p&gt;I discovered and disclosed a vulnerability in the &lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; and &lt;a href=&#34;https://www.algofame.org/dao&#34;&gt;FAME&lt;/a&gt; DAO contracts. Then I hacked them. This story is not boring.&lt;/p&gt;&#xA;&lt;h2 id=&#34;background-the-daos&#34;&gt;Background: The DAOs&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.updog.vote&#34;&gt;Updog&lt;/a&gt; offered a fully featured DAO platform. In a nutshell:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Each DAO instance has a governance token that can be staked and withdrawn.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;The DAO contracts could control assets and ALGO. Payments of both types could be executed trustlessly after a proposal passed with enough votes.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Voting power is proportional to the staked amount of governance tokens in the DAO.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

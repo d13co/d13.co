@@ -3,24 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://d13.co/</loc>
-    <lastmod>2024-07-22T14:49:12+00:00</lastmod>
+    <lastmod>2024-11-14T12:02:10+01:00</lastmod>
   </url><url>
     <loc>https://d13.co/posts/</loc>
-    <lastmod>2024-07-22T14:49:12+00:00</lastmod>
-  </url><url>
-    <loc>https://d13.co/tags/smart-contract-audit/</loc>
-    <lastmod>2024-07-22T14:49:12+00:00</lastmod>
-  </url><url>
-    <loc>https://d13.co/tags/</loc>
-    <lastmod>2024-07-22T14:49:12+00:00</lastmod>
-  </url><url>
-    <loc>https://d13.co/posts/tinyman-governance-community-audit/</loc>
-    <lastmod>2024-07-22T14:49:12+00:00</lastmod>
+    <lastmod>2024-11-14T12:02:10+01:00</lastmod>
   </url><url>
     <loc>https://d13.co/tags/algorand-protocol/</loc>
     <lastmod>2024-01-31T00:13:37+00:00</lastmod>
   </url><url>
     <loc>https://d13.co/tags/inflation/</loc>
+    <lastmod>2024-01-31T00:13:37+00:00</lastmod>
+  </url><url>
+    <loc>https://d13.co/tags/</loc>
     <lastmod>2024-01-31T00:13:37+00:00</lastmod>
   </url><url>
     <loc>https://d13.co/posts/musing-on-the-pond-dynamic-supply/</loc>
@@ -86,11 +80,12 @@
     <loc>https://d13.co/algod-loadb-an-aware-algod-http-load-balancer/</loc>
     <lastmod>2022-04-25T02:18:38+00:00</lastmod>
   </url><url>
+    <loc>https://d13.co/algofi-liquidations-stats-data/</loc>
+    <lastmod>2022-04-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://d13.co/our-very-own-community-space-r-d13/</loc>
     <lastmod>2022-04-19T02:18:38+00:00</lastmod>
   </url><url>
     <loc>https://d13.co/categories/</loc>
-  </url><url>
-    <loc>https://d13.co/algofi-liquidations-stats-data/</loc>
   </url>
 </urlset>
