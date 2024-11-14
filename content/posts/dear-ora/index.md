@@ -1,7 +1,6 @@
 ---
 title: "Dear Ora: An open letter to Ora miners"
 date: 2024-11-14T12:02:10+01:00
-draft: true
 ---
 
 **TL;DR: You can lighten the load of Ora on the ecosystem infrastructure by making small changes: mine with maximum fees (0.02) and minimize note sizes.**
