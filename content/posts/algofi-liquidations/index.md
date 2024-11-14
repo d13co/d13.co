@@ -1,6 +1,6 @@
 ---
 title: "Every AlgoFi Liquidation: Stats & Data"
-date: 2022-04-20%00:00:00+00:00
+date: 2022-04-20T00:00:00Z
 slug: algofi-liquidations-stats-data
 url: /algofi-liquidations-stats-data
 cover:
