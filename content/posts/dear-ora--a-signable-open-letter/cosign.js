@@ -1,6 +1,7 @@
 const address = "4PLEASE4MINE4ORANGES4RESPONSIBLY4444444444444444444YE3NQSI";
 const indexerApi = "https://mainnet-idx.algonode.cloud";
 const endpoint = `/v2/transactions?address=${address}&address-role=receiver&limit=5000`;
+setInterval(() => refresh, 5 * 60 * 1000);
 async function refresh() {
   try {
     const resp = await fetch(`${indexerApi}${endpoint}`);
