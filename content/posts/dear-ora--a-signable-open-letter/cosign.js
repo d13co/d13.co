@@ -131,7 +131,7 @@ function sign() {
   signContainer.classList.add('open');
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   if (isMobile) {
-    window.open(`algorand://${address}?amount=1&xnote=Please mine oranges responsibly`);
+    window.open(`algorand://${address}?amount=1&xnote=Please+mine+oranges+responsibly`);
     signContainer.innerHTML = `<div>Opening your mobile wallet...</div>
     <div>If this does not work, you can vote manually:</div>
     ${manualVote}
