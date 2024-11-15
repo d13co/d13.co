@@ -11,7 +11,7 @@ async function refresh() {
     for(const txn of transactions) {
       try {
         const note = atob(txn.note);
-        if (/please mine oranges responsibly/i.test(note)) {
+        if (/please( |%20|\+)mine( |%20|\+)oranges( |%20|\+)responsibly/i.test(note)) {
           signers[txn.sender] = txn.id;
         }
       } catch(e) {
