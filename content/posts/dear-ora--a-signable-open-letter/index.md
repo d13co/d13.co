@@ -121,7 +121,7 @@ The `HK5FKJ..` miner has mined 215526 + 263832 + 247932 = 727290 transactions ov
 
 Counted in MB, just the note fields from this miner add up to 87MB, 129MB & 97MB, for a grand total of three days' worth of notes taking up 314.65 MB.
 
-## 5. ~5 months in the life
+## 5. months in the life
 
 In [this spreadsheet](https://docs.google.com/spreadsheets/d/1IaDZzKeunrkDedqGgllYAwm3zKpSckp1Nav6mPZFzBw/edit?gid=294625563#gid=294625563) you can see fees and note statistics for approx. 5 months of Ora, June 22nd until "the time of writing".
 
