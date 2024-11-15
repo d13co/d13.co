@@ -172,7 +172,7 @@ If you use an explorer, check the base64 or hex representation of the note field
 
 ![](note-num.png) ![](note-base64.png)
 
-## 8. Wrapping Up
+## 7. Wrapping Up
 
 This isn't about avoiding to use the chain, but any good thing times ~half a billion can become a concern. The Ora miners and community are very proud of the mechanics of Ora and their contributions to the fee sink, but the negative externalities of current mining practices must also be considered, particularly if small changes can ease the burden moving forward.
 
