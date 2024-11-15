@@ -49,7 +49,7 @@ function showall(limit=0) {
       break;
     }
   }
-  if (limit && j != i) {
+  if (limit && ((j != i) || (Object.keys(signers).length > limit))) {
     contentList.innerHTML += `<div class="cx-space-between"><span>(NFDs shown first)</span><button className="btn" onclick="showall()">Show all</button><span class="cx-invisi">(NFDs shown first)</span></div>`;
   }
 }
