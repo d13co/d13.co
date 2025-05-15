@@ -27,7 +27,7 @@ Default node behavior: (not enforced by consensus)
 
 ## Backrunning today
 
-"Backrunning" is executing value-extracting transactions immediately _after_ a transaction that creates extractable value. Two primary backrunning examples are liquidations and arbitrage. In liquidations, there is usually an oracle that is updated with the latest price, which allows liquidations to take place. In arbitrage, an inefficient swap enables an arbitrager to move funds between different liquidity pools in order to make a small profit.
+"Backrunning" is executing value-extracting transactions immediately _after_ a transaction that creates extractable value. Two primary backrunning examples are liquidations and arbitrage. In liquidations, there is usually an oracle that is updated with the latest price, which allows liquidations to take place. In arbitrage, an inefficient swap enables an arbitrager to move funds between different liquidity pools in order to make a small profit. 
 
 Both scenarios are winner-takes-all, and the winner gets to have their transaction executed before their competition. Given the state of affairs of transaction ordering, competitive liquidators and arbitragers are in a race to be first-seen by as many block proposers as possible.
 
