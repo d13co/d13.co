@@ -51,7 +51,7 @@ params:
     icon: /images/logo-7-green-128.png
     iconHeight: 48
   homeInfoParams:
-    Title: "D13 .co | .algo | .coop"
+    Title: "D13 .co"
     Content: "Develops on Algorand."
   editPost:
     URL: 'https://github.com/d13co/d13.co/tree/main/content'
