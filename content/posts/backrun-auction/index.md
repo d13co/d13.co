@@ -1,5 +1,5 @@
 ---
-title: "Sustainability Proposal: Backrun Auctioning on Algorand"
+title: "Algorand Sustainability Proposal: Backrun Auctioning"
 date: 2025-05-06T10:32:45+03:00
 ---
 
