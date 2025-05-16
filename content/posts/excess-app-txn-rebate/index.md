@@ -11,9 +11,9 @@ Algorand fee sustainability has recently come back into the community spotlight.
 
 In this debate, there is considerable traction behind the notion that increasing the minimum transaction fee will negatively impact adoption: high volume applications may reduce their on-chain volume (or stop altogether) and certain use cases - micropayments or microinteractions - may no longer be viable on Algorand.
 
-Personally, I would avoid raising the minimum transaction fee for now, as I think it would be simultaneously too much (see above) and too little (would not make enough of a positive impact on sustainability vs its anticipated costs.)
+Personally, I would avoid raising the minimum transaction fee just yet, as I think it would be simultaneously too much (see above) and too little (would not make enough of a positive impact on sustainability vs its anticipated costs.)
 
-I think we have the time to experiment with innovative ways to bridge the sustainability gap, and this proposal could be a part of the solution. It was originally proposed by [grzracz](https://x.com/grzracz), founder of Vestige.
+I think we have the time to experiment with innovative ways to bridge the sustainability gap, and this proposal could be a small part of the solution. It was originally proposed by [grzracz](https://x.com/grzracz), founder of Vestige.
 
 ## Proposal
 
@@ -24,15 +24,15 @@ Encourage application developers to require "excess" transaction fees - that is,
 
 ## Simplified Example
 
-Alice's application is called with a simple application call transaction, requiring the minimum network fee of 0.001 ALGO.
+Alice's application is called with a simple application call transaction, requiring 1x of the minimum network fee of 0.001 ALGO.
 
 Alice thinks that increasing the network fees would not hurt the competitiveness of her service offering, so she has her frontend use a 0.101 ALGO fee instead (0.1 ALGO excess).
 
 The block proposer and fee sink each receive an extra 0.05 ALGO that they otherwise would not.
 
-The Foundation (or later, protocol) wants to incentivise usage of excess fees, so Alice's application revenue address is rebated at 50% - half of the excess fees she generated (0.05 ALGO.)
+The Foundation (or later, protocol) wants to incentivise usage of excess fees, so Alice's application revenue address is rebated at 50% - half of the excess fees she generated (0.05 ALGO.), which is the amount that ended up in the fee sink.
 
-In this simplified example, this is delta-neutral from a "purse" point of view: the foundation purse funds the fee sink (in order to support block bonus incentives) so it is money that would have ended up there anyway, but in this case the developer is causing the extra funding, and the Foundation rewards them for it. The extra benefits are supporting the developer, as well as the 50% excess that ended up in the block proposer as extra fees.
+In this simplified example, this is delta-neutral from a "purse" point of view: the foundation purse funds the fee sink (in order to support block bonus incentives) so it is money that would have been spent towards the fee sink anyway, but in this case the developer is rewarded instead for the amount they indirectly funded the fee sink with. The extra benefits are: supporting the developer, as well as the 50% excess that ended up in the block proposer as extra fees.
 
 ## Benefits
 
