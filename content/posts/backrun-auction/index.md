@@ -1,7 +1,6 @@
 ---
 title: "Sustainability Proposal: Backrun Auctioning on Algorand"
 date: 2025-05-06T10:32:45+03:00
-draft: true
 ---
 
 In recent conversations about sustainability and fees on Algorand, most of the focus has been on:

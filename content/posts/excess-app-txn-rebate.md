@@ -1,7 +1,6 @@
 ---
 title: "Sustainability Proposal: Excess Transaction Fee Rebate on Algorand"
 date: 2025-05-15T11:07:37+03:00
-draft: true
 ---
 
 Algorand fee sustainability has recently come back into the community spotlight.
