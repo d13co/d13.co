@@ -30,13 +30,15 @@ Alice thinks that increasing the network fees would not hurt the competitiveness
 
 The block proposer and fee sink each receive an extra 0.05 ALGO that they otherwise would not.
 
-The Foundation (or later, protocol) wants to incentivise usage of excess fees, so Alice's application revenue address is rebated half of the excess fees she generated (0.05 ALGO.)
+The Foundation (or later, protocol) wants to incentivise usage of excess fees, so Alice's application revenue address is rebated at 50% - half of the excess fees she generated (0.05 ALGO.)
+
+In this simplified example, this is delta-neutral from a "purse" point of view: the foundation purse funds the fee sink (in order to support block bonus incentives) so it is money that would have ended up there anyway, but in this case the developer is causing the extra funding, and the Foundation rewards them for it. The extra benefits are supporting the developer, as well as the 50% excess that ended up in the block proposer as extra fees.
 
 ## Benefits
 
 - Creates small revenue stream for developers
 - Incentivizes high transaction volume applications
-- Depending on the rebate percentage, the Foundation funds the fee sink at break-even or at a discount
+- Depending on the rebate percentage, the Foundation can fund the fee sink at break-even or at a discount (excluding development costs)
 - Can be implemented without protocol change (as a pilot)
 
 ## Implementation Decisions
@@ -47,10 +49,11 @@ It won't always be as simple as "application creator address" - e.g. we need to 
 
 **Is this an opt-in system, or in effect by default?**
 
-Opt-in has the following advantages:
+At least for an off-chain pilot, opt-in has clear advantages:
 
 - Easier to ensure the correct recipient. The developer would opt in by providing their creator addresses and all created applications would be found recursively.
 - Ability to provide a separate rebate revenue address than the application creator accounts.
+- Does not create unsolicited systematic payments that may have taxation or regulatory implications.
 - Applications could intentionally not opt in as a way of giving back. See below.
 
 **More decisions**
@@ -74,20 +77,20 @@ From the developer point of view, excess fees could either be suggested or enfor
 - suggested: dApp frontends encode higher fees. The smart contract does not enforce them as a requirement.
 - enforced: the smart contract itself enforces a minimum excess fee for app calls.
 
-An implementation consideration that was pointed out by Fergal Walsh from [Tinyman](https://tinyman.org/) is that for composable protocols (e.g. a DEX) the "suggested" approach would likely be preferable to preserve ease of composability. For example, a DEX swap may be called by a swap router smart contract instead of directly. In these cases, fees are almost always paid in the outer application call to the router contract, instead of the DEX contract itself, so the DEX contract would see zero fees being paid in its own application call.
+An implementation consideration that was pointed out by Fergal Walsh (CTO of [Tinyman](https://tinyman.org/)) is that for composable protocols (e.g. a DEX) the "suggested" approach would likely be preferable to preserve ease of composability. For example, a DEX swap may be called by a swap router smart contract instead of directly. In these cases, fees are almost always paid in the outer application call to the router contract, instead of the DEX contract itself, so the DEX contract would see zero fees being paid in its own application call.
 
 ## Why bother? You can already code this in a smart contract
 
 This is certainly possible, and even practiced: excess fees are already coded into smart contract logic, such as in Reti pooling, or the recently released [Haydrops](https://drops.hay.app/drops):
+
+![](./1747366674.png)
+> Excerpt from [Haydrops docs](https://drops.hay.app/docs)
 
 ![](lora.png)
 
 > Pictured: example of a haydrop "claim".
 > User pays .1 ALGO - portion used for MBR, portion goes to maintainer, rest goes to fee sink.
 > Total of 0.0253 to fee sink.
-
-![](./1747366674.png)
-> Excerpt from [Haydrops docs](https://drops.hay.app/docs)
 
 And of course dApps require platform fees already as standard practice, which they keep entirely.
 
@@ -101,11 +104,11 @@ I believe it is still worth making this a proper incentivization mechanic:
 
 ## Variant: incentivize new applications only
 
-I would be remiss not to mention Grzracz original intention for this, which is to only incentivize applications after a certain threshold - in other words, new applications deployed after this mechanic is implemented.
+I would be remiss not to mention Grzracz' original intention for this, which is to only incentivize applications after a certain threshold - in other words, new applications deployed after this mechanic is implemented.
 
 The rationale behind this is to focus the incentive to attracting builders, and lead them to high volume applications as well.
 
-Personally I would leave it open to all applications, new and old. From the "purse" point of view (Algorand Foundation) this strategy can be designed to be delta-neutral at worst, or even as a cost-saving (funding the fee sink at a discount.)
+Personally I would leave it open to all applications, new and old. However, one application utilizing excess fees as a core mechanic (Ora mining) is probably going to polarize the discussion whichever variant is chosen (new-only or all inclusive.) I will leave this specific edge case discussion for another day.
 
 ## Afterword
 
@@ -113,4 +116,6 @@ Personally I would leave it open to all applications, new and old. From the "pur
 
  As we have seen with the recently deployed protocol staking, incentives work. The altruistic concept of spending more to give back to the node-runners and fee sink protocol would probably do very well when paired with a monetary incentive to do so, even if this monetary incentive is low.
 
- Personally I would like to hear feedback on this idea, and then experiment with a pilot implementation if it is considered worthwhile.
+Personally I would like to hear feedback on this idea, and then if it is considered worthwhile all-around, look into a pilot implementation.
+
+_Once again: This is presented as a personal opinion piece. Views presented here are mine except when explicitly attributed._
