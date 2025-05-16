@@ -32,7 +32,7 @@ The block proposer and fee sink each receive an extra 0.05 ALGO that they otherw
 
 The Foundation (or later, protocol) wants to incentivise usage of excess fees, so Alice's application revenue address is rebated at 50% - half of the excess fees she generated (0.05 ALGO.), which is the amount that ended up in the fee sink.
 
-In this simplified example, this is delta-neutral from a "purse" point of view: the foundation purse funds the fee sink (in order to support block bonus incentives) so it is money that would have been spent towards the fee sink anyway, but in this case the developer is rewarded instead for the amount they indirectly funded the fee sink with. The extra benefits are: supporting the developer, as well as the 50% excess that ended up in the block proposer as extra fees.
+In this simplified example, this is delta-neutral from a "purse" point of view: the foundation purse funds the fee sink (in order to support block bonus incentives) so it is money that would have been spent towards the fee sink anyway, but in this case the developer is rewarded instead for the amount they indirectly contributed. The extra benefits are: supporting the developer, as well as the 50% excess that ended up in the block proposer as extra fees.
 
 In other scenarios, Alice may choose to do this without opting in to receive the rebates. She would instead be thinking that a minimal-cost contribution on her end (marginally less appealing offering because of the slightly increased cost) would sustain the protocol upon which her business is built.
 
