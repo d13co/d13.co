@@ -26,7 +26,7 @@ Encourage application developers to require "excess" transaction fees - that is,
 
 Alice's application is called with a simple application call transaction, requiring the minimum network fee of 0.001 ALGO.
 
-Alice thinks that increasing the network fees would not hurt the competitiveness of her service offering, so she has her frontend use a 0.101 ALGO fee instead.
+Alice thinks that increasing the network fees would not hurt the competitiveness of her service offering, so she has her frontend use a 0.101 ALGO fee instead (0.1 ALGO excess).
 
 The block proposer and fee sink each receive an extra 0.05 ALGO that they otherwise would not.
 
@@ -74,7 +74,7 @@ From the developer point of view, excess fees could either be suggested or enfor
 - suggested: dApp frontends encode higher fees. The smart contract does not enforce them as a requirement.
 - enforced: the smart contract itself enforces a minimum excess fee for app calls.
 
-An implementation consideration that was pointed out by [withheld] is that for composable protocols (e.g. a DEX) the "suggested" approach would likely be preferable to preserve ease of composability. For example, a DEX swap may be called by a swap router smart contract instead of directly. In these cases, fees are almost always paid in the outer application call to the router contract, instead of the DEX contract itself, so the DEX contract would see zero fees being paid in its own application call.
+An implementation consideration that was pointed out by Fergal Walsh from [Tinyman](https://tinyman.org/) is that for composable protocols (e.g. a DEX) the "suggested" approach would likely be preferable to preserve ease of composability. For example, a DEX swap may be called by a swap router smart contract instead of directly. In these cases, fees are almost always paid in the outer application call to the router contract, instead of the DEX contract itself, so the DEX contract would see zero fees being paid in its own application call.
 
 ## Why bother? You can already code this in a smart contract
 
