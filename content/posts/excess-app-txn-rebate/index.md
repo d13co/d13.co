@@ -1,7 +1,6 @@
 ---
 title: "Algorand Sustainability Proposal: Excess Transaction Fee Rebate"
 date: 2025-05-15T11:07:37+03:00
-draft: true
 cover:
   image: cover-rebate.png
 ---
