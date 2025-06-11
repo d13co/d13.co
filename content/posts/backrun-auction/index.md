@@ -109,7 +109,7 @@ Liquidators would still need to act fast - make sure their backrun is propagated
 
 ## Not so fast
 
-The rules as outlined to far are not the full picture, of course - there are several concerns to consider around performance, potential for abuse (DDOS), frontrunning possibilities etc.
+The `backrun-id` rules as outlined so far are not the full picture, of course - there are several concerns to consider around performance, potential for abuse (DDOS), frontrunning possibilities etc.
 
 ### Performance
 
