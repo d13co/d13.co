@@ -149,9 +149,9 @@ The unpredictability of future block proposers also works in favor of a protocol
 
 ## Yes, But…
 
-The `backrun-id` rules as outlined here are not the full picture - there are several concerns to address around performance, potential abuse (DDoS), and frontrunning.
+The `backrun-id` rules as outlined above are not the full picture - there are several concerns to address around performance, potential abuse (DDoS), and frontrunning.
 
-*Disclaimer: I am not a protocol developer - for best results, imagine this section as drawn on a napkin with crayons.*
+*Disclaimer: I am not a protocol developer. Best to imagine this section as drawn on a napkin with crayons.*
 
 ### Performance
 
