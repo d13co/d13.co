@@ -9,7 +9,7 @@ cover:
   image: backrun-cover.png
 ---
 
-> _This is presented as a personal opinion piece. Views presented here are mine except when explicitly attributed._
+> _This is presented as a personal opinion piece. Views presented here are mine except where explicitly attributed._
 
 ## Preface
 
