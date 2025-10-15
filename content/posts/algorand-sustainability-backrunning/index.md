@@ -9,30 +9,36 @@ cover:
   image: backrun-cover.png
 ---
 
+> _This is presented as a personal opinion piece. Views presented here are mine except when explicitly attributed._
+
 ## Preface
 
-In recent conversations about sustainability and fees on Algorand, most of the focus has been on:
+In conversations about sustainability and fees on Algorand, most of the focus so far has been on:
 
 1) raising the minimum fees, or
-2) changing the supply model to inflate/deflate dynamically with usage
+2) [changing the supply model](https://medium.com/@fishermanalgo/musings-on-the-pond-f1c6f6deeb72) to [inflate/deflate dynamically with usage](/posts/musing-on-the-pond-dynamic-supply/)
 
 and to a lesser extent:
 
 3) priority fee ordering - higher fee gets earlier placement in block
 
-I propose an alternative protocol change in the broader "priority fee" market. This is a personal proposal, which I have also made internally at the Algorand Foundation as part of the sustainability / King Safety project. The views presented here are my own.
+I propose an alternative protocol change in the broader "priority fee" market. This is a personal proposal, presented here as my recommendation to the community for discussion.
 
-My proposal concerns a real-time "auction market" for placement _after_ other transactions - also known as backrunning. Algorand sees significant high-value backrunning activities, like liquidations or arbitrage, and a protocol-native market like this should, through market dynamics, redirect most of those activities' profits to the block proposers and fee sink.
+It concerns a real-time "auction market" for placement _after_ other transactions - also known as backrunning.
 
-## Transaction ordering primer: current state of affairs
+Algorand sees significant high-value backrunning activities, like liquidations or arbitrage. These actors usually operate by spamming transactions and hoping that at least one of their transactions will be placed successfully. This causes unnecessary network load, as they all need to be considered, but only one transaction among the various actors will succeed in the end anyway, netting the block proposer a basic fee.
 
-This is the current node behavior.
+I believe a protocol-level fee market tailored to these activities will result in 1) increased protocol revenue to the fee sink and block proposers, 2) disincentivize harmful behaviors that result in unnecessary and excessive load on the network, while 3) attempting to prevent MEV that is detrimental user experience, such as sandwiching.
+
+## Transaction ordering primer
+
+The current state of affairs of transaction ordering on Algorand can be summarized as:
 
 1. Transactions are placed in blocks in first-in-first-out order, as received by the block proposer.
 2. Block proposers receive transactions at different times/order depending on their geographic & network placement (due to transaction propagation delays and network topology)
 3. Future block proposers are unknown
 
-Note: this is the default behavior of algod, but it is not enforced by consensus.
+_Note: this is the default behavior of algod, but it is not enforced by consensus._
 
 ## Backrunning today
 
@@ -145,7 +151,7 @@ The unpredictability of future block proposers also works in favor of a protocol
 
 The `backrun-id` rules as outlined here are not the full picture - there are several concerns to address around performance, potential abuse (DDoS), and frontrunning.
 
-*Disclaimer: I am not a protocol developer - think of this section as drawn on a napkin with crayons.*
+*Disclaimer: I am not a protocol developer - for best results, imagine this section as drawn on a napkin with crayons.*
 
 ### Performance
 
@@ -172,7 +178,7 @@ We could add propagation optimizations:
   * **Valid:** targets a transaction in the mempool
   * **Winning:** currently has the highest fee among competing backruns
 
-However, the "pay-once” model still leaves this open to abuse: an adversary could flood the network with valid backruns with increasing fees, each of which would be propagated. Sender restrictions would not meaningfully help, as such an attack can be cheaply executed with Sybils.
+However, the "pay-once” model still leaves this open to abuse: an adversary intending to harm the network could flood valid backruns with increasing fees, each of which would be propagated. Sender restrictions would not meaningfully help, as such an attack can be cheaply executed with Sybils.
 
 **It’s likely that a system like this should require a minimum fee to be paid by backrunning transactions regardless of execution.** This would impose the same propagation cost as any other transaction.
 
@@ -186,7 +192,7 @@ We could mitigate this by adding a **mutual exclusion restriction** between back
 
 * `backrun-id` transactions in the same block must not have overlapping account or application references.
 
-This "isolation” would prevent multiple backruns interacting with the same application or account from coexisting in a block, making optimistic frontrunning impossible.
+This "isolation” would prevent multiple backruns interacting with the same application or account from coexisting in a block, making this kind of optimistic frontrunning impossible.
 
 This would, however, add complexity to the backrun transaction selection algorithm: the protocol would now need to select a subset of backrun transactions that maximizes total fees while respecting the isolation rule.
 
@@ -196,7 +202,6 @@ This would, however, add complexity to the backrun transaction selection algorit
 
 MEV is a dirty word - but it can also be a major source of fee revenue for blockchains.
 
-This proposal aims to **thread the needle**: to capitalize on a subset of MEV that I believe is non-harmful and is happening anyway, just via brute force today.
+This proposal aims to **thread the needle**: to capitalize on a subset of MEV that I believe is non-harmful and is happening anyway, just via brute force.
 
-Would you like to see this implemented on Algorand? Do you think it would work? Can you think of ways it might make your on-chain experience worse? I’d love to hear your thoughts [on X](https://x.com/d13_co) or [on Discord](https://discord.gg/algorand).
-
+Would you like to see this implemented on Algorand? Do you think it would work? I’d love to hear your thoughts [on Discord](https://discord.gg/algorand) or [on X](https://x.com/d13_co).
