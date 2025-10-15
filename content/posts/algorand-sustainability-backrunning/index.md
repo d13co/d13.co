@@ -2,7 +2,14 @@
 title: "Algorand Sustainability Proposal: Backrunning MEV"
 slug: algorand-sustainability-proposal-backrunning-mev
 date: 2025-10-14T17:32:45+03:00
+ShowReadingTime: true
+ShowToc: true
+TocOpen: true
+cover:
+  image: backrun-cover.png
 ---
+
+## Preface
 
 In recent conversations about sustainability and fees on Algorand, most of the focus has been on:
 
