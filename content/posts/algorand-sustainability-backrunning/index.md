@@ -1,7 +1,7 @@
 ---
 title: "Algorand Sustainability Proposal: Backrunning MEV"
 slug: algorand-sustainability-proposal-backrunning-mev
-date: 2025-10-14T17:32:45+03:00
+date: 2025-10-15T23:56:00+02:00
 ShowReadingTime: true
 ShowToc: true
 TocOpen: true
