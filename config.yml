@@ -41,11 +41,11 @@ params:
   showtoc: false
   tocopen: false
   assets:
-    favicon: <link / abs url>
-    favicon16x16: <link / abs url>
-    favicon32x32: <link / abs url>
-    apple_touch_icon: <link / abs url>
-    safari_pinned_tab: <link / abs url>
+    favicon: /images/logo-7-green-128.png
+    favicon16x16: /images/logo-7-green-128.png
+    favicon32x32: /images/logo-7-green-128.png
+    apple_touch_icon: /images/logo-7-green-128.png
+    safari_pinned_tab: /images/logo-7-green-128.png
   label:
     text: ' '
     icon: /images/logo-7-green-128.png
