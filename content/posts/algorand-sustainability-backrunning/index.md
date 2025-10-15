@@ -204,11 +204,11 @@ MEV is a dirty word - but it can also be a major source of fee revenue for block
 
 This proposal aims to **thread the needle**: to capitalize on a subset of MEV that I believe is non-harmful and is happening anyway, just via brute force.
 
-Would you like to see this implemented on Algorand? Do you think it would work? I’d love to hear your thoughts [on Discord](https://discord.gg/BewrThnrNG) or [on X](https://x.com/d13_co).
-
 _Once again: This is presented as a personal opinion piece. Views presented here are mine except where explicitly attributed._
 
-{{< tweet user="d13_co" id="1978583280917041459" >}}
+Would you like to see this implemented on Algorand? Do you think it would work? I’d love to hear your thoughts [on Discord](https://discord.gg/BewrThnrNG) (#research), X or reddit:
+
+{{< tweet "https://twitter.com/d13_co/status/1978583280917041459" >}}
 
 {{< reddit "https://www.reddit.com/r/algorand/comments/1o7osfp/algorand_sustainability_proposal_backrunonly_mev/" "On Reddit: Algorand Sustainability Proposal: Backrunning MEV" >}}
 

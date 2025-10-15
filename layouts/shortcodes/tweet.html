@@ -1,13 +1,14 @@
-{{/* Usage: {{< tweet 1234567890123456789 >}} or {{< tweet id="123..." >}} */}}
-{{ $id := or (.Get "id") (.Get 0) }}
-<blockquote class="twitter-tweet"><a href="https://twitter.com/i/web/status/{{ $id }}"></a></blockquote>
+{{/* layouts/shortcodes/tweet.html */}}
+{{- $url := .Get 0 -}}
+{{- $theme := .Get "theme" | default "light" -}}
+{{- if not $url -}}
+  {{ errorf "tweet shortcode requires a tweet URL as the first param" }}
+{{- end -}}
 
-{{/* Load the widget script once per page */}}
-{{ if not (.Page.Scratch.Get "tw-widget-loaded") }}
-  {{ .Page.Scratch.Set "tw-widget-loaded" true }}
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-{{ end }}
-<noscript>
-  <p>View on Twitter: https://twitter.com/i/web/status/{{ $id }}</p>
-</noscript>
+<div style="display: flex; justify-content: center;">
+  <blockquote class="twitter-tweet" data-theme="{{ $theme }}" style="display: inline-block;">
+    <a href="{{ $url | safeURL }}"></a>
+  </blockquote>
+</div>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
