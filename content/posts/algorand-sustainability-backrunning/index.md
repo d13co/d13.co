@@ -64,10 +64,10 @@ From the point of view of the future proposer of the block that contains the liq
 {{< mermaid >}}
 flowchart LR
     A["txn-id: E14..
-    F/F UPDATE PRICE ORACLE
+    UPDATE PRICE ORACLE
     (enables liquidation)"] -->
     O["Some USDC Txn"] -->
-    M["_More txns..._"]
+    M["More txns..."]
 {{< /mermaid >}}
 
 A liquidator (eve.algo) has seen the price feed update transaction and composed their liquidation transaction, indicating that it should only be run immediately after the price feed update. The future proposer receives this and inserts it after the price feed update:
@@ -75,15 +75,15 @@ A liquidator (eve.algo) has seen the price feed update transaction and composed 
 {{< mermaid >}}
 flowchart LR
     A["txn-id: E14..
-    **F/F UPDATE PRICE ORACLE**
-    _(enables liquidation)_"] -->
+    UPDATE PRICE ORACLE
+    (enables liquidation)"] -->
     B["txn-id: EVX..
     backrun-id: E14..
-    **fee: 10A**
     sender: eve.algo
+    **fee: 10A**
     LIQUIDATE"] -->
     O["Some USDC Txn"] -->
-    M["_More txns..._"]
+    M["More txns..."]
 {{< /mermaid >}}
 
 Before the block has been assembled and proposed, the block proposer received another liquidation transaction from steve.algo. This one has a higher fee that eve's liquidation, so eve's transaction is discarded and steve's is put in place instead.
@@ -91,93 +91,105 @@ Before the block has been assembled and proposed, the block proposer received an
 {{< mermaid >}}
 flowchart LR
     A["txn-id: E14..
-    **F/F UPDATE PRICE ORACLE**
-    _(enables liquidation)_"] -->
+    UPDATE PRICE ORACLE
+    (enables liquidation)"] -->
     B["txn-id: JWS..
     backrun-id: E14..
-    **fee: 50A**
     sender: steve.algo
+    **fee: 50A**
     LIQUIDATE"] -->
     O["Some USDC Txn"] -->
-    M["_More txns..._"]
+    M["More txns..."]
 {{< /mermaid >}}
 
 When the block proposal timer elapses, the proposer assembles the block and broadcasts it for consensus consideration.
 
-## Intended effects
 
-This is intended to monetize and democratize the backrun half of MEV. Building backrunning into the protocol would help bridge the sustainability gap without introducing the negative user experience side effects of frontrunning & sandwiching.
+## Intended Effects
 
-By enabling preferential placement for arbitrage, liquidations and other backrunning activities, the winning condition in this market would now be paying the highest fee.
+This mechanism aims to **monetize and democratize** the backrun half of MEV. Building backrunning into the protocol could help bridge the sustainability gap without introducing the negative user experience side effects of frontrunning or sandwiching.
 
-Liquidators would still need to act fast - make sure their backrun is propagated to the block proposer in time - but over that threshold, the highest-fee win condition should mean that this market's players will compete with each other to lower their profit margins, to the benefit of the block proposer and fee sink.
+By enabling preferential placement for arbitrage, liquidations, and other backrunning activities, the winning condition in this market becomes paying the highest fee.
 
-- High value slots in blocks are now available to almost everyone
-    - Expectation: more liquidators and arbers
-- Win requirement: being “fast-enough” (reach proposer before the block is assembled)
-    - Expectation: significantly lower bar to compete
-- Win condition: highest txn fee wins
-    - Expectation: given enough competition, backrun txn fees in liquidations/arbitrage will tend towards the value of the liquidation/arb
-    - Expectation: majority of profit from these activities redirected to block proposer and fee sink
+Liquidators would still need to act quickly - ensuring their backrun reaches the proposer in time - but beyond that, the "highest-fee-wins” condition should push competitors to lower their profit margins, benefiting the proposer and the fee sink.
 
-## Why not a private fee market?
+* **High-value slots** in blocks become accessible to almost anyone
 
-This is a protocol-level recommendation because a private fee side-market would not be effective enough until it has majority uptake from noderunners. It  would also not be motivated to share profits with the fee sink.
+  * Expectation: more liquidators and arbitragers
+* **Win requirement:** be "fast enough” (reach the proposer before block assembly)
 
-The unpredictability of future block proposers works in favor of this being a protocol level mechanism: in a future where there are completing fee side markets, even if they have a significant market share between block proposers, we would still expect arbitragers and liquidators to use this protocol mechanism as well: They do not know if a side market participant will get to propose the next block, so to maximize their profits, they would participate in both the side market and the protocol backrun mechanism.
+  * Expectation: significantly lower barrier to compete
+* **Win condition:** highest transaction fee wins
 
-## Yes, but
+  * Expectation: given sufficient competition, backrun fees for liquidations/arbitrage will approach the value of the underlying opportunity
+  * Expectation: majority of profit redirected to block proposers and the fee sink
 
-The `backrun-id` rules as outlined so far are not the full picture, of course - there are several concerns to consider around performance, potential for abuse (DDOS), frontrunning possibilities etc.
+---
 
-_Disclaimer: I am not a protocol dev, so I recommend picturing this section as drawn on a napkin with crayons._
+## Why Not a Private Fee Market?
+
+This is a protocol-level recommendation because a private side market would not be effective until it had significant uptake from node runners - and even then, it would have little incentive to share profits with the fee sink.
+
+The unpredictability of future block proposers also works in favor of a protocol-level mechanism. Even if competing fee side markets achieve significant market share, arbitragers and liquidators would still likely use the protocol mechanism as well. Since they cannot predict whether a side-market participant will propose the next block, they would participate in both markets to maximize their profits.
+
+---
+
+## Yes, But…
+
+The `backrun-id` rules as outlined here are not the full picture - there are several concerns to address around performance, potential abuse (DDoS), and frontrunning.
+
+*Disclaimer: I am not a protocol developer - think of this section as drawn on a napkin with crayons.*
 
 ### Performance
 
-The current first-in, first-out approach to transaction ordering has the following performance benefit: pending/future transactions are evaluated as-received, and if they evaluate successfully, their ledger state transitions are kept until the transaction is either confirmed (included in a block) or expired (last-valid has elapsed without block inclusion.)
+The current FIFO approach has a performance benefit: pending transactions are evaluated as they are received, and if they evaluate successfully, their ledger state transitions are cached until the transaction is either confirmed (included in a block) or expired (if `last-valid` elapses without inclusion).
 
-Re-ordering transactions after first evaluation will require additional computation. Inserting a backrun transaction before already-evaluated transactions may require the latter to be re-evaluated.
+Reordering transactions after initial evaluation would require additional computation. Inserting a backrun transaction before already-evaluated ones may require those later transactions to be re-evaluated.
 
-A silver lining here is that only a small percentage of transactions should require re-evaluation, and it should be fairly cheap to figure out which ones do, because:
+The silver lining is that only a small percentage of transactions should require re-evaluation, and it should be relatively cheap to determine which ones do, because:
 
-> Transactions have implicit and explicit [references](https://dev.algorand.co/concepts/smart-contracts/resource-usage/#different-ways-to-provide-references) to the resources they are allowed to "touch" (read, write, interact with.)
+> Transactions have implicit and explicit [references](https://dev.algorand.co/concepts/smart-contracts/resource-usage/#different-ways-to-provide-references) to the resources they are allowed to "touch” (read, write, interact with).
 
-Having already been evaluated once, a list of such references could be kept to verify whether this re-evaluation would be necessary or not - i.e. any transactions after the backrun that have overlapping references with the backrun transaction would require re-evaluation to ensure that the backrun's state transitions does not make them fail. It would also make sense that this recalculation happens once, at assembly time.
+Having already been evaluated once, a list of these references could be cached. Any transactions after the backrun that have overlapping references would require re-evaluation to ensure the backrun’s state transitions don’t cause them to fail. It would make sense for this recalculation to occur once, at block assembly time.
 
-### Potential for abuse & DDOS
+### Potential for Abuse & DDoS
 
-Under the current state of affairs, relaying nodes will only propagate transactions that have successfully evaluated against the current ledger state. As a side-effect, most of these propagated transactions will end up being included in blocks, and pay their fees.
+Currently, relaying nodes only propagate transactions that successfully evaluate against the current ledger state. As a side effect, most propagated transactions end up being included in blocks and paying their fees.
 
-The winner-takes-all aspect of the backrun proposal now introduces scenarios where transactions are propagated which will not end up paying anything (because a higher backrun will execute instead.)
+The winner-takes-all nature of the backrun proposal introduces a scenario where many propagated transactions may never execute - and thus never pay fees - because a higher-fee backrun wins.
 
-We could add some optimizations for validity and necessity of propagation:
+We could add propagation optimizations:
 
-- Relaying nodes should only propagate <u>valid</u> and <u>winning</u> `backrun-id` transactions 
-    - valid: targeting a transaction in the mempool.
-    - winning: with the highest fee between competing backrun transactions (so far.)
+* Relaying nodes should only propagate <u>valid</u> and <u>winning</u> `backrun-id` transactions:
 
-However, the pay-once aspect still leaves this open for abuse: An adversary could flood multiple valid backruns with increasing fees, and the network would propagate each of them, as long as they adhere to the aforementioned rules. Imposing sender restrictions would not suffice to meaningfully protect either, as it is virtually free to perform this attack with sybils.
+  * **Valid:** targets a transaction in the mempool
+  * **Winning:** currently has the highest fee among competing backruns
 
-**It is likely that a system like this should require a minimum fee to be paid by backrunning transactions regardless of whether they were executed or not.** This would associate the same cost to propagate as any other transaction.
+However, the "pay-once” model still leaves this open to abuse: an adversary could flood the network with valid backruns with increasing fees, each of which would be propagated. Sender restrictions would not meaningfully help, as such an attack can be cheaply executed with Sybils.
 
-### Optimistic frontrun anyway
+**It’s likely that a system like this should require a minimum fee to be paid by backrunning transactions regardless of execution.** This would impose the same propagation cost as any other transaction.
 
-During an friendly red-teaming of this concept, [nullun](https://x.com/nullun) pointed out that an unbounded backrun system could be used to execute a frontrun or sandwich.
+### Optimistic Frontrunning
 
-Someone attempting to frontrun could select an "early" transaction - the earliest they have seen that has not been included in a block yet - and attempt an optimistic frontrun of their target transaction by backrunning off the earlier transaction, hoping that the block proposer will also place it before the target transaction. The protocol backrun mechanism would then be used to execute the backrun part of the sandwich.
+During a friendly red-teaming of this concept, [nullun](https://x.com/nullun) pointed out that an unbounded backrun system could still be used to execute a frontrun or sandwich.
 
-We may be able to mitigate this concern with a mutual exclusion restriction between backrun transactions in the same block:
+A frontrunner could select an "early” transaction - the earliest they’ve seen that has not yet been included - and attempt an optimistic frontrun of their target transaction by backrunning from that earlier one. The backrun mechanism would then be used to execute the backrun portion of the sandwich.
 
-- `backrun-id` transactions in the same block must not have overlapping account or application references.
+We could mitigate this by adding a **mutual exclusion restriction** between backrun transactions in the same block:
 
-This "isolation" of backruns would prevent multiple backrun transactions interacting with the same application (or account) co-existing in the same block, so optimistic frontrunning should not be possible.
+* `backrun-id` transactions in the same block must not have overlapping account or application references.
 
-This would also introduce more complexity in the backrun transaction selection algorithm: now we are selecting for the subset of backrun transactions that yield the highest total fees, while also obeying the isolation restriction.
+This "isolation” would prevent multiple backruns interacting with the same application or account from coexisting in a block, making optimistic frontrunning impossible.
+
+This would, however, add complexity to the backrun transaction selection algorithm: the protocol would now need to select a subset of backrun transactions that maximizes total fees while respecting the isolation rule.
+
+---
 
 ## Afterword
 
-MEV is a dirty word, but it can also be a major fee revenue source for blockchains.
+MEV is a dirty word - but it can also be a major source of fee revenue for blockchains.
 
-This proposal is about threading the needle to capitalize on a subset of MEV that I believe is non-harmful, which is happening anyway by brute force.
+This proposal aims to **thread the needle**: to capitalize on a subset of MEV that I believe is non-harmful and is happening anyway, just via brute force today.
 
-Would you like to see this implemented on Algorand? Do you think it would work? Can you think of a way it would make your on-chain life any less pleasant? Eager to hear your thoughts [on X](https://x.com/d13_co) or [Discord](https://discord.gg/algorand). 
+Would you like to see this implemented on Algorand? Do you think it would work? Can you think of ways it might make your on-chain experience worse? I’d love to hear your thoughts [on X](https://x.com/d13_co) or [on Discord](https://discord.gg/algorand).
+
