@@ -205,3 +205,5 @@ MEV is a dirty word - but it can also be a major source of fee revenue for block
 This proposal aims to **thread the needle**: to capitalize on a subset of MEV that I believe is non-harmful and is happening anyway, just via brute force.
 
 Would you like to see this implemented on Algorand? Do you think it would work? I’d love to hear your thoughts [on Discord](https://discord.gg/algorand) or [on X](https://x.com/d13_co).
+
+_Once again: This is presented as a personal opinion piece. Views presented here are mine except where explicitly attributed._
