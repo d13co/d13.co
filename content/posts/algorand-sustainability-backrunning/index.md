@@ -194,6 +194,8 @@ We could mitigate this by adding a **mutual exclusion restriction** between back
 
 This "isolation” would prevent multiple backruns interacting with the same application or account from coexisting in a block, making this kind of optimistic frontrunning impossible.
 
+_Update: As pointed out by [@nmadon65](https://x.com/nmadon65), isolating by application references would slow down liquidations to one per block, which could lead to bad debt accumulating in flash-crash conditions. Isolating by account references alone should be considered instead._
+
 This would, however, add complexity to the backrun transaction selection algorithm: the protocol would now need to select a subset of backrun transactions that maximizes total fees while respecting the isolation rule.
 
 ---
