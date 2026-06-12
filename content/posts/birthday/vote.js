@@ -131,6 +131,26 @@ async function init() {
 }
 init();
 
+async function reloadPoll(event) {
+  if (event) event.preventDefault();
+  const link = document.getElementById("poll-reload");
+  if (link.dataset.busy === "1") return;
+  link.dataset.busy = "1";
+  link.textContent = "Reloading...";
+  // Reset pagination/state and pull fresh from the indexer.
+  nextToken = undefined;
+  exhausted = false;
+  seenSenders.clear();
+  voters.length = 0;
+  shown = INITIAL_SHOWN;
+  try {
+    await init();
+  } finally {
+    link.textContent = "Reload";
+    link.dataset.busy = "0";
+  }
+}
+
 function vote(code) {
   const note = `${NOTE_PREFIX}${code}`;
   const option = OPTIONS.find((o) => o.code === code);

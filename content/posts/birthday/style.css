@@ -116,7 +116,8 @@
   align-items: baseline;
   gap: 10px;
 }
-#poll-export {
+#poll-export,
+#poll-reload {
   font-size: 0.9em;
   cursor: pointer;
   white-space: nowrap;

@@ -111,7 +111,10 @@ Are you convinced? Let it be known by voting with your wallet. Do not worry, it 
   <div id="poll-action"></div>
 </div>
 
-**Results**
+<div class="poll-voters-head">
+  <strong>Results</strong>
+  <a id="poll-reload" href="#" onclick="reloadPoll(event)">Reload</a>
+</div>
 
 <div id="poll-results">
   (Loading)
