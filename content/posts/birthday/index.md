@@ -16,7 +16,7 @@ tags:
 
 A few crypto-decades ago, the Algorand powers that be decided to celebrate Algorand's Birthday on June 19th. That was the day of the Dutch Auction, through which the ALGO token was first distributed to the broader public, so it was certainly a milestone date. But was it The Birthday?
 
-A few years into MainNet's lifetime, a then-undoxxed crypto anarchist[^me] pointed out that the Genesis block, as well as the first few blocks, ackthually have June 11th timestamps, thus starting the Genesarian schism of the Algorand religion. The Dutchaversarist Foundation was put in an awkward position. It certainly frowned upon the heresy but acknowledging it would only help it spread, so instead it spent years quietly suppressing this rationalist movement built around page 1 of our divine ledger.
+A few years into MainNet's lifetime, a then-undoxxed crypto anarchist[^me] pointed out that the Genesis block, as well as the first few blocks, acktchually have June 11th timestamps, thus starting the Genesarian schism of the Algorand religion. The Dutchaversarist Foundation was put in an awkward position. It certainly frowned upon the heresy but acknowledging it would only help it spread, so instead it spent years quietly suppressing this rationalist movement built around page 1 of our divine ledger.
 
 But as it turns out, both were wrong, and years later the best guess at an accurate Algorand birthday would spawn yet another rationalist faction, the Duodecimailsts[^duodecim]. They are **pretty sure that Algorand MainNet launched on June 12th, 2019.**
 
