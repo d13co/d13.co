@@ -5,6 +5,8 @@ slug: isitalgorandsbirthday
 url: /isitalgorandsbirthday
 cover:
   image: 1692233635.png
+tags:
+  - Algorand's Birthday
 ---
 
 To celebrate Algorand MainNet\'s third birthday on the 11th of June
@@ -16,6 +18,8 @@ and a midi project that will be revealed there on Algorand\'s big day.
 We picked June 11 from Block Zero\'s timestamp on MainNet:
 
 \"2019-06-11T00:00:00Z\"
+
+{{< callout emoji="⚠️" text="**2026 Update:** [We picked wrong](/posts/mainnet-archaeology-1-algorands-birthday/) — turns out MainNet's birthday is June 12." >}}
 
 At midnight the countdown will transition to a web2.0 celebration
 extravaganza. CSS3 is definitely invited, and even 3D may make a cameo.

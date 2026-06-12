@@ -1,0 +1,152 @@
+/* Birthday poll */
+#poll-vote {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.poll-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.poll-options button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  text-align: left;
+  border: 1px gray solid;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.poll-date {
+  font-weight: bold;
+}
+.poll-faction {
+  opacity: 0.6;
+  font-size: 0.9em;
+}
+.poll-options button.active {
+  border-color: green;
+  box-shadow: inset 0 0 0 1px green;
+}
+.poll-options button.active .poll-faction {
+  opacity: 0.85;
+}
+#poll-action {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+#poll-action.open {
+  border-left: 5px green solid;
+  padding-left: 15px;
+}
+.poll-wallet-btn {
+  align-self: flex-start;
+  display: inline-block;
+  border: 1px gray solid;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.poll-qr {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
+.poll-qr img,
+.poll-qr canvas {
+  max-width: 50%;
+  height: auto;
+  background: #fff;
+  border: 8px solid #fff;
+  border-radius: 4px;
+}
+
+/* Results table with percentage bars */
+#poll-results {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.poll-row {
+  display: grid;
+  grid-template-columns: 7em 1fr 6em;
+  align-items: center;
+  gap: 10px;
+}
+.poll-row-label {
+  font-weight: bold;
+}
+.poll-bar {
+  background: rgba(128, 128, 128, 0.18);
+  border-radius: 4px;
+  height: 1.6em;
+  overflow: hidden;
+}
+.poll-bar-fill {
+  background: green;
+  height: 100%;
+  width: 0;
+  border-radius: 4px;
+  transition: width 0.4s ease;
+}
+.poll-row-count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+.poll-row-pct {
+  opacity: 0.6;
+}
+.poll-total {
+  margin-top: 6px;
+  opacity: 0.7;
+  font-size: 0.9em;
+}
+
+/* Recent votes list */
+.poll-voters-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+#poll-export {
+  font-size: 0.9em;
+  cursor: pointer;
+  white-space: nowrap;
+}
+#poll-voters {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 10px;
+  padding-left: 15px;
+  border-left: 5px green solid;
+}
+.poll-voter {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.poll-voter-choice {
+  opacity: 0.6;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+.poll-empty {
+  opacity: 0.6;
+}
+.poll-more {
+  align-self: flex-start;
+  margin-top: 6px;
+  border: 1px gray solid;
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
