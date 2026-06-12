@@ -134,7 +134,7 @@ init();
 function vote(code) {
   const note = `${NOTE_PREFIX}${code}`;
   const option = OPTIONS.find((o) => o.code === code);
-  const uri = `algorand://${VOTE_ADDRESS}?amount=0&xnote=${encodeURIComponent(note)}`;
+  const uri = `algorand://${VOTE_ADDRESS}?amount=1&xnote=${encodeURIComponent(note)}`;
 
   const manual = `<div>Or send 0 ALGO with the note <code>${note}</code> to:</div>
     <div><code>${VOTE_ADDRESS}</code></div>`;
