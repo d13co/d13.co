@@ -6,6 +6,7 @@ cover:
   image: algo-in-wonderland.jpg
 ShowReadingTime: true
 ShowToc: true
+TocOpen: true
 tags:
   - Algorand Archaeology
   - Algorand's Birthday
