@@ -1,9 +1,10 @@
 ---
 title: "MainNet Archaeology 1: Algorand's Birthday"
+description: Occam's razor deduction that Algorand MainNet launched June 12th, 2019
 slug: mainnet-archaeology-1-algorands-birthday
 date: 2026-06-12T14:15:18+00:00
 cover:
-  image: algo-in-wonderland.jpg
+  image: algo-birthday-12.jpg
 ShowReadingTime: true
 ShowToc: true
 TocOpen: true
@@ -133,15 +134,15 @@ Are you convinced? Let it be known by voting with your wallet. Do not worry, it 
 <script src="https://cdn.jsdelivr.net/gh/davidshimjs/qrcodejs@04f46c6a0708418cb7b96fc563eacae0fbf77674/qrcode.min.js"></script>
 <script src="vote.js"></script>
 
-## Parting Thoughts and Disclaimers
+## Parting Thoughts
 
-I had fun writing this. I'm trying to improve my writing, but I can't seem to stop trying to thread the humour needle and stabbing my thumb in the process.
+While not proven beyond reasonable doubt, I do think Occam's razor places MainNet launch on June 12th.
 
-Yes, I do believe MainNet launched June 12th. While not proven beyond reasonable doubt, that's the way my personal Occam's razor cuts.
+I had fun writing this. I'm trying to improve my writing, but I can't seem to stop trying to thread the humour needle and occasionally stabbing my thumb in the process.
 
-Beyond that: it's not that deep, I don't take it too seriously, and the conspiracy and religious references are meant to be tongue in cheek. Algorand is not a religion, I am not poking fun at religion in general, nor your religion in particular.
+The conspiracy and religious references are tongue in cheek. Algorand is not a religion, I am not poking fun at religion in general, nor your religion in particular.
 
-And in case you need your food for thought chewed for you: these views are personal, not made in a professional capacity, nor while representing my employer.
+And in case you need your food for thought chewed for you: these views are personal, not representing my employer.
 
 {{< callout emoji="⚠️" text="Read the above before reaching out to the [Complaint Department](https://algo.surf/account/COMPLAINTDEPARTMENTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJDV26LQ)" >}}
 
