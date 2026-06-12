@@ -12,11 +12,11 @@ tags:
   - Algorand's Birthday
 ---
 
-{{< callout emoji="⚠️" text="_Note: Some sections herein may be disorienting to readers unable to parse satire._" >}}
+{{< callout emoji="⚠️" text="_Note: Some sections herein may be disorienting to readers over- or under-sensitive to satire._" >}}
 
 A few crypto-decades ago, the Algorand powers that be decided to celebrate Algorand's Birthday on June 19th. That was the day of the Dutch Auction, through which the ALGO token was first distributed to the broader public, so it was certainly a milestone date. But was it The Birthday?
 
-A few years into MainNet's lifetime, an undoxxed crypto anarchist pointed out that the Genesis block, as well as the first few blocks, ackthually have June 11th timestamps, thus starting the Genesarian schism of the Algorand religion. The Dutchaversarist Foundation was put in an awkward position. It certainly frowned upon the heresy but acknowledging it would only help it spread, so instead it spent years quietly suppressing this rationalist movement built around page 1 of our divine ledger.
+A few years into MainNet's lifetime, a then-undoxxed crypto anarchist[^me] pointed out that the Genesis block, as well as the first few blocks, ackthually have June 11th timestamps, thus starting the Genesarian schism of the Algorand religion. The Dutchaversarist Foundation was put in an awkward position. It certainly frowned upon the heresy but acknowledging it would only help it spread, so instead it spent years quietly suppressing this rationalist movement built around page 1 of our divine ledger.
 
 But as it turns out, both were wrong, and years later the best guess at an accurate Algorand birthday would spawn yet another rationalist faction, the duodecimailsts[^duodecim]. They are **pretty sure that Algorand MainNet launched on June 12th, 2019.**
 
@@ -138,6 +138,9 @@ Beyond that, I do not take it that seriously, and the conspiracy and religious r
 
 And clearly: these views are personal and not representing my employer, whoever that may be at this time in space.
 
+{{< callout emoji="⚠️" text="Read the above before reaching out to the [Complaint Department](https://algo.surf/account/COMPLAINTDEPARTMENTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJDV26LQ)" >}}
+
+[^me]: Me.
 [^duodecim]: Duodecim is the Latin word for Twelve.
 [^unix]: Number of non-leap seconds elapsed since Jan 1, 1970. [Learn more](https://en.wikipedia.org/wiki/Unix_time)
 [^bt]: Code: [Bookkeeping rules](https://github.com/algorand/go-algorand/blob/ea67b3f8816b238ba096d003587d1ff091f8ea24/data/bookkeeping/block.go#L818) - Spec: [MaxTimestampIncrement](https://specs.algorand.co/ledger/ledger-parameters?highlight=MaxTimestampIncrement#block)
