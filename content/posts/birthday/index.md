@@ -1,6 +1,7 @@
 ---
 title: "MainNet Archaeology 1: Algorand's Birthday"
-description: Occam's razor deduction that Algorand MainNet launched June 12th, 2019
+description: My Occam's razor deduction that Algorand MainNet launched June 12th, 2019
+summary: My Occam's razor deduction that Algorand MainNet launched June 12th, 2019
 slug: mainnet-archaeology-1-algorands-birthday
 date: 2026-06-12T14:15:18+00:00
 cover:
