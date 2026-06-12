@@ -1,7 +1,7 @@
 // On-chain birthday poll. Votes are 0-ALGO transactions sent to VOTE_ADDRESS
 // with an ARC-2 note: `d13bday:u<code>`. Latest vote per wallet wins.
 // The indexer returns transactions newest-first and pages older via next-token.
-const VOTE_ADDRESS = "OOOOOOOOOOLOOKATMEVOTEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEC2SUAHY";
+const VOTE_ADDRESS = "777WHEN777IS777MY777BIRTHDAY777HELPAAAAAAAAAAAAAAAAJEWO4O4";
 const indexerApi = "https://mainnet-idx.algonode.cloud";
 const PAGE_LIMIT = 100; // txns fetched per page
 const INITIAL_SHOWN = 10; // voters visible before first "show more"
