@@ -6,7 +6,6 @@ cover:
   image: algo-in-wonderland.jpg
 ShowReadingTime: true
 ShowToc: true
-TocOpen: true
 tags:
   - Algorand Archaeology
   - Algorand's Birthday
@@ -18,11 +17,11 @@ A few crypto-decades ago, the Algorand powers that be decided to celebrate Algor
 
 A few years into MainNet's lifetime, a then-undoxxed crypto anarchist[^me] pointed out that the Genesis block, as well as the first few blocks, ackthually have June 11th timestamps, thus starting the Genesarian schism of the Algorand religion. The Dutchaversarist Foundation was put in an awkward position. It certainly frowned upon the heresy but acknowledging it would only help it spread, so instead it spent years quietly suppressing this rationalist movement built around page 1 of our divine ledger.
 
-But as it turns out, both were wrong, and years later the best guess at an accurate Algorand birthday would spawn yet another rationalist faction, the duodecimailsts[^duodecim]. They are **pretty sure that Algorand MainNet launched on June 12th, 2019.**
+But as it turns out, both were wrong, and years later the best guess at an accurate Algorand birthday would spawn yet another rationalist faction, the Duodecimailsts[^duodecim]. They are **pretty sure that Algorand MainNet launched on June 12th, 2019.**
 
 ## Genesis Timestamp
 
-Block zero, the "genesis block", is not a block; it is a pre-agreed upon configuration _file_ with which the network launched. It can be queried on [any algorand node](https://mainnet-api.4160.nodely.dev/genesis). It contains all information required to bootstrap a network, including the distribution of the 10 billion ALGO supply, initial participation key information for the bootstrap nodes, the fee pool address, and so on.
+Block zero, the "genesis block", is not a block; it is a pre-agreed upon configuration _file_ with which the network launched. It can be queried on [any Algorand node](https://mainnet-api.4160.nodely.dev/genesis). It contains all information required to bootstrap a network, including the distribution of the 10 billion ALGO supply, initial participation key information for the bootstrap nodes, the fee pool address, and so on.
 
 They can also include optional information, like a Genesis timestamp. MainNet's genesis file included such a timestamp: `1560211200`, a.k.a. `Tue, 11 Jun 2019 00:00:00 UTC`. When a genesis timestamp is present, it is treated like a "block zero" timestamp, which restricts possible block one timestamps based on the Algorand block timestamp rules.
 
@@ -41,7 +40,9 @@ If a proposed block has a timestamp that violates these rules, it will be reject
 
 The first 6637 blocks on MainNet exhibit a round time of 25 seconds. But this doesn't mean that the protocol was slower back then - after block 6638 we observe the average round time converging around ~4.25 seconds and sustaining that.
 
-So if the first block's timestamp was bound by the genesis timestamp, and we had thousands of consecutive blocks with maximum timestamp, we are forced to conclude that all proposing nodes considered their local time to be "way ahead" of the timestamps recorded in the blocks, so the June 11 midnight UTC launch time is called into question.
+So if the first block's timestamp was bound by the genesis timestamp, and we had thousands of consecutive blocks with maximum timestamp, it should follow that all proposing nodes considered their local time to be "way ahead" of the timestamps recorded in the blocks, thus recording 25-second round times. So the June 11 midnight UTC launch time is called into question.
+
+_From an anthropological perspective, it is reasonable to doubt that Algorand inc, based in Boston, would choose to undertake such a significant engineering operation at 8PM on a Monday._
 
 | Round | Timestamp | Round Time | Avg RT (15 rounds) |
 |:-:|:-:|:-:|:-:|
@@ -64,9 +65,7 @@ So if the first block's timestamp was bound by the genesis timestamp, and we had
 | 6668 | 1560377256 | 13 | 4.25 |
 | 6669 | 1560377260 | 4 | 4.25 |
 
-[More numbers on Google Sheets](https://docs.google.com/spreadsheets/d/121bzTOIwXmMe6D_pZXnl6gQMjGm7SkWhqBdpop0rvNQ). We can [also see](https://docs.google.com/spreadsheets/d/121bzTOIwXmMe6D_pZXnl6gQMjGm7SkWhqBdpop0rvNQ/edit?gid=886315211#gid=886315211) that at launch some nodes had persistent clock drift, which explains the 15-round-sample aberrations in average round time.
-
-_From an anthropological perspective, it is reasonable to doubt that Algorand inc, based in Boston, would choose to undertake such a significant engineering operation at 8PM on a Monday._
+[More numbers on Google Sheets](https://docs.google.com/spreadsheets/d/121bzTOIwXmMe6D_pZXnl6gQMjGm7SkWhqBdpop0rvNQ). _As an aside, we can [also see](https://docs.google.com/spreadsheets/d/121bzTOIwXmMe6D_pZXnl6gQMjGm7SkWhqBdpop0rvNQ/edit?gid=886315211#gid=886315211) that at launch some nodes had persistent clock drift, which explains the 15-round-sample aberrations in average round time, but on average timekeeping was fine after block 6638._
 
 ## Duodecimalist napkin math
 
@@ -74,9 +73,11 @@ Where does all this leave the actual launch date? Well, since Algorand Has Never
 
 **Assumption: the average round time exhibited from [block 6638](https://algo.surf/6638) onwards (4.25 seconds) was approximately the average round time leading up to that block.**
 
-Working backwards from that, we anchor "real time" at block 6638 being 2019-06-12 22:05:29 UTC, and pin the actual launch at ~28211 seconds[^math] before that, which leads to Duodecimalist tenet #1:
+To work backwards from that, we anchor "real time" at block 6638 being 2019-06-12 22:05:29 UTC, and pin the actual launch at ~28211 seconds[^math] before that, which leads to Duodecimalist tenet #1:
 
-**Algorand MainNet launched at around 2019-06-12 14:15 UTC, give or take a few hours.**
+{{< callout emoji="✍" text="**Algorand MainNet launched at around 2019-06-12 14:15 UTC, give or take a few hours.**" >}}
+
+
 
 _This also pleases the anthropologists, as it works out to 10:15 AM Boston time._
 
