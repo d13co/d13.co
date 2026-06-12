@@ -94,7 +94,7 @@ The Duodecimalists acknowledge the following MainNet launch milestones:
 
 Faced with the Blinding Light of Duodecimalist Revelation, reformed Genesarians must take the painful journey of acknowledging their former folly. Surely Algorand never has, and never will, stall - and surely Algorand Inc would not turn on MainNet lights at 8PM on a Monday and then go home... What _were_ we thinking!
 
-Are you convinced? Let it be known by voting with your wallet. Do not worry, it is not expensive. It is on Algorand.
+Are you convinced? Let it be known by voting with your wallet. Do not worry, it is not expensive.
 
 <link href="style.css" rel="stylesheet" />
 
