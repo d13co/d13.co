@@ -136,7 +136,7 @@ Are you convinced? Let it be known by voting with your wallet. Do not worry, it 
 
 I had fun writing this. I'm trying to improve my writing, but I can't seem to stop trying to thread the humour needle and stabbing my thumb in the process.
 
-Yes, I do believe MainNet launched June 12th. While not proven beyond reasonable doubt, that's the way by personal Occam's razor cuts.
+Yes, I do believe MainNet launched June 12th. While not proven beyond reasonable doubt, that's the way my personal Occam's razor cuts.
 
 Beyond that: it's not that deep, I don't take it too seriously, and the conspiracy and religious references are meant to be tongue in cheek. Algorand is not a religion, I am not poking fun at religion in general, nor your religion in particular.
 
