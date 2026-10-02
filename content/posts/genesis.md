@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 Pretty sure Algorand MainNet launched June 12th, 2019
 
 Algorand MainNet anniversary celebrations have varied along the years. The original celebration date was June 19th, which was seemingly picked to mark the Dutch Auction via which ALGO was first distributed to 
